@@ -300,8 +300,8 @@ println!("Vector is now {:?}", vec);
 
 A mutable reference is created with the `&mut` operator. The type of `num` is written as `&mut i32`. Compared to immutable references, you can see two important differences in the permissions:
 
-1. When `num` was an immutable reference, `vec` still had @Perm{read} permissions. Now that `num` is a mutable reference, `vec` has lost _all_ permissions while `num` is in use.
-2. When `num` was an immutable reference, the path `*num` only had @Perm{read}@Perm{own} permissions. Now that `num` is a mutable reference, `*num` has also gained the @Perm{write} permission.
+1. When `num` was an immutable reference, `vec` still had the @Perm{read} permission. Now that `num` is a mutable reference, `vec` has lost _all_ permissions while `num` is in use.
+2. When `num` was an immutable reference, the path `*num` only had the @Perm{read} permission. Now that `num` is a mutable reference, `*num` has also gained the @Perm{write} permission.
 
 The first observation is what makes mutable references *safe*. Mutable references allow mutation but prevent aliasing. The borrowed path `vec` becomes temporarily unusable, so effectively not an alias.
 
