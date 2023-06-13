@@ -8,7 +8,7 @@ This repository contains the source of "The Rust Programming Language" book, spe
 
 [The book is available in dead-tree form from No Starch Press][nostarch].
 
-[nostarch]: https://nostarch.com/rust
+[nostarch]: https://nostarch.com/rust-programming-language-2nd-edition
 
 You can also read the book for free online. Please see the book as shipped with
 the latest [stable], [beta], or [nightly] Rust releases. Be aware that issues
@@ -32,7 +32,7 @@ rust-lang/rust uses in [this file][rust-mdbook]. To get it:
 [rust-mdbook]: https://github.com/rust-lang/rust/blob/master/src/tools/rustbook/Cargo.toml
 
 ```bash
-$ cargo install mdbook --vers [version-num]
+$ cargo install mdbook --version <version_num>
 ```
 
 ## Building
@@ -75,7 +75,7 @@ kinds of contributions we're looking for.
 
 [contrib]: https://github.com/rust-lang/book/blob/main/CONTRIBUTING.md
 
-Because the book is [printed](https://nostarch.com/rust), and because we want
+Because the book is [printed][nostarch], and because we want
 to keep the online version of the book close to the print version when
 possible, it may take longer than you're used to for us to address your issue
 or pull request.
