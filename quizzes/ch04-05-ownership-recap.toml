@@ -141,7 +141,8 @@ prompt.distractors = [
 ]
 context = """
 The @Perm{own} permission represents ownership of an object. There can only exist one owner of an object, so it is important
-that references cannot transfer ownership.
+that references cannot transfer ownership of non-copyable types like `String`. If two variables thought they owned
+the same string, then they would both attempt to deallocate it, causing a double-free.
 """
 
 [[questions]]
