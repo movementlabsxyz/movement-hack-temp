@@ -182,6 +182,7 @@ elements in a vector</span>
 To change the value that the mutable reference refers to, we again use the `*` dereference operator to get to the value in `n_ref` before we can use the `+=` operator. 
 <!-- END INTERVENTION -->
 
+{{#quiz ../quizzes/ch08-01-vec-sec1.toml}}
 
 ### Safely Using Iterators
 
@@ -314,7 +315,7 @@ valid.
 
 Let’s move on to the next collection type: `String`!
 
-{{#quiz ../quizzes/ch08-01-vec.toml}}
+{{#quiz ../quizzes/ch08-01-vec-sec2.toml}}
 
 [data-types]: ch03-02-data-types.html#data-types
 [nomicon]: https://doc.rust-lang.org/nomicon/vec/vec.html

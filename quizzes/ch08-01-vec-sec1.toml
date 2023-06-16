@@ -27,24 +27,6 @@ This function does not panic if `n = 1` because it returns before reaching the o
 """
 
 [[questions]]
-id = "5af7c045-95dc-4bd0-9318-7204732e3ed5"
-type = "Tracing"
-prompt.program = """
-fn main() {
-  let mut v = vec![1, 2, 3];
-  for i in &mut v {
-    v.push(*i);
-  }
-  println!("{} {} {}", v[3], v[4], v[5]);
-}
-"""
-answer.doesCompile = false
-answer.lineNumber = 4
-context = """
-Even though `v` is mutably borrowed, that only allows `i` to be mutated inside the for-loop, not `v`. Therefore calling `v.push` is an ownership error.
-"""
-
-[[questions]]
 id = "789dfffc-7556-443d-98ab-5d0a4db5c162"
 type = "Tracing"
 prompt.program = """
@@ -60,29 +42,24 @@ fn main() {
 answer.doesCompile = false
 answer.lineNumber = 6
 context = """
-`Vec::push` moves its argument, so `s` is not usable after calling `v.push(s)`. Therefore calling `println("original: {}", s)` is not ownership-safe.
+`Vec::push` moves its argument, so `s` is not usable after calling `v.push(s)`. Therefore calling `println!("original: {}", s)` is not ownership-safe.
 """
 
 [[questions]]
-id = "e8da8773-8df2-4279-8c27-b7e9eda1dddd"
+id = "66270f68-3ad6-4e79-8c73-c04d2daf9792"
 type = "Tracing"
 prompt.program = """
 fn main() {
-  let mut v: Vec<i32> = vec![1, 2, 3];
-  let mut v2: Vec<&mut i32> = Vec::new();
-  for i in &mut v {
-    v2.push(i);
-  }
-  *v2[0] = 5;
-
-  let a = *v2[0];
-  let b = v[0];
-  println!("{a} {b}");
+  let v = vec![String::from("Hello ")];
+  let mut s = v[0];
+  s.push_str("world");
+  println!("{s}");
 }
 """
-answer.doesCompile = true
-answer.stdout = "5 5"
+answer.doesCompile = false
+answer.lineNumber = 3
 context = """
-`i` has type `&mut i32`, meaning it is a pointer to a number within `v`. So if we push `i` into `v2`, then `v2` contains pointers to `v`. Therefore
-mutating `v2[0]` actually mutates `v[0]`.
+Non-copyable types cannot be moved out of a vector by indexing. Only methods such as `Vec::remove` permit moving out of a vector. See Section 4.3 
+["Copying vs. Moving Out of a Collection"](ch04-03-fixing-ownership-errors.html#fixing-an-unsafe-program-copying-vs-moving-out-of-a-collection)
+for a deeper explanation of why.
 """
