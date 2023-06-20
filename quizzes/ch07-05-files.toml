@@ -9,8 +9,8 @@ foobar
 ├── Cargo.toml
 └── src/
     ├── lib.rs
+    ├── engine.rs
     └── engine/
-        ├── mod.rs
         └── analysis.rs
 ```
 
@@ -23,7 +23,7 @@ pub fn run() {}
 ```
 
 ```
-// engine/mod.rs
+// engine.rs
 mod analysis;
 pub use analysis::*;
 ```
