@@ -9,7 +9,7 @@ to match. Patterns that can fail to match for some possible value are
 <!-- BEGIN INTERVENTION: 3c29eb2d-cbe9-4a2c-99b8-aa5c6467c8b4 -->
 * In the expression `if let Some(x) = a_value`, then `Some(x)` is refutable. If the value in the `a_value` variable is `None` rather than
 `Some`, the `Some(x)` pattern will not match. 
-* In the expression `let &[x, ..] = a_slice`, then `&[x, ..]` is refutable. If the value in the `a_slice` variable has zero elements, the `&[x, ..]` pattern will not match.
+* In the expression `if let &[x, ..] = a_slice`, then `&[x, ..]` is refutable. If the value in the `a_slice` variable has zero elements, the `&[x, ..]` pattern will not match.
 <!-- END INTERVENTION: 3c29eb2d-cbe9-4a2c-99b8-aa5c6467c8b4 -->
 
 Function parameters, `let` statements, and `for` loops can only accept
