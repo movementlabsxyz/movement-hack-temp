@@ -58,7 +58,7 @@ fn greet(g1: &String, g2: &String) { // note the ampersands
 }
 ```
 
-The expression `&m1` uses the ampersand operator to create a reference to (or "borrow") `m1`. The type of the `greet` parameter `g1` is changed to `&String`, meaning "a reference to a `String`". 
+The expression `&m1` uses the ampersand operator to create a reference to (or "borrow") `m1`. The type of the `greet` parameter `g1` is changed to `&String`, meaning "a reference to a `String`".
 
 <!-- At runtime, the references look like this:
 
@@ -66,7 +66,7 @@ The expression `&m1` uses the ampersand operator to create a reference to (or "b
 
 Observe at L2 that there are two steps from `g1` to the string "Hello". `g1` is a reference that points to `m1` on the stack, and `m1` is a String containing a box that points to "Hello" on the heap.
 
-While `m1` owns the heap data "Hello", `g1` does _not_ own either `m1` or "Hello". Therefore after `greet` ends and the program reaches L3, no heap data has been deallocated. Only the stack frame for `greet` disappears. This fact is consistent with our *Moved Heap Data Principle*. Because `g1` did not own "Hello", Rust did not deallocate "Hello" on behalf of `g1`.
+While `m1` owns the heap data "Hello", `g1` does _not_ own either `m1` or "Hello". Therefore after `greet` ends and the program reaches L3, no heap data has been deallocated. Only the stack frame for `greet` disappears. This fact is consistent with our *Box Deallocation Principle*. Because `g1` did not own "Hello", Rust did not deallocate "Hello" on behalf of `g1`.
 
 References are **non-owning pointers**, because they do not own the data they point to.
 
@@ -78,7 +78,7 @@ The previous examples using boxes and strings have not shown how Rust "follows" 
 #fn main() {
 let mut x: Box<i32> = Box::new(1);
 let a: i32 = *x;         // *x reads the heap value, so a = 1
-*x += 1;                 // *x on the left-side modifies the heap value, 
+*x += 1;                 // *x on the left-side modifies the heap value,
                          //     so x points to the value 2
 
 let r1: &Box<i32> = &x;  // r1 points to x on the stack
@@ -115,7 +115,7 @@ assert_eq!(s_len1, s_len2);
 This example shows implicit conversions in three ways:
 1. The `i32::abs` function expects an input of type `i32`. To call `abs` with a `Box<i32>`, you can explicitly dereference the box like `i32::abs(*x)`. You can also implicitly dereference the box using method-call syntax like `x.abs()`. The dot syntax is syntactic sugar for the function-call syntax.
 
-2. This implicit conversion works for multiple layers of pointers. For example, calling `abs` on a reference to a box `r: &Box<i32>` will insert two dereferences. 
+2. This implicit conversion works for multiple layers of pointers. For example, calling `abs` on a reference to a box `r: &Box<i32>` will insert two dereferences.
 
 3. This conversion also works the opposite direction. The function `str::len` expects a reference `&str`. If you call `len` on an owned `String`, then Rust will insert a single borrowing operator. (In fact, there is a further conversion from `String` to `str`!)
 
@@ -185,8 +185,8 @@ The core idea behind the borrow checker is that variables have three kinds of **
 
 These permissions don't exist at runtime, only within the compiler. They describe how the compiler "thinks" about your program before the program is executed.
 
-By default, a variable has read/own permissions (@Perm{read}@Perm{own}) on its data. If a variable is annotated with `let mut`, then it also has the write permission (@Perm{write}). The key idea is 
-that **references can temporarily remove these permissions.** 
+By default, a variable has read/own permissions (@Perm{read}@Perm{own}) on its data. If a variable is annotated with `let mut`, then it also has the write permission (@Perm{write}). The key idea is
+that **references can temporarily remove these permissions.**
 
 To illustrate this idea, let's look at the permissions on a variation of the program above that is actually safe. The `push` has been moved after the `println!`. The permissions in this program are visualized with a new kind of diagram. The diagram shows the changes in permissions on each line.
 
@@ -259,7 +259,7 @@ println!("Third element is {}", *num);
 #}
 ```
 
-Any time a path is used, Rust expects that path to have certain permissions depending on the operation. For example, the borrow `&vec[2]` requires that `vec` is readable. Therefore the @Perm{read} permission is shown between the operation `&` and the path `vec`. The letter is filled-in because `vec` has the read permission at that line. 
+Any time a path is used, Rust expects that path to have certain permissions depending on the operation. For example, the borrow `&vec[2]` requires that `vec` is readable. Therefore the @Perm{read} permission is shown between the operation `&` and the path `vec`. The letter is filled-in because `vec` has the read permission at that line.
 
 By contrast, the mutating operation `vec.push(4)` requires that `vec` is readable and writable. Both @Perm{read} and @Perm{write} are shown. However, `vec` does not have write permissions (it is borrowed by `num`). So the letter @Perm[missing]{write} is hollow, indicating that the write permission is *expected* but `vec` does not have it.
 
@@ -385,7 +385,7 @@ fn first(strings: &Vec<String>) -> &String {
 }
 ```
 
-This snippet introduces a new kind of permission, the flow permission @Perm{flow}. The @Perm{flow} permission is expected whenever an expression uses an input reference (like `&strings[0]`), or returns an output reference (like `return s_ref`). 
+This snippet introduces a new kind of permission, the flow permission @Perm{flow}. The @Perm{flow} permission is expected whenever an expression uses an input reference (like `&strings[0]`), or returns an output reference (like `return s_ref`).
 
 Unlike the @Perm{read}@Perm{write}@Perm{own} permissions, @Perm{flow} does not change throughout the body of a function. A reference has the @Perm{flow} permission if it's allowed to be used (that is, to *flow*) in a particular expression. For example, let's say we change `first` to a new function `first_or` that includes a `default` parameter:
 
@@ -395,7 +395,7 @@ fn first_or(strings: &Vec<String>, default: &String) -> &String {
         &strings[0]`{}`
     } else {
         default`{}`
-    }    
+    }
 }
 ```
 
