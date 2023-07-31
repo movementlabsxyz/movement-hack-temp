@@ -68,7 +68,7 @@ fn move_a_box(b: Box<i32>) {
 Below are four snippets which are rejected by the Rust compiler. 
 Imagine that Rust instead allowed these snippets to compile and run. 
 Select each snippet that would cause undefined behavior, or select 
-"None of the above" is none of these snippets would cause undefined behavior.
+"None of the above" if none of these snippets would cause undefined behavior.
 """
 answer.answer = [
 """
