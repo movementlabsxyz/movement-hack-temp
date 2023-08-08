@@ -61,7 +61,7 @@ export const highlightIsValid = (highlighter: Highlighter, highlight: HighlightS
   let dom_nodes = highlighter.getDoms(highlight.id);
 
   // if highlight has no DOM node, filter
-  if (!dom_nodes) return false;
+  if (!dom_nodes || dom_nodes.length == 0) return false;
 
   // check highlight's DOM node content hasn't changed
   let domHash = md5(dom_nodes[0].innerHTML);
