@@ -174,6 +174,7 @@ Borrowing a variable (creating a reference to it) temporarily removes some of th
 let mut s = String::from("Hello");
 let s_ref = &s;
 println!("{s_ref}");
+println!("{s}");
 #}
 ```
 
@@ -184,6 +185,7 @@ But mutating an immutable reference is not ok:
 let mut s = String::from("Hello");
 let s_ref = &s;`(focus,paths:*s_ref)`
 s_ref.push_str(" world");
+println!("{s}");
 #}
 ```
 
@@ -205,6 +207,7 @@ And moving data out of the reference is not ok:
 let mut s = String::from("Hello");
 let s_ref = &s;`(focus,paths:*s_ref)`
 let s2 = *s_ref;
+println!("{s}");
 #}
 ```
 
