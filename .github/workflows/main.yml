@@ -41,7 +41,7 @@ jobs:
       run: |
         mkdir bin
         curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.25/mdbook-v0.4.25-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
-        curl -sSL https://github.com/cognitive-engineering-lab/mdbook-quiz/releases/download/v0.3.0/mdbook-quiz_x86_64-unknown-linux-gnu_full.tar.gz | tar -xz --directory=bin
+        curl -sSL https://github.com/cognitive-engineering-lab/mdbook-quiz/releases/download/v0.3.1/mdbook-quiz_x86_64-unknown-linux-gnu_full.tar.gz | tar -xz --directory=bin
         echo "$(pwd)/bin" >> ${GITHUB_PATH}
 
     - name: Report versions
@@ -49,6 +49,7 @@ jobs:
         rustup --version
         rustc -Vv
         mdbook --version
+        mdbook-quiz --version
 
     - name: Install cargo-make
       uses: davidB/rust-cargo-make@v1 
