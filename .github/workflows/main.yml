@@ -25,9 +25,6 @@ jobs:
       with:
         version: 6.7.0
 
-    - name: Install Depot
-      run: curl https://raw.githubusercontent.com/cognitive-engineering-lab/depot/main/scripts/install.sh | sh
-    
     - name: Update rustup
       run: rustup self update
 
@@ -37,10 +34,14 @@ jobs:
         rustup toolchain install 1.70 -c rust-docs
         rustup default 1.70
 
-    - name: Install mdbook
+    - name: Install Depot
+      run: curl https://raw.githubusercontent.com/cognitive-engineering-lab/depot/main/scripts/install.sh | sh
+    
+    - name: Install mdbook and mdbook-quiz
       run: |
         mkdir bin
         curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.25/mdbook-v0.4.25-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
+        curl -sSL https://github.com/cognitive-engineering-lab/mdbook-quiz/releases/download/v0.3.0/mdbook-quiz_x86_64-unknown-linux-gnu_full.tar.gz | tar -xz --directory=bin
         echo "$(pwd)/bin" >> ${GITHUB_PATH}
 
     - name: Report versions
@@ -49,18 +50,14 @@ jobs:
         rustc -Vv
         mdbook --version
 
-    - uses: davidB/rust-cargo-make@v1 
+    - name: Install cargo-make
+      uses: davidB/rust-cargo-make@v1 
+
     - name: Install mdbook-aquascope
       run: |
         git clone https://github.com/cognitive-engineering-lab/aquascope
         cd aquascope        
         cargo make install-mdbook
-        
-    - name: Install mdbook-quiz
-      run: |
-        git clone https://github.com/cognitive-engineering-lab/mdbook-quiz
-        cd mdbook-quiz
-        cargo make install
 
     - name: Install js-extensions
       run: |
