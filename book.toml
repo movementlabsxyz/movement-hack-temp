@@ -22,6 +22,7 @@ git-repository-url = "https://github.com/cognitive-engineering-lab/rust-book"
 fullscreen = true
 validate = true
 cache-answers = true
+more-words = "words.dic"
 
 [preprocessor.aquascope]
 
