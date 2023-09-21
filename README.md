@@ -35,6 +35,13 @@ rust-lang/rust uses in [this file][rust-mdbook]. To get it:
 $ cargo install mdbook --version <version_num>
 ```
 
+This fork also requires a few mdBook preprocessors to support our experimental extensions. Follow the installation instructions at each link below.
+
+* `mdbook-aquascope`: <https://github.com/cognitive-engineering-lab/aquascope#installation>
+* `mdbook-quiz`: <https://github.com/cognitive-engineering-lab/mdbook-quiz#installation>
+
+You should install the same version of each preprocessor [used in CI](https://github.com/cognitive-engineering-lab/rust-book/blob/main/.github/workflows/main.yml).
+
 ## Building
 
 To build the book, type:

@@ -9,6 +9,8 @@ on:
 env:
   RUST_LIB_BACKTRACE: 1
   RAYON_NUM_THREADS: 1
+  MDBOOK_QUIZ_VERSION: 0.3.2
+  AQUASCOPE_VERSION: 0.3.0
 
 jobs:
   test:
@@ -41,7 +43,7 @@ jobs:
       run: |
         mkdir bin
         curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.25/mdbook-v0.4.25-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
-        curl -sSL https://github.com/cognitive-engineering-lab/mdbook-quiz/releases/download/v0.3.1/mdbook-quiz_x86_64-unknown-linux-gnu_full.tar.gz | tar -xz --directory=bin
+        curl -sSL https://github.com/cognitive-engineering-lab/mdbook-quiz/releases/download/v${MDBOOK_QUIZ_VERSION}/mdbook-quiz_x86_64-unknown-linux-gnu_full.tar.gz | tar -xz --directory=bin
         echo "$(pwd)/bin" >> ${GITHUB_PATH}
 
     - name: Report versions
@@ -56,7 +58,7 @@ jobs:
 
     - name: Install mdbook-aquascope
       run: |
-        git clone https://github.com/cognitive-engineering-lab/aquascope
+        git clone -b v${AQUASCOPE_VERSION} https://github.com/cognitive-engineering-lab/aquascope
         cd aquascope        
         cargo make install-mdbook
 
