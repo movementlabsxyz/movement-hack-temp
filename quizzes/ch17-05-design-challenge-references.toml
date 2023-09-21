@@ -1,9 +1,8 @@
-[[questions]]
-type = "MultipleChoice"
-prompt.prompt = """
+[multipart]
+q = """
 **Context:** You are designing a simple asset manager for a game engine.
 
-**Key Functionality:** An API client will provide paths of assets to load, and gets back access to the loaded assets.
+**Functionality:** An API client will provide paths of assets to load, and gets back access to the loaded assets.
 
 **Assumptions:** You may assume that loads happen synchronously and instantaneously.
 
@@ -38,8 +37,13 @@ impl AssetManager {
     pub fn get(&self, handle: AssetHandle) -> &Asset;
 }
 ```
+"""
 
-Your task is to determine which designs satisfy a new requirement:
+[[questions]]
+type = "MultipleChoice"
+multipart = "q"
+prompt.prompt = """
+Select each design option that satisfies the following requirement:
 
 **Requirement:** Once loaded, an asset should be permanently immutable.
 """
@@ -56,46 +60,9 @@ id = "10ae140e-72a6-4594-802a-d656f33cd836"
 
 [[questions]]
 type = "MultipleChoice"
+multipart = "q"
 prompt.prompt = """
-**Context:** You are designing a simple asset manager for a game engine.
-
-**Key Functionality:** An API client will provide paths of assets to load, and gets back access to the loaded assets.
-
-**Assumptions:** You may assume that loads happen synchronously and instantaneously.
-
-**Designs:** Below are several proposed designs to implement the functionality.
-
-```
-pub struct AssetManager {
-    // ...
-}
-
-// Option 1
-impl AssetManager {
-    pub fn load(&mut self, path: PathBuf) -> &Asset;
-}
-
-// Option 2
-impl AssetManager {
-    pub fn load(&mut self, path: PathBuf) -> &mut Asset;
-}
-
-// Option 3
-impl AssetManager {
-    pub fn load(&mut self, path: PathBuf) -> Rc<Asset>;
-}
-
-// Option 4
-#[derive(Copy, Clone)]
-pub struct AssetHandle(usize);
-
-impl AssetManager {
-    pub fn load(&mut self, path: PathBuf) -> AssetHandle;
-    pub fn get(&self, handle: AssetHandle) -> &Asset;
-}
-```
-
-Your task is to determine which designs satisfy a new requirement:
+Select each design option that satisfies the following requirement:
 
 **Requirement:**  Clients of the asset manager need to retain access to assets across several short-term borrows of the asset manager.
 """
@@ -128,47 +95,10 @@ id = "b69cde98-8ccd-4a89-aeeb-80a3338f9e68"
 
 
 [[questions]]
+multipart = "q"
 type = "MultipleChoice"
 prompt.prompt = """
-**Context:** You are designing a simple asset manager for a game engine.
-
-**Key Functionality:** An API client will provide paths of assets to load, and gets back access to the loaded assets.
-
-**Assumptions:** You may assume that loads happen synchronously and instantaneously.
-
-**Designs:** Below are several proposed designs to implement the functionality.
-
-```
-pub struct AssetManager {
-    // ...
-}
-
-// Option 1
-impl AssetManager {
-    pub fn load(&mut self, path: PathBuf) -> &Asset;
-}
-
-// Option 2
-impl AssetManager {
-    pub fn load(&mut self, path: PathBuf) -> &mut Asset;
-}
-
-// Option 3
-impl AssetManager {
-    pub fn load(&mut self, path: PathBuf) -> Rc<Asset>;
-}
-
-// Option 4
-#[derive(Copy, Clone)]
-pub struct AssetHandle(usize);
-
-impl AssetManager {
-    pub fn load(&mut self, path: PathBuf) -> AssetHandle;
-    pub fn get(&self, handle: AssetHandle) -> &Asset;
-}
-```
-
-Your task is to determine which designs satisfy a new requirement:
+Select each design option that satisfies the following requirement:
 
 **Requirement:** It is important that all assets be deallocated at a single, predictable time.
 """

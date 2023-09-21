@@ -2,11 +2,11 @@
 
 This section is about **design trade-offs** in Rust. To be an effective Rust engineer, it's not enough just to know how Rust works. You have to decide which of Rust's many tools are appropriate for a given job. In this section, we will give you a sequence of quizzes about your understanding of design trade-offs in Rust.  After each quiz, we will explain in-depth our rationale for each question.
 
-Here's an example of what a question will look like:
+Here's an example of what a question will look like. It will start out by describing a software case study with a space of designs:
 
-> **Context:** You are designing an application with a common context, e.g. containing command-line flags.
+> **Context:** You are designing an application with a global configuration, e.g. containing command-line flags.
 >
-> **Key Functionality:** The application need to pass immutable references to this context throughout the application.
+> **Functionality:** The application need to pass immutable references to this configuration throughout the application.
 >
 > **Designs:** Below are several proposed designs to implement the functionality.
 >
@@ -14,24 +14,28 @@ Here's an example of what a question will look like:
 > # use std::rc::Rc;
 > # use std::sync::Arc;
 > #
-> struct Context { 
+> struct Config { 
 >     flags: Flags,
 >     // .. more fields ..
 > }
 > 
 > // Option 1
-> struct ContextRef<'a>(&'a Context);
+> struct ConfigRef<'a>(&'a Config);
 > 
 > // Option 2
-> struct ContextRef(Rc<Context>);
+> struct ConfigRef(Rc<Config>);
 > 
 > // Option 3
-> struct ContextRef(Arc<Context>);
+> struct ConfigRef(Arc<Config>);
 > ```
+
+Given just the context and key functionality, all three designs are potential candidates. 
+We need more information about the system goals to decide which one makes sense.
+Hence, we give a new requirement:
+
+> Select each design option that satisfies the following requirement:
 >
-> Your task is to determine which designs satisfy a given requirement:
->
-> **Requirement:** The context reference must be sharable between multiple threads.
+> **Requirement:** The configuration reference must be sharable between multiple threads.
 >
 > **Answer:**
 >
@@ -39,16 +43,12 @@ Here's an example of what a question will look like:
 > <input type="checkbox" disabled> Option 2 <br>
 > <input type="checkbox" checked disabled> Option 3 <br>
 
-Given just the context and key functionality, all three designs are potential candidates. 
-We need more information about the system goals to decide which one makes sense.
-Hence, we give a new requirement that the context reference must shared between threads.
-
-In formal terms, this means that `ContextRef` implements [`Send`] and [`Sync`]. 
-Assuming `Context: Send + Sync`, then both `&Context` and `Arc<Context>` satisfy this requirement,
+In formal terms, this means that `ConfigRef` implements [`Send`] and [`Sync`]. 
+Assuming `Config: Send + Sync`, then both `&Config` and `Arc<Config>` satisfy this requirement,
 but [`Rc`] does not (because non-atomic reference-counted pointers are not thread-safe). So Option 2 does not satisfy the requirement, while Option 3 does.
 
 We might also be tempted to conclude that Option 1 does not satisfy the requirement because functions like [`thread::spawn`] require that all data moved into a thread can only contain references with a `'static` lifetime. However, that does not rule out Option 1 for two reasons:
-1.  The `Context` could be stored as a global static variable (e.g., using [`OnceLock`]), so one could construct `&'static Context` references.
+1.  The `Config` could be stored as a global static variable (e.g., using [`OnceLock`]), so one could construct `&'static Config` references.
 2. Not all concurrency mechanisms require `'static` lifetimes, such as [`thread::scope`]. 
 
 Therefore the requirement as-stated only rules out non-[`Send`] types, and we consider Options 1 and 3 to be the correct answers.
@@ -57,13 +57,17 @@ Therefore the requirement as-stated only rules out non-[`Send`] types, and we co
 
 {{#quiz ../quizzes/ch17-05-design-challenge-references.toml}}
 
-<!-- <br>
-<details>
-<summary>Click here to see the explanation AFTER you've completed the questions above.</summary>
+## Trait Trees
 
-An explanation of each question will go here!
+{{#quiz ../quizzes/ch17-05-design-challenge-trait-trees.toml}}
 
-</details> -->
+## Dispatch
+
+{{#quiz ../quizzes/ch17-05-design-challenge-dispatch.toml}}
+
+## Intermediates
+
+{{#quiz ../quizzes/ch17-05-design-challenge-intermediates.toml}}
 
 [`thread::spawn`]: https://doc.rust-lang.org/std/thread/fn.spawn.html
 [`Send`]: https://doc.rust-lang.org/std/marker/trait.Send.html
