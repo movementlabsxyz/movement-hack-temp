@@ -13,22 +13,22 @@ pub struct AssetManager {
     // ...
 }
 
-// Option 1
+// Option 1: return a reference
 impl AssetManager {
     pub fn load(&mut self, path: PathBuf) -> &Asset;
 }
 
-// Option 2
+// Option 2: return a mutable reference
 impl AssetManager {
     pub fn load(&mut self, path: PathBuf) -> &mut Asset;
 }
 
-// Option 3
+// Option 3: return a reference-counted pointer
 impl AssetManager {
     pub fn load(&mut self, path: PathBuf) -> Rc<Asset>;
 }
 
-// Option 4
+// Option 4: return a copyable handle that can be turned into a reference
 #[derive(Copy, Clone)]
 pub struct AssetHandle(usize);
 
@@ -108,7 +108,7 @@ answer.answer = ["1", "2", "4"]
 context = """
 To deallocate all assets at a single time, the `AssetManager` must retain exclusive ownership over them.
 Therefore when the `AssetManager` is dropped (or otherwise instructed to deallocate assets), 
-it is guaranteed that all of the `Asset`s can be safely dropped.
+it is guaranteed that all of the assets can be safely dropped.
 Options 1, 2, and 4 DO satisfy this requirement. Option 4 would require that `AssetManager::get` panics if
 the client calls `manager.get(handle)` after an asset has been deallocated. If there is a real chance a client may do this,
 another alternative would be for `get` to return `Option<&Asset>`.

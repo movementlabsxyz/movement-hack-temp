@@ -7,7 +7,7 @@ q = """
 **Designs:** Below are several proposed designs to implement the functionality.
 
 ```
-// Option 1
+// Option 1: types serialize to a `Value` enum
 pub enum Value {
 	String(String),
 	Number(isize)
@@ -26,20 +26,22 @@ pub fn to_json(data: impl Serialize) -> String {
     value_to_json(value)
 }
 
-// Option 2
+
+// Option 2: types serialize via calls to a `Serializer` interface
+pub trait Serialize {
+	fn serialize<S: Serializer>(&self, serializer: &mut S);
+}
+
 pub trait Serializer {
 	fn serialize_string(&mut self, s: &str);
 	fn serialize_number(&mut self, n: isize);
-}
-
-pub trait Serialize {
-	fn serialize<S: Serializer>(&self, serializer: &mut S);
 }
 
 struct JsonSerializer { buffer: String };
 impl Serializer for JsonSerializer {
 	/* .. */
 }
+
 pub fn to_json(data: impl Serialize) -> String { 
 	let mut serializer = JsonSerializer { buffer: String::new() };
 	data.serialize(&mut serializer);
@@ -60,7 +62,7 @@ prompt.distractors = []
 prompt.sortAnswers = true
 answer.answer = ["1", "2"]
 context = """
-Both designs are sufficiently decoupled such that each new data format does is independent of any `Serialize` implementations. For Option 1,
+Both designs are sufficiently decoupled such that each new data format is independent of any `Serialize` implementations. For Option 1,
 each data format converts a `Value` into the format's representation. `Value` acts as a module boundary.
 
 For Option 2, there is no explicit intermediate representation of a serialized value, but rather each `Serialize` implementation is explicitly generic

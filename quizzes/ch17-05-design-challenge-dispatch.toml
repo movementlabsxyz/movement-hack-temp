@@ -2,7 +2,7 @@
 q = """
 **Context:** You are designing a simple event system that calls callback functions in response to events. 
 
-**Functionality:** An `Events` struct provides functions to register callbacks, such as top-level functions or closures. 
+**Functionality:** An `Events` struct provides functions to register callbacks.
 A callback is either parallelizable (runnable across multiple threads) or sequential (must be run only on the main thread).
 
 **Designs:** Below are several proposed designs to implement the functionality.
@@ -12,13 +12,13 @@ pub struct Events {
 	// ...
 }
 
-// Option 1
+// Option 1: parallel and sequential are two separate methods
 impl Events {
 	pub fn register<E, F: Fn(E)>(&mut self, f: F) { /* .. */ }
 	pub fn register_sequential<E, F: Fn(E)>(&mut self, f: F) { /* .. */ }
 }
 
-// Option 2
+// Option 2: parallel and sequential are two members of an enum
 pub enum Callback<F> {
 	Parallel(F),
 	Sequential(F)
@@ -27,7 +27,7 @@ impl Events {
 	pub fn register<E, F: Fn(E)>(&mut self, f: Callback<F>) { /* .. */ }
 }
 
-// Option 3
+// Option 3: parallel and sequential are markers in a trait method
 pub trait Register<Marker, F, E> {
 	fn register(&mut self, f: F);
 }
@@ -58,7 +58,7 @@ answer.answer = ["1", "3"]
 context = """
 First, let's imagine what it would look like to register a callback under each design.
 
-```
+```rust
 // Option 1
 events.register(|e: OnClick| { /* .. */ });
 events.register_sequential(|e: OnClick| { /* .. */ })

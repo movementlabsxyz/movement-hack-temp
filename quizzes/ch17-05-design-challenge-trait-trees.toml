@@ -7,28 +7,28 @@ q = """
 **Designs:** Below are several proposed designs to implement the functionality.
 
 ```
-// Option 1
+// Option 1: children must be Self
 pub trait Widget: Sized {
 	fn render(&self) -> Vec<Self>;
 }
 
-// Option 2
+// Option 2: children are a trait parameter
 pub trait Widget<Children> {
 	fn render(&self) -> Vec<Children>;
 }
 
-// Option 3
+// Option 3: children are an associated type
 pub trait Widget {
 	type Children: Widget;
 	fn render(&self) -> Vec<Self::Children>;
 }
 
-// Option 4
+// Option 4: children are a reference trait object
 pub trait Widget {
 	fn render(&self) -> Vec<&dyn Widget>;
 }
 
-// Option 5
+// Option 5: children are a boxed trait object
 pub trait Widget {
 	fn render(&self) -> Vec<Box<dyn Widget>>;
 }
@@ -88,7 +88,7 @@ impl Widget for Text { /* .. */ }
 ```
 
 Therefore a vector of widgets needs to be heterogeneous, i.e., it could contain widgets of distinct types.
-Options 1, 2, and 3 all constraint each `Widget::render` implementation to return a vector of a single widget type.
+Options 1, 2, and 3 all constrain each `Widget::render` implementation to return a vector of a single widget type.
 Options 4 and 5 use dynamic dispatch via trait objects to permit heterogeneous widget vectors.
 """
 id = "0fdd5ca0-835f-4999-8d24-37841cb0a1a7"
