@@ -1,0 +1,112 @@
+[multipart]
+q = """
+**Context:** You are designing a simple user interface framework that consists of a tree of widgets, such as text and buttons.
+
+**Functionality:** The API provides a `Widget` trait that defines how a widget works. The API client implements the `Widget` trait, and calls it to render a UI.
+
+**Designs:** Below are several proposed designs to implement the functionality.
+
+```
+// Option 1: children must be Self
+pub trait Widget: Sized {
+	fn render(&self) -> Vec<Self>;
+}
+
+// Option 2: children are a trait parameter
+pub trait Widget<Children> {
+	fn render(&self) -> Vec<Children>;
+}
+
+// Option 3: children are an associated type
+pub trait Widget {
+	type Children: Widget;
+	fn render(&self) -> Vec<Self::Children>;
+}
+
+// Option 4: children are a reference trait object
+pub trait Widget {
+	fn render(&self) -> Vec<&dyn Widget>;
+}
+
+// Option 5: children are a boxed trait object
+pub trait Widget {
+	fn render(&self) -> Vec<Box<dyn Widget>>;
+}
+```
+"""
+
+[[questions]]
+type = "MultipleChoice"
+multipart = "q"
+prompt.prompt = """
+Select each design option that satisfies the following requirement:
+
+**Requirement:** The API client is expected to provide a single `WidgetImpl` enum representing all possible widgets, and implement the `Widget` trait for `WidgetImpl`.
+"""
+prompt.distractors = ["2", "3", "4", "5"]
+prompt.sortAnswers = true
+answer.answer = ["1"]
+context = """
+If we represent all possible widgets as a single enum, like this:
+
+```
+enum WidgetImpl {
+  Button { /* .. */ },
+  Text { /* .. */ },
+  // ..
+}
+
+impl Widget for WidgetImpl { /* .. */ }
+```
+
+Then we have a "closed world" system where there is a non-extensible set of possible widgets. There is only one implementation of `Widget`, and no need for dynamic dispatch. 
+Therefore only Option 1 makes sense, because `render` would only ever return other `WidgetImpl` types. All other designs contain unnecessary complexity under this requirement.
+"""
+id = "e529cabf-a14c-4f1b-865f-1f376b704df8"
+
+[[questions]]
+type = "MultipleChoice"
+multipart = "q"
+prompt.prompt = """
+Select each design option that satisfies the following requirement:
+
+**Requirement:** The API client is expected to provide a unique struct for each possible widget, and implement the `Widget` trait for each struct. 
+Each widget can return a vector containing widgets of any possible type.
+"""
+prompt.distractors = ["1", "2", "3"]
+prompt.sortAnswers = true
+answer.answer = ["4", "5"]
+context = """
+Unlike the previous question, now we expect to have a distinct type for each widget, like:
+
+```
+struct Button { /* .. */ }
+impl Widget for Button { /* .. */ }
+
+struct Text { /* .. */ }
+impl Widget for Text { /* .. */ }
+```
+
+Therefore a vector of widgets needs to be heterogeneous, i.e., it could contain widgets of distinct types.
+Options 1, 2, and 3 all constrain each `Widget::render` implementation to return a vector of a single widget type.
+Options 4 and 5 use dynamic dispatch via trait objects to permit heterogeneous widget vectors.
+"""
+id = "0fdd5ca0-835f-4999-8d24-37841cb0a1a7"
+
+
+[[questions]]
+multipart = "q"
+type = "MultipleChoice"
+prompt.prompt = """
+Select each design option that satisfies the following requirement:
+
+**Requirement:** Only types that implement the `Widget` trait should be returned from `render`.
+"""
+prompt.distractors = ["2"]
+prompt.sortAnswers = true
+answer.answer = ["1", "3", "4", "5"]
+context = """
+The `Widget` trait in Option 2 does not constrain that `Children: Widget`. 
+All other options do ensure return a `Vec<W>` for some `W` where `W: Widget`.
+"""
+id = "fbed1c75-737c-49f5-8f11-66d25391079b"
