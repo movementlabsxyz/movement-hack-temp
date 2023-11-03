@@ -39,8 +39,8 @@ d2.add_word("world")
 
 Consider two key questions about this example:
 
-1. **When is the word array deallocated?** 
-This program has created three pointers to the same array. The variables `words`, `d`, and `d2` all contain a pointer to the word list allocated on the heap. Therefore Python will only deallocate the word array when all three variables are out of scope. More generally, it's often difficult to predict where data will be garbage-collected just by reading the source code.
+1. **When is the words array deallocated?** 
+This program has created three pointers to the same array. The variables `words`, `d`, and `d2` all contain a pointer to the words array allocated on the heap. Therefore Python will only deallocate the words array when all three variables are out of scope. More generally, it's often difficult to predict where data will be garbage-collected just by reading the source code.
 
 2. **What are the contents of the document `d`?** 
 Because `d2` contains a pointer to the same words array as `d`, then `d2.add_word("world")` also mutates the document `d`. Therefore in this example, the words in `d` are `["Hello", "world"]`. This happens because `d.get_words()` returns a mutable reference to the words array in `d`. Pervasive, implicit mutable references can easily lead to unpredictable bugs when data structures can leak their internals[^ownership-originally]. Here, it is probably not intended behavior that a change to `d2` can change `d`.
