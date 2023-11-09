@@ -378,7 +378,7 @@ A similar kind of problem arises when we borrow elements of an array. For exampl
 ```aquascope,permissions,stepper,boundaries
 #fn main() {
 let mut a = [0, 1, 2, 3];
-let x = &mut a[0];`(focus,paths:a[_])`
+let x = &mut a[1];`(focus,paths:a[_])`
 *x += 1;`(focus,paths:a[_])`
 println!("{a:?}");
 #}
@@ -396,8 +396,8 @@ What is the value of `idx`? Rust isn't going to guess, so it assumes `idx` could
 ```aquascope,permissions,boundaries,stepper,shouldFail
 #fn main() {
 let mut a = [0, 1, 2, 3];
-let x = &mut a[0];`(focus,paths:a[_])`
-let y = &a[1];`{}`
+let x = &mut a[1];`(focus,paths:a[_])`
+let y = &a[2];`{}`
 *x += *y;
 #}
 ```
@@ -408,9 +408,9 @@ However, Rust will reject this program because `a` gave its read permission to `
 error[E0502]: cannot borrow `a[_]` as immutable because it is also borrowed as mutable
  --> test.rs:4:9
   |
-3 | let x = &mut a[0];
+3 | let x = &mut a[1];
   |         --------- mutable borrow occurs here
-4 | let y = &a[1];
+4 | let y = &a[2];
   |         ^^^^^ immutable borrow occurs here
 5 | *x += *y;
   | -------- mutable borrow later used here
@@ -419,29 +419,30 @@ error[E0502]: cannot borrow `a[_]` as immutable because it is also borrowed as m
 <!-- However, Rust will reject this program because `a` gave its read permission to `x`. -->
 
 
-Again, **this program is safe.** For cases like these, Rust often provides a function in the standard library that can work around the borrow checker. For example, we could use [`slice::split_first_mut`][split_first_mut]:
+Again, **this program is safe.** For cases like these, Rust often provides a function in the standard library that can work around the borrow checker. For example, we could use [`slice::split_at_mut`][split_at_mut]:
 
 ```rust,ignore
 #fn main() {
 let mut a = [0, 1, 2, 3];
-let (x, rest) = a.split_first_mut().unwrap();
-let y = &rest[0];
+let (a_l, a_r) = a.split_at_mut(2);
+let x = &mut a_l[1];
+let y = &a_r[0];
 *x += *y;
 #}
 ```
 
-You might wonder, but how is `split_first_mut` implemented? In some Rust libraries, especially core types like `Vec` or `slice`, you will often find **`unsafe` blocks**. `unsafe` blocks allow the use of "raw" pointers, which are not checked for safety by the borrow checker. For example, we could use an unsafe block to accomplish our task:
+You might wonder, but how is `split_at_mut` implemented? In some Rust libraries, especially core types like `Vec` or `slice`, you will often find **`unsafe` blocks**. `unsafe` blocks allow the use of "raw" pointers, which are not checked for safety by the borrow checker. For example, we could use an unsafe block to accomplish our task:
 
 ```rust,ignore
 #fn main() {
 let mut a = [0, 1, 2, 3];
-let x = &mut a[0] as *mut i32;
-let y = &a[1] as *const i32;
+let x = &mut a[1] as *mut i32;
+let y = &a[2] as *const i32;
 unsafe { *x += *y; } // DO NOT DO THIS unless you know what you're doing!
 #}
 ```
 
-Unsafe code is sometimes necessary to work around the limitations of the borrow checker. As a general strategy, let's say the borrow checker rejects a program you think is actually safe. Then you should look for standard library functions (like `split_first_mut`) that contain `unsafe` blocks which solve your problem. We will discuss unsafe code further in [Chapter 19][unsafe]. For now, just be aware that unsafe code is how Rust implements certain otherwise-impossible patterns.
+Unsafe code is sometimes necessary to work around the limitations of the borrow checker. As a general strategy, let's say the borrow checker rejects a program you think is actually safe. Then you should look for standard library functions (like `split_at_mut`) that contain `unsafe` blocks which solve your problem. We will discuss unsafe code further in [Chapter 19][unsafe]. For now, just be aware that unsafe code is how Rust implements certain otherwise-impossible patterns.
 
 {{#quiz ../quizzes/ch04-03-fixing-ownership-errors-sec2-safety.toml}}
 
@@ -451,7 +452,7 @@ When fixing an ownership error, you should ask yourself: is my program actually 
 
 [rc]: https://doc.rust-lang.org/std/rc/index.html
 [cells]: https://doc.rust-lang.org/std/cell/index.html
-[split_first_mut]: https://doc.rust-lang.org/std/primitive.slice.html#method.split_first_mut
+[split_first_mut]: https://doc.rust-lang.org/std/primitive.slice.html#method.split_at_mut
 [unsafe]: ch19-01-unsafe-rust.html
 [`Vec::remove`]: https://doc.rust-lang.org/std/vec/struct.Vec.html#method.remove
 [iterators]: ch13-02-iterators.html
