@@ -19,7 +19,8 @@ let ConsentForm = () => {
           <div className="row">
             <p>
               This website is an experiment by Brown University researchers{" "}
-              <a href="https://willcrichton.net/">Will Crichton</a> and{" "}
+              <a href="https://willcrichton.net/">Will Crichton</a>,{" "}
+              <a href="https://gavinleroy.com/">Gavin Gray</a>, and{" "}
               <a href="https://cs.brown.edu/~sk/">Shriram Krishnamurthi</a>. The goal of this
               experiment is to evaluate and improve the content of the Rust Book to help people
               learn Rust more effectively.
