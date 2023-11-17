@@ -452,7 +452,7 @@ When fixing an ownership error, you should ask yourself: is my program actually 
 
 [rc]: https://doc.rust-lang.org/std/rc/index.html
 [cells]: https://doc.rust-lang.org/std/cell/index.html
-[split_first_mut]: https://doc.rust-lang.org/std/primitive.slice.html#method.split_at_mut
+[split_at_mut]: https://doc.rust-lang.org/std/primitive.slice.html#method.split_at_mut
 [unsafe]: ch19-01-unsafe-rust.html
 [`Vec::remove`]: https://doc.rust-lang.org/std/vec/struct.Vec.html#method.remove
 [iterators]: ch13-02-iterators.html
