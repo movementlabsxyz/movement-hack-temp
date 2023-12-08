@@ -42,9 +42,19 @@ This fork also requires a few mdBook preprocessors to support our experimental e
 
 You should install the same version of each preprocessor [used in CI](https://github.com/cognitive-engineering-lab/rust-book/blob/main/.github/workflows/main.yml).
 
+Finally, you need [pnpm](https://pnpm.io/installation).
+
 ## Building
 
-To build the book, type:
+First, build the Javascript extensions.
+
+```bash
+$ cd js-extensions
+$ pnpm init-repo
+$ cd ..
+```
+
+Then to build the book, type:
 
 ```bash
 $ mdbook build
