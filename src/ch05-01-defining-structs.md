@@ -196,7 +196,7 @@ longer use `user1` after creating `user2` because the `String` in the
 `active` and `sign_in_count` values from `user1`, then `user1` would still be
 valid after creating `user2`. The types of `active` and `sign_in_count` are
 types that implement the `Copy` trait, so the behavior we discussed in the
-[“Copying vs. Moving Out of a Vector”][copy]<!-- ignore --> section would apply.
+[“Copying vs. Moving Out of a Collection”][copy]<!-- ignore --> section would apply.
 
 ### Using Tuple Structs Without Named Fields to Create Different Types
 
@@ -398,5 +398,5 @@ add `> ` before every line -->
 
 [tuples]: ch03-02-data-types.html#the-tuple-type
 [move]: ch04-01-what-is-ownership.html
-[copy]: ch04-03-fixing-ownership-errors.html#fixing-an-unsafe-program-copying-vs-moving-out-of-a-vector
+[copy]: ch04-03-fixing-ownership-errors.html#fixing-an-unsafe-program-copying-vs-moving-out-of-a-collection
 [differentfields]: ch04-03-fixing-ownership-errors.html#fixing-a-safe-program-mutating-different-tuple-fields
