@@ -1,6 +1,6 @@
 [book]
-title = "The Rust Programming Language"
-authors = ["Steve Klabnik", "Carol Nichols", "Contributions from the Rust Community"]
+title = "Movement Hack"
+authors = ["Andy Golay", "Contributions from the Movement Community"]
 
 [output.html]
 additional-css = [

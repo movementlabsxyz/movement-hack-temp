@@ -13,17 +13,17 @@ let ConsentForm = () => {
   return (
     <div className="consent-form" ref={ref}>
       <div className="container">
-        <h1>Experiment: Improving the Rust Book</h1>
+        <h1>Experiment: Interactive Movement Hack</h1>
         <section>
           <h2>What is this?</h2>
           <div className="row">
             <p>
-              This website is an experiment by Brown University researchers{" "}
+              This website is an experiment by Movement Labs{" "}
               <a href="https://willcrichton.net/">Will Crichton</a>,{" "}
               <a href="https://gavinleroy.com/">Gavin Gray</a>, and{" "}
               <a href="https://cs.brown.edu/~sk/">Shriram Krishnamurthi</a>. The goal of this
-              experiment is to evaluate and improve the content of the Rust Book to help people
-              learn Rust more effectively.
+              experiment is to help people
+              learn to build with Movement more effectively.
             </p>
             <img src="img/experiment/brown-logo.png" width="150" />
           </div>
@@ -32,17 +32,15 @@ let ConsentForm = () => {
           <h2>How does it work?</h2>
           <div className="row">
             <div>
-              <p>This website has the same structure as the Rust Book, but modified in two ways:</p>
+              <p>This course workbook is supplemented with community involvement:</p>
               <ol>
                 <li>
                   <strong>Interactive quizzes are added in each section.</strong> These quizzes help
-                  you test your understanding of Rust. The quizzes also help us determine which
-                  sections need improvement.
+                  you test your understanding of building for Movement. The quizzes also help us determine which
+                  sections need improvement. 
                 </li>
                 <li>
-                  <strong>Some explanations will be changed.</strong> For instance, we will
-                  experiment with modifying some of the text, including replacing it with
-                  visualizations.
+                  <strong>Join the Discord and Telegram.</strong> We will hold weekly office hours and calls to support you on your developer journey.
                 </li>
               </ol>
             </div>
@@ -50,17 +48,9 @@ let ConsentForm = () => {
           </div>
         </section>
         <section>
-          <h2>Do I have to participate?</h2>
+          <h2>Why should I take Movement Hack? </h2>
           <p>
-            No, you are not at all obliged to do so! Participation is entirely optional and you may
-            stop using this version at any time you like.
-          </p>
-        </section>
-        <section>
-          <h2>Why should I participate? </h2>
-          <p>
-            We believe these changes will help you learn Rust better than reading the existing Rust
-            Book. Your participation may also help every future Rust learner!
+            If you'd like to learn to build on an emerging new Move Ecosystem infrstracture, this is the course for you!
           </p>
         </section>
         <section>
@@ -69,7 +59,7 @@ let ConsentForm = () => {
             We do not need any personal information about you. The only data we gather are: whenever
             you take a quiz, we record your answers to the quiz. We also use cookies to determine
             when a set of answers are coming from the same browser session. We hope the patterns of
-            answers will help us better understand the Rust learning experience.
+            answers will help us better understand the Movement learning experience.
           </p>
         </section>
         <div className="row">

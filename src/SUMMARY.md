@@ -1,52 +1,47 @@
 # The Rust Programming Language
-
-[Experiment Introduction](experiment-intro.md)
+[Introduction](experiment-intro.md)
+<!--
 [The Rust Programming Language](title-page.md)
 [Foreword](foreword.md)
 [Introduction](ch00-00-introduction.md)
+-->
 
 ## Getting started
 
-- [Getting Started](ch01-00-getting-started.md)
-    - [Installation](ch01-01-installation.md)
-    - [Hello, World!](ch01-02-hello-world.md)
-    - [Hello, Cargo!](ch01-03-hello-cargo.md)
+- [History of Move](ch01-00-history-of-move.md)
+    - [The Language for Digital Assets](ch01-01-the-language.md)
+    - [The Dispersion of Move](ch01-02-dispersion-of-move.md)
+    - [Enter the Movement](ch01-03-enter-movement.md)
 
-- [Programming a Guessing Game](ch02-00-guessing-game-tutorial.md)
+- [Getting Started with Move](ch02-00-getting-started-with-move.md)
+    - [Advantages of Move](ch02-01-advantages-of-move.md)
+    - [Install Movement CLI](ch02-02-install-movement-cli.md)
+    - [Hello, Move!](ch02-03-hello-move.md)
+    - [Capstone Project Overview](ch02-04-capstone-project-overview.md)
 
-- [Common Programming Concepts](ch03-00-common-programming-concepts.md)
-    - [Variables and Mutability](ch03-01-variables-and-mutability.md)
-    - [Data Types](ch03-02-data-types.md)
-    - [Functions](ch03-03-how-functions-work.md)
-    - [Comments](ch03-04-comments.md)
-    - [Control Flow](ch03-05-control-flow.md)
+- [Domain Modeling](ch03-00-domain-modeling.md)
+    - [Your dApp's User Story](ch03-01-user-story.md)
+    - [Your dApp's Architectural Diagram](ch03-02-architectural-diagram.md)
 
-- [Understanding Ownership](ch04-00-understanding-ownership.md)
-    - [What is Ownership?](ch04-01-what-is-ownership.md)
-    - [References and Borrowing](ch04-02-references-and-borrowing.md)
-    - [Fixing Ownership Errors](ch04-03-fixing-ownership-errors.md)
-    - [The Slice Type](ch04-04-slices.md)
-    - [Ownership Recap](ch04-05-ownership-recap.md)
+- [Basic Move Syntax](ch04-00-basic-move-syntax.md)
+    - [Primitive Types](ch04-01-primitive-types.md)
+    - [Comments](ch04-02-comments.md)
+    - [Expressions and Scope](ch04-03-expressions-and-scope.md)
+    - [Control Flow](ch04-04-control-flow.md)
+    - [Modules and Imports](ch04-05-modules-and-imports.md)
 
-- [Using Structs to Structure Related Data](ch05-00-structs.md)
-    - [Defining and Instantiating Structs](ch05-01-defining-structs.md)
-    - [An Example Program Using Structs](ch05-02-example-structs.md)
-    - [Method Syntax](ch05-03-method-syntax.md)
+- [Custom types and generics](ch05-00-custom-types-and-generics.md)
+    - [Custom Types](ch05-01-custom-types.md)
+    - [Getter Functions](ch05-02-getter-functions.md)
+    - [Generics Introduction](ch05-03-generics-intro.md)
+    - [Generics to Constrain Abilities](ch05-04-generics-abilities.md)
+    - [Generics with Multiple Type Parameters](ch05-05-generics-with-multiple-types.md)
 
-- [Enums and Pattern Matching](ch06-00-enums.md)
-    - [Defining an Enum](ch06-01-defining-an-enum.md)
-    - [The `match` Control Flow Construct](ch06-02-match.md)
-    - [Concise Control Flow with `if let`](ch06-03-if-let.md)
-    - [Ownership Inventory #1](ch06-04-inventory.md)
-
-## Basic Rust Literacy
-
-- [Managing Growing Projects with Packages, Crates, and Modules](ch07-00-managing-growing-projects-with-packages-crates-and-modules.md)
-    - [Packages and Crates](ch07-01-packages-and-crates.md)
-    - [Defining Modules to Control Scope and Privacy](ch07-02-defining-modules-to-control-scope-and-privacy.md)
-    - [Paths for Referring to an Item in the Module Tree](ch07-03-paths-for-referring-to-an-item-in-the-module-tree.md)
-    - [Bringing Paths Into Scope with the `use` Keyword](ch07-04-bringing-paths-into-scope-with-the-use-keyword.md)
-    - [Separating Modules into Different Files](ch07-05-separating-modules-into-different-files.md)
+- [Move's Storage Model](ch06-00-storage-model.md)
+    - [Ownership and References](ch06-01-ownership-and-references.md)
+    - [Resources](ch06-02-resources.md)
+    - [Collections](ch06-03-collections.md)
+    - [Resource Applications](ch06-04-resource-applications.md)
 
 - [Common Collections](ch08-00-common-collections.md)
     - [Storing Lists of Values with Vectors](ch08-01-vectors.md)
