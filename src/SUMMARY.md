@@ -17,11 +17,11 @@
     - [Advantages of Move](ch02-01-advantages-of-move.md)
     - [Install Movement CLI](ch02-02-install-movement-cli.md)
     - [Hello, Move!](ch02-03-hello-move.md)
-    - [Capstone Project Overview](ch02-04-capstone-project-overview.md)
 
-- [Domain Modeling](ch03-00-domain-modeling.md)
-    - [Your dApp's User Story](ch03-01-user-story.md)
-    - [Your dApp's Architectural Diagram](ch03-02-architectural-diagram.md)
+- [Planning Your Capstone Project](ch03-00-domain-modeling.md)
+    - [Capstone Project Overview](ch03-01-capstone-project-overview.md)
+    - [User Story](ch03-02-user-story.md)
+    - [Architectural Diagram](ch03-03-architectural-diagram.md)
 
 - [Basic Move Syntax](ch04-00-basic-move-syntax.md)
     - [Primitive Types](ch04-01-primitive-types.md)

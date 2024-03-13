@@ -1,149 +1,35 @@
-## Installation
+## Move: The language for digital assets
 
-The first step is to install Rust. We’ll download Rust through `rustup`, a
-command line tool for managing Rust versions and associated tools. You’ll need
-an internet connection for the download.
+In this lesson, you'll learn why the Move language was created and what makes Move the ideal language for Digital assets.
 
-> Note: If you prefer not to use `rustup` for some reason, please see the
-> [Other Rust Installation Methods page][otherinstall] for more options.
+Move is a Rust-like language. It was developed in 2020 by the team behind Facebook's Diem project[1]. The goal of Move is to improve how digital assets are managed, making them more secure and efficient.
 
-The following steps install the latest stable version of the Rust compiler.
-Rust’s stability guarantees ensure that all the examples in the book that
-compile will continue to compile with newer Rust versions. The output might
-differ slightly between versions because Rust often improves error messages and
-warnings. In other words, any newer, stable version of Rust you install using
-these steps should work as expected with the content of this book.
+### Why Was Move Created?
 
-> ### Command Line Notation
->
-> In this chapter and throughout the book, we’ll show some commands used in the
-> terminal. Lines that you should enter in a terminal all start with `$`. You
-> don’t need to type the `$` character; it’s the command line prompt shown to
-> indicate the start of each command. Lines that don’t start with `$` typically
-> show the output of the previous command. Additionally, PowerShell-specific
-> examples will use `>` rather than `$`.
+Digital assets on the blockchain faced problems like security risks and management difficulties. Previous languages did not fully address these issues. Move was developed to solve these problems by treating digital assets more like physical assets, which helps prevent fraud and errors.
 
-### Installing `rustup` on Linux or macOS
+### The Inventors of Move
 
-If you’re using Linux or macOS, open a terminal and enter the following command:
+The engineering team at Diem, which included experts from Facebook, created Move. They used their deep knowledge of blockchain and finance to design a language that meets the needs of the digital economy.
 
-```console
-$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
-```
+### Key Features of Move
 
-The command downloads a script and starts the installation of the `rustup`
-tool, which installs the latest stable version of Rust. You might be prompted
-for your password. If the install is successful, the following line will appear:
+- **Resources Concept:** Move uses a concept called "resources" to represent digital assets. This approach ensures that assets cannot be copied or accidentally lost, enhancing their security.
 
-```text
-Rust is installed now. Great!
-```
+- **Move Prover:** Move includes a verification tool called the Move Prover. This tool checks that Move programs follow the rules and are free from common mistakes, making the programs safer.
 
-You will also need a *linker*, which is a program that Rust uses to join its
-compiled outputs into one file. It is likely you already have one. If you get
-linker errors, you should install a C compiler, which will typically include a
-linker. A C compiler is also useful because some common Rust packages depend on
-C code and will need a C compiler.
+- **Compilation into BCS Bytecode:** Move programs are compiled into a format known as BCS (Binary Canonical Serialization) bytecode. This process makes the programs efficient and secure, suitable for various blockchain applications.
 
-On macOS, you can get a C compiler by running:
+- **Flexibility and Scalability:** Move is designed to be flexible, supporting everything from simple transactions to complex financial contracts. It allows developers to create reusable components, promoting an ecosystem of secure and compatible applications.
 
-```console
-$ xcode-select --install
-```
+- **Open Source and Community-Driven:** Move is open source, meaning anyone can see how it works and contribute to its development. This approach ensures that Move can evolve to meet changing needs.
 
-Linux users should generally install GCC or Clang, according to their
-distribution’s documentation. For example, if you use Ubuntu, you can install
-the `build-essential` package.
+### Conclusion
 
-### Installing `rustup` on Windows
+Move is a significant advancement in blockchain technology, offering a secure and efficient way to manage digital assets. Its introduction of resources, combined with the Move Prover and efficient bytecode compilation, makes it a robust tool for developers. Move's open-source nature and flexibility ensure it is well-equipped to support the future of digital finance with security and efficiency at its core.
 
-On Windows, go to [https://www.rust-lang.org/tools/install][install] and follow
-the instructions for installing Rust. At some point in the installation, you’ll
-receive a message explaining that you’ll also need the MSVC build tools for
-Visual Studio 2013 or later.
+TODO: ADD QUIZ / GALXE UI
 
-To acquire the build tools, you’ll need to install [Visual Studio
-2022][visualstudio]. When asked which workloads to install, include:
+### References
 
-* “Desktop Development with C++”
-* The Windows 10 or 11 SDK
-* The English language pack component, along with any other language pack of
-  your choosing
-
-The rest of this book uses commands that work in both *cmd.exe* and PowerShell.
-If there are specific differences, we’ll explain which to use.
-
-### Troubleshooting
-
-To check whether you have Rust installed correctly, open a shell and enter this
-line:
-
-```console
-$ rustc --version
-```
-
-You should see the version number, commit hash, and commit date for the latest
-stable version that has been released, in the following format:
-
-```text
-rustc x.y.z (abcabcabc yyyy-mm-dd)
-```
-
-If you see this information, you have installed Rust successfully! If you don’t
-see this information, check that Rust is in your `PATH`
-system variable as follows.
-
-In Windows CMD, use:
-
-```console
-> echo %PATH%
-```
-
-In PowerShell, use:
-
-```powershell
-> echo $env:Path
-```
-
-In Linux and macOS, use:
-
-```console
-$ echo $PATH
-```
-
-If that’s all correct and Rust still isn’t working, there are a number of
-places you can get help. Find out how to get in touch with other Rustaceans (a
-silly nickname we call ourselves) on [the community page][community].
-
-### Updating and Uninstalling
-
-Once Rust is installed via `rustup`, updating to a newly released version is
-easy. From your shell, run the following update script:
-
-```console
-$ rustup update
-```
-
-To uninstall Rust and `rustup`, run the following uninstall script from your
-shell:
-
-```console
-$ rustup self uninstall
-```
-
-### Local Documentation
-
-The installation of Rust also includes a local copy of the documentation so
-that you can read it offline. Run `rustup doc` to open the local documentation
-in your browser.
-
-Any time a type or function is provided by the standard library and you’re not
-sure what it does or how to use it, use the application programming interface
-(API) documentation to find out!
-
-{{#quiz ../quizzes/ch01-01-installation.toml}}
-
-[otherinstall]: https://forge.rust-lang.org/infra/other-installation-methods.html
-[install]: https://www.rust-lang.org/tools/install
-[visualstudio]: https://visualstudio.microsoft.com/downloads/
-[community]: https://www.rust-lang.org/community
+1. The language of money, Part one: Why build Move? Diem blog: https://www.diem.com/en-us/blog/why-build-move/

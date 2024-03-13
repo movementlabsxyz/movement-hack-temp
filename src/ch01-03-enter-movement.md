@@ -1,263 +1,43 @@
-## Hello, Cargo!
+### Enter the Movement
 
-Cargo is Rust’s build system and package manager. Most Rustaceans use this tool
-to manage their Rust projects because Cargo handles a lot of tasks for you,
-such as building your code, downloading the libraries your code depends on, and
-building those libraries. (We call the libraries that your code needs
-*dependencies*.)
+In this lesson, you'll learn how Movement labs has created a network of modular Move-based blockchains to help build a more secure blockchain world.
 
-The simplest Rust programs, like the one we’ve written so far, don’t have any
-dependencies. If we had built the “Hello, world!” project with Cargo, it would
-only use the part of Cargo that handles building your code. As you write more
-complex Rust programs, you’ll add dependencies, and if you start a project
-using Cargo, adding dependencies will be much easier to do.
+Movement was born from a simple idea: What If you could take advantage of the Move programming language within any distributed environment?
 
-Because the vast majority of Rust projects use Cargo, the rest of this book
-assumes that you’re using Cargo too. Cargo comes installed with Rust if you
-used the official installers discussed in the
-[“Installation”][installation]<!-- ignore --> section. If you installed Rust
-through some other means, check whether Cargo is installed by entering the
-following in your terminal:
+At Movement Labs, we've seen what happens when monolithic L1s control the progress of decentralized technologies. We've come together to share our passion for Move with the industry and make our favorite programming language available to as many people around the world as possible.
 
-```console
-$ cargo --version
-```
+By creating seamless standardization across infrastructures, we can unlock innovation for all.
 
-If you see a version number, you have it! If you see an error, such as `command
-not found`, look at the documentation for your method of installation to
-determine how to install Cargo separately.
+This is bigger than any single technology or platform. This is about shaping the future, about creating a world where crypto is not just a currency or a technology, but a Movement. A movement that empowers, that inspires, and that brings us all closer together.
 
-### Creating a Project with Cargo
+>Movement network is build on the following principles:
+>
+>**Unified ecosystem**
+>No more silos. Movement seamlessly integrates diverse blockchain platforms with unified infrastructure, ensuring that builders can collaborate without barriers.
+>
+>Movement Labs acts as a bridge between these diverse crypto platforms. By offering a standardized interface, Movement ensures that developers and users can interact with any blockchain seamlessly, without having to navigate the intricacies of each individual platform.
+>
+>**Accessibility and inclusivity** 
+>We believe in a blockchain world where everyone, regardless of their technical background, can participate. Movement simplifies complexities, making blockchain more approachable for all.
+>
+>The Movement SDK is complementary to existing blockchain frameworks such as EVM. Universal Compatibility means open onboarding for all out of the box, without having to go through any hurdles. Adoption is accelerated by building without barriers.
+>
+>**Interconnectivity for open innovation**
+>With Movement, boundaries fade. Connect, collaborate, and create on any platform, ensuring your projects have the reach and impact they deserve.
+>
+>Movement promotes open innovation by providing tools and frameworks that are universally compatible. This means developers can leverage advancements from across the blockchain spectrum, fostering a collaborative environment where the best ideas from every platform can be integrated and built upon.
+>
+>**Future-proof** 
+>As the blockchain landscape evolves, so does Movement. Stay ahead of the curve, ensuring your projects are always compatible with the latest innovations.
+>
+>**Community-driven** 
+>At the heart of Movement is a vibrant community of builders, innovators, and dreamers. Join us in shaping the future of a unified blockchain ecosystem.
+>
+>Movement provides a framework for developers to build move-based blockchains, applications, and infrastructure in any distributed environment.
+>
+>Movement recognizes the pivotal role of developers and builders. They are the architects of this digital age, and with Movement, we're here to provide the tools to shape the future.
+>
 
-Let’s create a new project using Cargo and look at how it differs from our
-original “Hello, world!” project. Navigate back to your *projects* directory
-(or wherever you decided to store your code). Then, on any operating system,
-run the following:
+At Movement Labs, we're not just building a product; we're building a legacy and we’re building a Movement. A Movement and legacy built on accessibility, interconnectivity, innovation, and community.
 
-```console
-$ cargo new hello_cargo
-$ cd hello_cargo
-```
-
-The first command creates a new directory and project called *hello_cargo*.
-We’ve named our project *hello_cargo*, and Cargo creates its files in a
-directory of the same name.
-
-Go into the *hello_cargo* directory and list the files. You’ll see that Cargo
-has generated two files and one directory for us: a *Cargo.toml* file and a
-*src* directory with a *main.rs* file inside.
-
-It has also initialized a new Git repository along with a *.gitignore* file.
-Git files won’t be generated if you run `cargo new` within an existing Git
-repository; you can override this behavior by using `cargo new --vcs=git`.
-
-> Note: Git is a common version control system. You can change `cargo new` to
-> use a different version control system or no version control system by using
-> the `--vcs` flag. Run `cargo new --help` to see the available options.
-
-Open *Cargo.toml* in your text editor of choice. It should look similar to the
-code in Listing 1-2.
-
-<span class="filename">Filename: Cargo.toml</span>
-
-```toml
-[package]
-name = "hello_cargo"
-version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-```
-
-<span class="caption">Listing 1-2: Contents of *Cargo.toml* generated by `cargo
-new`</span>
-
-This file is in the [*TOML*][toml]<!-- ignore --> (*Tom’s Obvious, Minimal
-Language*) format, which is Cargo’s configuration format.
-
-The first line, `[package]`, is a section heading that indicates that the
-following statements are configuring a package. As we add more information to
-this file, we’ll add other sections.
-
-The next three lines set the configuration information Cargo needs to compile
-your program: the name, the version, and the edition of Rust to use. We’ll talk
-about the `edition` key in [Appendix E][appendix-e]<!-- ignore -->.
-
-The last line, `[dependencies]`, is the start of a section for you to list any
-of your project’s dependencies. In Rust, packages of code are referred to as
-*crates*. We won’t need any other crates for this project, but we will in the
-first project in Chapter 2, so we’ll use this dependencies section then.
-
-Now open *src/main.rs* and take a look:
-
-<span class="filename">Filename: src/main.rs</span>
-
-```rust
-fn main() {
-    println!("Hello, world!");
-}
-```
-
-Cargo has generated a “Hello, world!” program for you, just like the one we
-wrote in Listing 1-1! So far, the differences between our project and the
-project Cargo generated are that Cargo placed the code in the *src* directory
-and we have a *Cargo.toml* configuration file in the top directory.
-
-Cargo expects your source files to live inside the *src* directory. The
-top-level project directory is just for README files, license information,
-configuration files, and anything else not related to your code. Using Cargo
-helps you organize your projects. There’s a place for everything, and
-everything is in its place.
-
-If you started a project that doesn’t use Cargo, as we did with the “Hello,
-world!” project, you can convert it to a project that does use Cargo. Move the
-project code into the *src* directory and create an appropriate *Cargo.toml*
-file.
-
-### Building and Running a Cargo Project
-
-Now let’s look at what’s different when we build and run the “Hello, world!”
-program with Cargo! From your *hello_cargo* directory, build your project by
-entering the following command:
-
-```console
-$ cargo build
-   Compiling hello_cargo v0.1.0 (file:///projects/hello_cargo)
-    Finished dev [unoptimized + debuginfo] target(s) in 2.85 secs
-```
-
-This command creates an executable file in *target/debug/hello_cargo* (or
-*target\debug\hello_cargo.exe* on Windows) rather than in your current
-directory. Because the default build is a debug build, Cargo puts the binary in
-a directory named *debug*. You can run the executable with this command:
-
-```console
-$ ./target/debug/hello_cargo # or .\target\debug\hello_cargo.exe on Windows
-Hello, world!
-```
-
-If all goes well, `Hello, world!` should print to the terminal. Running `cargo
-build` for the first time also causes Cargo to create a new file at the top
-level: *Cargo.lock*. This file keeps track of the exact versions of
-dependencies in your project. This project doesn’t have dependencies, so the
-file is a bit sparse. You won’t ever need to change this file manually; Cargo
-manages its contents for you.
-
-We just built a project with `cargo build` and ran it with
-`./target/debug/hello_cargo`, but we can also use `cargo run` to compile the
-code and then run the resultant executable all in one command:
-
-```console
-$ cargo run
-    Finished dev [unoptimized + debuginfo] target(s) in 0.0 secs
-     Running `target/debug/hello_cargo`
-Hello, world!
-```
-
-Using `cargo run` is more convenient than having to remember to run `cargo
-build` and then use the whole path to the binary, so most developers use `cargo
-run`.
-
-Notice that this time we didn’t see output indicating that Cargo was compiling
-`hello_cargo`. Cargo figured out that the files hadn’t changed, so it didn’t
-rebuild but just ran the binary. If you had modified your source code, Cargo
-would have rebuilt the project before running it, and you would have seen this
-output:
-
-```console
-$ cargo run
-   Compiling hello_cargo v0.1.0 (file:///projects/hello_cargo)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.33 secs
-     Running `target/debug/hello_cargo`
-Hello, world!
-```
-
-Cargo also provides a command called `cargo check`. This command quickly checks
-your code to make sure it compiles but doesn’t produce an executable:
-
-```console
-$ cargo check
-   Checking hello_cargo v0.1.0 (file:///projects/hello_cargo)
-    Finished dev [unoptimized + debuginfo] target(s) in 0.32 secs
-```
-
-Why would you not want an executable? Often, `cargo check` is much faster than
-`cargo build` because it skips the step of producing an executable. If you’re
-continually checking your work while writing the code, using `cargo check` will
-speed up the process of letting you know if your project is still compiling! As
-such, many Rustaceans run `cargo check` periodically as they write their
-program to make sure it compiles. Then they run `cargo build` when they’re
-ready to use the executable.
-
-Let’s recap what we’ve learned so far about Cargo:
-
-* We can create a project using `cargo new`.
-* We can build a project using `cargo build`.
-* We can build and run a project in one step using `cargo run`.
-* We can build a project without producing a binary to check for errors using
-  `cargo check`.
-* Instead of saving the result of the build in the same directory as our code,
-  Cargo stores it in the *target/debug* directory.
-
-An additional advantage of using Cargo is that the commands are the same no
-matter which operating system you’re working on. So, at this point, we’ll no
-longer provide specific instructions for Linux and macOS versus Windows.
-
-### Building for Release
-
-When your project is finally ready for release, you can use `cargo build
---release` to compile it with optimizations. This command will create an
-executable in *target/release* instead of *target/debug*. The optimizations
-make your Rust code run faster, but turning them on lengthens the time it takes
-for your program to compile. This is why there are two different profiles: one
-for development, when you want to rebuild quickly and often, and another for
-building the final program you’ll give to a user that won’t be rebuilt
-repeatedly and that will run as fast as possible. If you’re benchmarking your
-code’s running time, be sure to run `cargo build --release` and benchmark with
-the executable in *target/release*.
-
-### Cargo as Convention
-
-With simple projects, Cargo doesn’t provide a lot of value over just using
-`rustc`, but it will prove its worth as your programs become more intricate.
-Once programs grow to multiple files or need a dependency, it’s much easier to
-let Cargo coordinate the build.
-
-Even though the `hello_cargo` project is simple, it now uses much of the real
-tooling you’ll use in the rest of your Rust career. In fact, to work on any
-existing projects, you can use the following commands to check out the code
-using Git, change to that project’s directory, and build:
-
-```console
-$ git clone example.org/someproject
-$ cd someproject
-$ cargo build
-```
-
-For more information about Cargo, check out [its documentation][cargo].
-
-{{#quiz ../quizzes/ch01-03-hello-cargo.toml}}
-
-
-## Summary
-
-You’re already off to a great start on your Rust journey! In this chapter,
-you’ve learned how to:
-
-* Install the latest stable version of Rust using `rustup`
-* Update to a newer Rust version
-* Open locally installed documentation
-* Write and run a “Hello, world!” program using `rustc` directly
-* Create and run a new project using the conventions of Cargo
-
-This is a great time to build a more substantial program to get used to reading
-and writing Rust code. So, in Chapter 2, we’ll build a guessing game program.
-If you would rather start by learning how common programming concepts work in
-Rust, see Chapter 3 and then return to Chapter 2.
-
-[installation]: ch01-01-installation.html#installation
-[toml]: https://toml.io
-[appendix-e]: appendix-05-editions.html
-[cargo]: https://doc.rust-lang.org/cargo/
+TODO: ADD QUIZ OR GALXE UI

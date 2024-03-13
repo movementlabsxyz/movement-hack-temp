@@ -1,8 +1,8 @@
-# Getting Started
+# The History of Move
 
-Let’s start your Rust journey! There’s a lot to learn, but every journey starts
-somewhere. In this chapter, we’ll discuss:
+Let’s start your Move journey! There’s a lot to learn, but every journey starts
+somewhere. Because Move is a new language, we'll begin with a brief history. We’ll discuss:
 
-* Installing Rust on Linux, macOS, and Windows
-* Writing a program that prints `Hello, world!`
-* Using `cargo`, Rust’s package manager and build system
+* why the Move language was invented
+* how Move came to be used on multiple blockchain networks
+* what Movement labs is doing to spread Move adoption

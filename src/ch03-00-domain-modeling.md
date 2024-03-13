@@ -1,7 +1,7 @@
-# Understanding Ownership
+# Domain Modeling
 
-Ownership is Rust’s most unique feature and has deep implications for the rest
-of the language. It enables Rust to make memory safety guarantees without
-needing a garbage collector, so it’s important to understand how ownership
-works. In this chapter, we’ll talk about ownership as well as several related
-features: borrowing, slices, and how Rust lays data out in memory.
+This course encourages you to spend time planning your capstone project. Whether it's a public good, a for-profit dApp or service, or something altogether different, your project should move you. 
+
+You might be envisioning your capstone project as part of a portfolio to help you get a job. Or maybe you want to turn it into a project you release publicly. 
+
+Either way, this chapter will guide you to plan your project's user story and model its domain for the best possible outcome.
