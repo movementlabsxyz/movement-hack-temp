@@ -32,8 +32,6 @@ This SimpleMath module provides two functions, add and subtract, which can be us
 
 To use the functionality defined in a module, you must import it. This can be done in scripts or other modules.
 
-### Direct Import Example
-
 You can directly reference a module by its address when calling its functions:
 
 ```rust
@@ -69,8 +67,6 @@ By importing SimpleMath at the script's beginning, we make its functions readily
 ### Advanced Importing Techniques
 
 Move's importing capabilities also include importing specific members of a module or using aliases to avoid naming conflicts.
-
-### Member Import Example
 
 If you only need certain functions from a module, you can import them individually:
 
@@ -125,8 +121,6 @@ This UserManager module defines a Profile struct and provides functions to creat
 
 Modules can use functionalities defined in other modules through imports. This promotes code reuse and modularity.
 
-### Direct Use of Modules
-
 When a module's functionality is needed in another module, you directly reference it using its address and name:
 
 ```rust
@@ -161,8 +155,6 @@ Here, `EnhancedUserManager` imports specific functions and types from `UserManag
 ### Advanced Import Techniques
 
 Move's flexible import system also supports member imports and aliasing, providing fine-grained control over module content usage.
-
-### Importing Specific Members
 
 You can import only the necessary components from a module, reducing namespace clutter:
 

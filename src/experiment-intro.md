@@ -1,15 +1,15 @@
-# Experiment Introduction
+# Movement Hack Introduction
  
-Welcome to the Rust Book experiment, and thank you for your participation! First, we want to introduce you to the new mechanics of this experiment.
+Welcome to the Movement Hack course, and thank you for your participation! First, we want to introduce you to the new mechanics of this course.
 
 ## 1. Quizzes
 
-The main mechanic is **quizzes**: each page has a few quizzes about the page's content. We have two rules about quizzes for this experiment:
+The main mechanic is **quizzes**: each page has one ore more quizzes about the page's content. We have two rules about quizzes:
 
 1. **Take a quiz as soon as you get to it.**
 2. **Do not skip a quiz.**
 
-(We don't enforce these rules, but please follow them!)
+(We don't enforce these rules, but please follow them! You can get points on Galxe for submitting quiz results!)
 
 Every quiz looks like the one below. Try it out by clicking "Start".
 
@@ -17,7 +17,7 @@ Every quiz looks like the one below. Try it out by clicking "Start".
 
 If you get a question incorrect, you can choose to either retry the quiz, or see the correct answers. We encourage you to retry the quiz until you get 100% &mdash; feel free to review the content before retrying the quiz. Note that once you see the correct answers, you cannot retry the quiz.
 
-If you spot an issue in a question, you can submit a bug report by clicking the 🐞 icon. If you spot any other issue in this book, you can file an issue on our Github repository: <https://github.com/cognitive-engineering-lab/rust-book>
+If you spot an issue in a question, you can submit a bug report by clicking the 🐞 icon. If you spot any other issue in this book, you can file an issue on our Github repository: <https://github.com/movementlabsxyz/movement-hack>
 
 ## 2. Highlighting
 
@@ -33,21 +33,5 @@ You can use highlights to save information for yourself. You can also use highli
 
 The book's content may change as you go through the experiment. We will update this page as we add new features. Here's the changelog:
 
-* February 16, 2023
-  * A new chapter on ownership has replaced the previous Chapter 4.
-* January 18, 2023
-  * Questions have been added for the remaining chapters of the book.    
-* December 15, 2022
-  * New sections called "Ownership Inventory" have been added throughout the book
-    with challenging ownership-related questions.    
-* November 7, 2022
-  * Only questions with incorrect answers will be shown on a retry.
-  * Most multiple-choice questions will have their choices randomized.
-  * Some questions will now prompt for your reasoning.
-  * Many questions have been updated based on your feedback. Keep it coming!
-
-_Interested in participating in other experiments about making Rust easier to learn? Please sign up here:_ <https://forms.gle/U3jEUkb2fGXykp1DA>
-
-## 4. Acknowledgments
-
-Niko Matsakis and Amazon Web Services provided funding for this experiment. Carol Nichols and the Rust Foundation helped publicize the experiment. TRPL is the product of many peoples' hard work before we started this experiment.
+* March 13, 2023
+  * First draft written.
