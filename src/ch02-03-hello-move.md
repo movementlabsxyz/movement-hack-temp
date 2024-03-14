@@ -60,3 +60,5 @@ const abi = { "address": "0xYOUR_ADDRESS", (...)}"
 Make sure the address starts with `0x` else add it. That should be available in `.aptos/config.yaml` file as the `account` field.
 
 Now you can try running your transactions on the frontend and see the chat messages being posted.
+
+### TODO: Add Galxe integration to submit GitHub repo link here

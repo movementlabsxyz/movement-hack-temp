@@ -32,11 +32,11 @@ int main() {
     return 0;
 }
 ```
+{{#quiz ../quizzes/ch02-01-unsafe-access.toml}}
+
 In Move, this kind of unsafe access would not be possible because of strict ownership conditions.
 
 Each function owns any resources it creates and is responsible for its lifecycle. This ownership model ensures that resources are properly managed and prevents unauthorized access or modification, bolstering the security of blockchain-based applications.
-
-{{#quiz ../quizzes/ch03-01-variables-and-mutability-sec1-variables.toml}}
 
 ### Access Restriction All the Way Down
 
@@ -62,6 +62,8 @@ f(a) ->
 ```
 
 Type linearity is a crucial aspect of resource-oriented programming that enforces the linear use of resources. In Move, resources generally have linear types, meaning they can only be consumed or moved, not duplicated. This feature prevents resource duplication, reduces memory consumption, and eliminates the risk of double-spending, ensuring the integrity and accuracy of transactions on the blockchain.
+
+{{#quiz ../quizzes/ch02-01-type-linearity.toml}}
 
 ### How does Move address common smart contract vulnerabilities?
 
