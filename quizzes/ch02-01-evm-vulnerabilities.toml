@@ -1,0 +1,15 @@
+[[questions]]
+id = "02-01-evm-vulns"
+type = "MultipleChoice"
+prompt.prompt = """
+In a reentrancy attack, a malicious contract calls back into the calling contract before the first execution completes. Which feature of Move helps prevent reentrancy attacks?
+"""
+answer.answer = "In Move, once a resource is moved, it cannot be accessed again within the same transaction, thereby mitigating reentrancy risks."
+prompt.distractors = [
+  "In Move, once a resource is copied, it cannot be accessed again within the same transaction, thereby mitigating reentrancy risks.",
+  "In Move, once a resource is referenced, it cannot be accessed again within the same transaction, thereby mitigating reentrancy risks.",
+  "In Move, once a resource is mutated, it cannot be accessed again within the same transaction, thereby mitigating reentrancy risks."
+]
+context = """
+This C program will compile despite the unsafe access of `value`. Accessing freed memory results in a "use-after-free" vulnerability, which can lead to undefined behavior, crashes, or security exploits.
+"""

@@ -39,6 +39,8 @@ script {
 }
 ```
 
+{{#quiz ../quizzes/ch04-01-integer-types.toml}}
+
 ### Operator `as`: Changing Your Perspective
 
 Sometimes, you need to compare things of different sizes, like if a cup of water will fill a bucket. In Move, you can change the "size" of your integer using the as operator, to make sure you're comparing apples to apples.
@@ -56,6 +58,8 @@ script {
 }
 ```
 
+{{#quiz ../quizzes/ch04-01-as-operator.toml}}
+
 ### Boolean: Yes or No, True or False
 
 Booleans are straightforward – they can only be true or false. Think of them like answering a yes-or-no question: "Is it sunny outside?"
@@ -71,6 +75,7 @@ script {
     }
 }
 ```
+{{#quiz ../quizzes/ch04-01-bool.toml}}
 
 ### Address: Identifying Where Things Belong
 
@@ -90,6 +95,8 @@ script {
     }
 }
 ```
+
+{{#quiz ../quizzes/ch04-01-address.toml}}
 
 ### Wrap-Up
 In Move, these primitive types form the foundation of the language, allowing you to count, measure, make decisions, and identify accounts on the blockchain. By understanding integers, booleans, and addresses, you're well on your way to mastering the basics of Move and blockchain programming.

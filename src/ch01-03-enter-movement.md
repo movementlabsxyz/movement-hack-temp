@@ -40,4 +40,4 @@ This is bigger than any single technology or platform. This is about shaping the
 
 At Movement Labs, we're not just building a product; we're building a legacy and we’re building a Movement. A Movement and legacy built on accessibility, interconnectivity, innovation, and community.
 
-TODO: ADD QUIZ OR GALXE UI
+{{#quiz ../quizzes/ch01-03-movement-principles.toml}}

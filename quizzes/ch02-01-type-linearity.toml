@@ -4,12 +4,12 @@ type = "MultipleChoice"
 prompt.prompt = """
 How does type linearity ensure resource safety?
 """
-answer.answer = "Accessing data after it has been freed can lead to undefined behavior, such as crashes or security vulnerabilities."
+answer.answer = "By ensuring each resource has only one owner at a time, preventing accidental duplication or loss."
 prompt.distractors = [
-  "Accessing data after it has been freed can lead to network slowdowns and halt the blockchain due to infinite loops.",
-  "Because of the line `#include <string.h>`, the line containing `printf` will not execute.",
-  "The program will not compile, because accessing data after it has been freed is inherently unsafe"
+  "By making sure that all the fields of the struct contain linear functions.",
+  "If you can ensure that each type is aligned in terms of the number of fields they have, then you can prevent unsafe code.",
+  "You can ensure resource safety by adding the copy and drop abilities. Then it won't matter if they are duplicated or lost."
 ]
 context = """
-This C program will compile despite the unsafe access of `value`. Accessing freed memory results in a "use-after-free" vulnerability, which can lead to undefined behavior, crashes, or security exploits.
+Type linearity for resources means ownership of resources is in a line, with one owner of a resource after another.  
 """

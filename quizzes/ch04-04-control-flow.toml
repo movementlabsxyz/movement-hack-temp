@@ -1,0 +1,29 @@
+[[questions]]
+id = "ch04-04-control-flow"
+type = "MultipleChoice"
+prompt.prompt = """
+In Rust, a curly-brace block like `{ /* ... */ }` is:
+1. An expression
+2. A statement
+3. A syntactic scope
+"""
+answer.answer = "1 and 3"
+prompt.distractors = [ "1 only", "2 only", "2 and 3" ]
+context = """
+A block is an expression (#1) that is allowed to contain statements. It also defines a syntactic scope for let-bindings inside it (#3).
+"""
+
+[[questions]]
+id = "42671602-ada3-4943-aa73-28aebcfe5011"
+type = "Tracing"
+prompt.program = """
+fn f(x: i32) -> i32 { x + 1 }
+fn main() {
+  println!("{}", f({
+    let y = 1;
+    y + 1
+  }));
+}
+"""
+answer.doesCompile = true
+answer.stdout = "3"

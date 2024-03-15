@@ -19,10 +19,11 @@
     - [Hello, Move!](ch02-03-hello-move.md)
 
 - [Planning Your Capstone Project](ch03-00-domain-modeling.md)
-    - [Capstone Project Overview](ch03-01-capstone-project-overview.md)
+    - [User Story and Architectural Diagram](ch03-01-course-project-overview.md)
+    <!-- 
     - [User Story](ch03-02-user-story.md)
     - [Architectural Diagram](ch03-03-architectural-diagram.md)
-
+    -->
 - [Basic Move Syntax](ch04-00-basic-move-syntax.md)
     - [Primitive Types](ch04-01-primitive-types.md)
     - [Comments](ch04-02-comments.md)
@@ -42,7 +43,7 @@
     - [Resources](ch06-02-resources.md)
     - [Collections](ch06-03-collections.md)
     - [Resource Applications](ch06-04-resource-applications.md)
-
+<!-- 
 - [Common Collections](ch08-00-common-collections.md)
     - [Storing Lists of Values with Vectors](ch08-01-vectors.md)
     - [Storing UTF-8 Encoded Text with Strings](ch08-02-strings.md)
@@ -138,3 +139,5 @@
     - [E - Editions](appendix-05-editions.md)
     - [F - Translations of the Book](appendix-06-translation.md)
     - [G - How Rust is Made and “Nightly Rust”](appendix-07-nightly-rust.md)
+
+    -->

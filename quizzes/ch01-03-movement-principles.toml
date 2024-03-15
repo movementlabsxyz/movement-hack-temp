@@ -1,0 +1,15 @@
+[[questions]]
+id = "01-03-movement-principles"
+type = "MultipleChoice"
+prompt.prompt = """
+Movement network is built on all of the following principles EXCEPT:
+"""
+answer.answer = "Wen lambo"
+prompt.distractors = [
+  "Community-driven",
+  "Unified ecosystem",
+  "Accessibility and inclusivity"
+]
+context = """
+Movement network is built on sustainable principles for builders and users for long-term community growth.
+"""
