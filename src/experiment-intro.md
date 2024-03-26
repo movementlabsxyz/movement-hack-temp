@@ -1,6 +1,8 @@
 # Movement Hack Introduction
- 
-Welcome to the Movement Hack course, and thank you for your participation! First, we want to introduce you to the new mechanics of this course.
+
+This course is designed to train you to build for Movement. See our [docs](https://docs.movementlabs.xyz/) for an introduction to the Move stack.
+
+Here are some unique mechanics of this course:
 
 ## 1. Quizzes
 
