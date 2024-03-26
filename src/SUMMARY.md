@@ -36,13 +36,14 @@
     - [Generics Introduction](ch05-03-generics-intro.md)
     - [Generics to Constrain Abilities](ch05-04-generics-abilities.md)
     - [Generics with Multiple Type Parameters](ch05-05-generics-with-multiple-types.md)
-
+    
+<!--
 - [Move's Storage Model](ch06-00-storage-model.md)
     - [Ownership and References](ch06-01-ownership-and-references.md)
     - [Resources](ch06-02-resources.md)
     - [Collections](ch06-03-collections.md)
     - [Resource Applications](ch06-04-resource-applications.md)
-<!-- 
+ 
 - [Common Collections](ch08-00-common-collections.md)
     - [Storing Lists of Values with Vectors](ch08-01-vectors.md)
     - [Storing UTF-8 Encoded Text with Strings](ch08-02-strings.md)
