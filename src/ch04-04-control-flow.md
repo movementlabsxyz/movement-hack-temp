@@ -1,10 +1,10 @@
-## Control flow
+# Control flow
 
 This lesson will help you gain the ability to use control loops safely. You'll be able to write for loops, while loops, and if statements, debug infinite loops, and assert preconditions in Move.
 
 Move is an imperative language. Control flow mechanisms like loops and conditional statements allow developers to dictate the execution path of their code. This lesson provides an overview of these control structures with practical examples to help you understand how to implement and debug them effectively.
 
-### The `if` Expression: Making Decisions
+## The `if` Expression: Making Decisions
 
 The if expression in Move lets you execute a block of code based on whether a condition is true or false. It's like deciding whether to take an umbrella based on whether it's raining.
 
@@ -23,11 +23,11 @@ script {
 
 In this example, the decision to wear a sweater is made based on the temperature. The syntax is: `if (condition) { ... } else { ... }`;
 
-### Iterating with Loops
+## Iterating with Loops
 
 Move supports two types of loops: while for conditional looping and loop for potentially infinite loops.
 
-### `while` Loop: Conditional Iteration
+## `while` Loop: Conditional Iteration
 
 Use a while loop when you want to repeat an action until a certain condition becomes false. For example, incrementing a counter until it reaches a specified limit.
 
@@ -45,7 +45,7 @@ script {
 
 This loop decrements a counter from a starting value until it hits zero, mimicking a countdown timer.
 
-### Infinite loop
+## Infinite loop
 
 An infinite loop will run forever unless explicitly exited with break. It's crucial to use it cautiously to avoid infinite loops that can consume excessive resources (gas) on the blockchain.
 
@@ -62,7 +62,7 @@ script {
 ```
 In this example, the loop increments i but exits before it becomes an infinite loop thanks to the break statement.
 
-### Debugging Infinite Loops
+## Debugging Infinite Loops
 
 Understanding how to safely exit a loop is essential for debugging. Use break to exit loops and continue to skip to the next iteration of the loop.
 
@@ -78,9 +78,10 @@ script {
     }
 }
 ```
+
 This loop increments i, skips even numbers using continue, and stops when i is greater than 10 using break.
 
-### Using `assert!` for Preconditions
+## Using `assert!` for Preconditions
 
 Move's assert! function is a powerful tool for checking conditions and aborting execution if the condition is not met, preventing unwanted states in your blockchain applications.
 
@@ -98,6 +99,6 @@ In this example, assert! ensures that the token amount to be transferred is not 
 
 {{#quiz ../quizzes/ch04-04-control-flow.toml}}
 
-### Conclusion
+## Conclusion
 
 Control flow structures in Move, such as if expressions, while and loop loops, and the assert! function, are essential for creating dynamic and safe smart contracts. By leveraging these constructs, developers can write more robust and efficient applications on the blockchain. Practicing with these examples will help you become proficient in controlling the flow of your Move programs and debugging them effectively.

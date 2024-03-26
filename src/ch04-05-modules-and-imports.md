@@ -1,14 +1,14 @@
-## Modules and Imports
+# Modules and Imports
 
 In this lesson, you'll gain experience writing Move modules and importing functions and types from other modules.
 
 In Move, a language designed for blockchain development, modules play a crucial role in organizing code, while imports allow for modularization and reusability. Here's an in-depth look at how to create modules and import functions and types from them, illustrated with practical examples.
 
-### Creating Modules in Move
+## Creating Modules in Move
 
 A module in Move is akin to a package of code that contains functions, types, and resources, encapsulating related functionality under a single namespace. Modules are published under a developer's address and can be utilized by scripts and other modules.
 
-### Example: Defining a Simple Math Module
+## Example: Defining a Simple Math Module
 
 Let's start with a basic example of a module that performs arithmetic operations:
 
@@ -28,7 +28,7 @@ module 0x1::SimpleMath {
 
 This SimpleMath module provides two functions, add and subtract, which can be used by other parts of your Move application.
 
-### Importing from Modules
+## Importing from Modules
 
 To use the functionality defined in a module, you must import it. This can be done in scripts or other modules.
 
@@ -47,7 +47,7 @@ script {
 
 In this script, we're using the add and subtract functions from the SimpleMath module to perform arithmetic operations.
 
-### Using `use` to Import Modules
+## Using `use` to Import Modules
 
 The use keyword simplifies imports, especially when dealing with multiple functions or types from the same module:
 
@@ -64,7 +64,7 @@ script {
 
 By importing SimpleMath at the script's beginning, we make its functions readily available for use.
 
-### Advanced Importing Techniques
+## Advanced Importing Techniques
 
 Move's importing capabilities also include importing specific members of a module or using aliases to avoid naming conflicts.
 
@@ -82,7 +82,7 @@ script {
 ```
 This approach keeps your script clean and focused, importing only what you need.
 
-### Example: A Module for User Management
+## Example: A Module for User Management
 
 Consider a module designed for managing user profiles in a decentralized application:
 
@@ -117,7 +117,7 @@ For Sui, in `Move.toml` under `[addresses]` you could add user_manager_addr="0x0
 
 This UserManager module defines a Profile struct and provides functions to create and update a user's profile.
 
-### Importing Module Contents into Other Modules
+## Importing Module Contents into Other Modules
 
 Modules can use functionalities defined in other modules through imports. This promotes code reuse and modularity.
 
@@ -134,7 +134,7 @@ module profile_analytics_addr::ProfileAnalytics {
 ```
 In the ProfileAnalytics module, we're using the UserManager::Profile type and directly accessing the username field to compute its length, showcasing how to access types and fields across modules.
 
-### Using `use` for Easier Access
+## Using `use` for Easier Access
 
 The use statement simplifies access to external modules by allowing you to refer to them without specifying the full path each time:
 
@@ -150,9 +150,10 @@ module EnhancedUserManager {
 }
 }
 ```
+
 Here, `EnhancedUserManager` imports specific functions and types from `UserManager`, making it easier to interact with user profiles, such as incrementing a user's age to celebrate a birthday.
 
-### Advanced Import Techniques
+## Advanced Import Techniques
 
 Move's flexible import system also supports member imports and aliasing, providing fine-grained control over module content usage.
 
@@ -169,7 +170,7 @@ module TransactionLogger {
 ```
 This approach imports only the Profile struct, keeping the module focused on its specific logging responsibilities.
 
-### Aliasing with `as`
+## Aliasing with `as`
 
 Aliasing resolves naming conflicts and shortens verbose module names for convenience:
 
@@ -189,6 +190,6 @@ SecureUserManager uses UM as an alias for UserManager, streamlining access to th
 
 {{#quiz ../quizzes/ch04-05-modules-and-imports.toml}}
 
-### Conclusion
+## Conclusion
 
 By leveraging modules and imports, Move developers can build well-organized, modular, and reusable code. This structured approach facilitates collaboration across large-scale projects by clearly defining, isolating and reusing different components. 

@@ -1,12 +1,12 @@
-## Primitive types
+# Primitive types
 
 After completing this lession, you'll be able to define and assign values to primitive types (integer types, as operator, boolean, address).
 
-### Understanding Primitive Types in Move with Everyday Examples
+## Understanding Primitive Types in Move with Everyday Examples
 
 In the world of Move, the programming language used for blockchain development, there are some basic building blocks known as primitive types. These are the simple types used to represent numbers, whether something is true or false (boolean values), and unique identifiers for accounts or wallets on the blockchain (addresses). Let's dive into what these primitive types look like, using examples you might encounter in everyday life.
 
-### Integer Types: Counting and Measuring
+## Integer Types: Counting and Measuring
 
 Move uses three types of integers: `u8`, `u64`, and `u128`. You can think of integers like the numbers you use to count things. For example:
 
@@ -41,7 +41,7 @@ script {
 
 {{#quiz ../quizzes/ch04-01-integer-types.toml}}
 
-### Operator `as`: Changing Your Perspective
+## Operator `as`: Changing Your Perspective
 
 Sometimes, you need to compare things of different sizes, like if a cup of water will fill a bucket. In Move, you can change the "size" of your integer using the as operator, to make sure you're comparing apples to apples.
 
@@ -60,7 +60,7 @@ script {
 
 {{#quiz ../quizzes/ch04-01-as-operator.toml}}
 
-### Boolean: Yes or No, True or False
+## Boolean: Yes or No, True or False
 
 Booleans are straightforward – they can only be true or false. Think of them like answering a yes-or-no question: "Is it sunny outside?"
 
@@ -77,7 +77,7 @@ script {
 ```
 {{#quiz ../quizzes/ch04-01-bool.toml}}
 
-### Address: Identifying Where Things Belong
+## Address: Identifying Where Things Belong
 
 In the blockchain world, an address is like the address of your house, but for your digital wallet or account. It's how you receive things (like cryptocurrency) or where you send them from.
 
@@ -98,5 +98,5 @@ script {
 
 {{#quiz ../quizzes/ch04-01-address.toml}}
 
-### Wrap-Up
+## Wrap-Up
 In Move, these primitive types form the foundation of the language, allowing you to count, measure, make decisions, and identify accounts on the blockchain. By understanding integers, booleans, and addresses, you're well on your way to mastering the basics of Move and blockchain programming.

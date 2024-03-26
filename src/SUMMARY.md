@@ -20,7 +20,7 @@
 
 - [Planning Your Capstone Project](ch03-00-domain-modeling.md)
     - [Domain Modeling](ch03-01-course-project-overview.md)
-    - [User Journey](ch03-02-user-story.md)
+    - [User Journey](ch03-02-user-journey.md)
     - [Architectural Diagram](ch03-03-architectural-diagram.md)
     -->
 - [Basic Move Syntax](ch04-00-basic-move-syntax.md)

@@ -1,23 +1,23 @@
-## Project Overview
+# Project Overview
 
 This lesson contains an overview of the project you'll build throughout the course. You'll create a model of the domain and look into how Move plays into each component.
 
-### Your dApp's user story
+## Your dApp's user story
 
 A user story is a narrative about your dApp, from your dApp user's perspective.
 
-> ### Chat Room User Story Example
+> ## Chat Room User Story Example
 >
 > "I went to this site called Move Chat. There were all these messages getting posted, from lots of different wallets. I connected my wallet with a button in the upper right corner. And then I typed in my first message: "Hello, Move!" I clicked Send, signed with my wallet, and my message posted, onto the blockchain! I've been using Move Chat for months now - met several great friends and business partners on there and love the new features they keep adding.
 >
 
-> ### Track Your Progress: User Story
+> ## Track Your Progress: User Story
 > 
 > Write a user story for the chat app you created. Include features that you haven't built yet, which you think could be good to add. 
 > Copy your user story's text and <a href="">submit here for credit on Galxe.</a>
 >
 
-### Your dApp's architecture diagram
+## Your dApp's architecture diagram
 To create a diagram of Move Chat, start by looking at the types and functions specified in the module code:
 
 ```rust
@@ -82,7 +82,7 @@ The angle bracket (>) represents moving a resource to an account.
 * **Step 1:** `init_module` creates a new `ChatRoom` resource
 * **Step 2:** The `ChatRoom` resource is moved to `account`.
 
-> ### Track Your Progress: Architectural Diagram
+> ## Track Your Progress: Architectural Diagram
 >
 > * Create a diagram representing the `create_chat_room` function. 
 > * Just create text boxes and add the code for each relevant struct and function. Then diagram the steps to represent what happens when the function is called. 
