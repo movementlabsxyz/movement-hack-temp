@@ -33,4 +33,4 @@ Move is a significant advancement in blockchain technology, offering a secure an
 
 ## References
 
-1. The language of money, Part one: Why build Move? Diem blog: https://www.diem.com/en-us/blog/why-build-move/
+1. The language of money, Part one: Why build Move? Diem blog: [https://www.diem.com/en-us/blog/why-build-move/](https://www.diem.com/en-us/blog/why-build-move/)
