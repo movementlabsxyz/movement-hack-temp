@@ -1,35 +1,12 @@
-# The Rust Programming Language
+# Movement Hack
 
-![Build Status](https://github.com/rust-lang/book/workflows/CI/badge.svg)
-
-This repository contains the source of "The Rust Programming Language" book, specifically an experimental branch that supports interactive features like quizzes.
-
-**If you discovered an issue in at <https://rust-book.cs.brown.edu/>, PLEASE report the issue on THIS REPOSITORY and not elsewhere.**
-
-[The book is available in dead-tree form from No Starch Press][nostarch].
-
-[nostarch]: https://nostarch.com/rust-programming-language-2nd-edition
-
-You can also read the book for free online. Please see the book as shipped with
-the latest [stable], [beta], or [nightly] Rust releases. Be aware that issues
-in those versions may have been fixed in this repository already, as those
-releases are updated less frequently.
-
-[stable]: https://doc.rust-lang.org/stable/book/
-[beta]: https://doc.rust-lang.org/beta/book/
-[nightly]: https://doc.rust-lang.org/nightly/book/
-
-See the [releases] to download just the code of all the code listings that appear in the book.
-
-[releases]: https://github.com/rust-lang/book/releases
+This repository contains the source of the Movement Hack course book.
 
 ## Requirements
 
-Building the book requires [mdBook], ideally the same version that
-rust-lang/rust uses in [this file][rust-mdbook]. To get it:
+Building the book requires [mdBook]. To get it:
 
 [mdBook]: https://github.com/rust-lang-nursery/mdBook
-[rust-mdbook]: https://github.com/rust-lang/rust/blob/master/src/tools/rustbook/Cargo.toml
 
 ```bash
 $ cargo install mdbook --version <version_num>
@@ -56,7 +33,7 @@ $ cargo make install
 
 ### Without cargo-make
 
-First, build the Javascript extensions.
+First, build the JavaScript extensions.
 
 ```bash
 $ cd js-extensions
@@ -102,19 +79,7 @@ $ mdbook test
 We'd love your help! Please see [CONTRIBUTING.md][contrib] to learn about the
 kinds of contributions we're looking for.
 
-[contrib]: https://github.com/rust-lang/book/blob/main/CONTRIBUTING.md
-
-Because the book is [printed][nostarch], and because we want
-to keep the online version of the book close to the print version when
-possible, it may take longer than you're used to for us to address your issue
-or pull request.
-
-So far, we've been doing a larger revision to coincide with [Rust
-Editions](https://doc.rust-lang.org/edition-guide/). Between those larger
-revisions, we will only be correcting errors. If your issue or pull request
-isn't strictly fixing an error, it might sit until the next time that we're
-working on a large revision: expect on the order of months or years. Thank you
-for your patience!
+[contrib]: https://github.com/movementlabsxyz/movement-hack/blob/main/CONTRIBUTING.md
 
 ### Translations
 
@@ -123,7 +88,7 @@ efforts that are currently in progress. Open a new issue to start working on
 a new language! We're waiting on [mdbook support] for multiple languages
 before we merge any in, but feel free to start!
 
-[Translations]: https://github.com/rust-lang/book/issues?q=is%3Aopen+is%3Aissue+label%3ATranslations
+[Translations]: https://github.com/movementlabsxyz/movement-hack/issues?q=is%3Aopen+is%3Aissue+label%3ATranslations
 [mdbook support]: https://github.com/rust-lang-nursery/mdBook/issues/5
 
 ## Spellchecking
