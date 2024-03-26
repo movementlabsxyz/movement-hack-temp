@@ -1,4 +1,4 @@
-### Enter the Movement
+# Enter the Movement
 
 In this lesson, you'll learn how Movement labs has created a network of modular Move-based blockchains to help build a more secure blockchain world.
 

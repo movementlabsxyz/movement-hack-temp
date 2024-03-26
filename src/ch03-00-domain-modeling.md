@@ -1,5 +1,9 @@
-# Planning your course project
+# Planning your capstone project
 
-This course encourages you to spend time planning your capstone project. Whether it's a public good, a for-profit dApp or service, or something completely different, your project should be something that moves you, because you'll be investing decent amounts of time . 
+You'll be investing a decent chunks of time building your capstone project. Even an hour or two a day working on it is enough, but it takes commitment and dedication to get a worthwhile project done. So, whether it's a public good, a for-profit dApp or service, or something completely different, your project should be something that moves you.
 
-This chapter will guide you to plan your project's user story and model its domain for the best possible outcome.
+This chapter will guide you to plan your capstone project in the following ways:
+
+* Understanding principles of domain modeling
+* Writing the user journey for your project
+* Creating an archictual diagram to model your project's domain 
