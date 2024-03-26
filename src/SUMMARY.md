@@ -19,9 +19,8 @@
     - [Hello, Move!](ch02-03-hello-move.md)
 
 - [Planning Your Capstone Project](ch03-00-domain-modeling.md)
-    - [User Story and Architectural Diagram](ch03-01-course-project-overview.md)
-    <!-- 
-    - [User Story](ch03-02-user-story.md)
+    - [Domain Modeling](ch03-01-course-project-overview.md)
+    - [User Journey](ch03-02-user-story.md)
     - [Architectural Diagram](ch03-03-architectural-diagram.md)
     -->
 - [Basic Move Syntax](ch04-00-basic-move-syntax.md)

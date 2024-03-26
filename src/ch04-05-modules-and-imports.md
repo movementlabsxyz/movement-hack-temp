@@ -187,6 +187,8 @@ module SecureUserManager {
 
 SecureUserManager uses UM as an alias for UserManager, streamlining access to the original module's functionality while adding an encryption layer.
 
+{{#quiz ../quizzes/ch04-05-modules-and-imports.toml}}
+
 ### Conclusion
 
 By leveraging modules and imports, Move developers can build well-organized, modular, and reusable code. This structured approach facilitates collaboration across large-scale projects by clearly defining, isolating and reusing different components. 
