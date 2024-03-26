@@ -1,3 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '**'
+
+env:
+  RUST_LIB_BACKTRACE: 1
+  RAYON_NUM_THREADS: 1
+  MDBOOK_QUIZ_VERSION: 0.3.3
+  AQUASCOPE_VERSION: 0.3.1
+  AQUASCOPE_TOOLCHAIN: nightly-2023-08-25
+
+jobs:
+  placeholder-job:
+    name: Placeholder Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo a Message
+        run: echo "This is a placeholder job to prevent 'No jobs were run' error."
+
+
 # name: CI
 # on:
 #   push:
