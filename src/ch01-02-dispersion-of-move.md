@@ -5,25 +5,30 @@ Move's journey from Facebook's Diem project to its adoption by Sui, Aptos, and o
 
 ## The Beginning: Facebook's Vision
 
-Move began as part of Facebook's ambitious blockchain project, initially named Libra and later rebranded as Diem. The goal was to create a global payment system that was accessible and efficient. Facebook realized early on that existing blockchain languages and platforms had limitations, especially concerning security and the precise handling of digital assets. To overcome these challenges, they developed Move—a language designed from the ground up to safely manage digital assets on the blockchain.
+Move began as part of Facebook's ambitious blockchain project, first named Libra and later rebranded as Diem. The goal was to create a global payment system that was accessible and efficient. 
+
+Facebook realized early on that existing blockchain languages and platforms had limitations, especially with security and the precise handling of digital assets. To overcome these challenges, they developed Move: a language designed from the ground up to safely manage digital assets on the blockchain.
+
+{{#quiz ../quizzes/ch01-02-move-was-designed-for.toml}}
 
 ## From Diem to the Wider World
 
-Although Diem garnered significant attention and sparked discussions worldwide, it faced regulatory hurdles and skepticism from financial authorities. As the project's future became uncertain, the innovative work on Move did not go unnoticed by the broader blockchain community. The principles and capabilities of Move, particularly its focus on safety and asset specificity, were too valuable to be confined to a single project.
+Although Diem garnered significant attention and sparked discussions worldwide, it faced regulatory hurdles and skepticism from financial authorities. As the project's future became uncertain, the innovative work on Move did not go unnoticed by the broader blockchain community. The principles and capabilities of Move were too valuable to be confined to a single project.
 
 ## The Dispersion: Aptos, Sui and Beyond
 
 Two notable blockchain platforms, Aptos and Sui, were the first major networks to adopt and adapt the Move language for their own ecosystems. Both projects were started by former members of the Diem team who wanted to continue Move's development beyond Diem.
 
-Before the dawning of Movement network, the Move ecosystem included:
-
-- **Aptos:** Aptos Labs, a team with roots in the Diem project, chose to carry the Move torch.. They saw Move's safety features and asset handling capabilities as crucial for building a reliable and secure blockchain infrastructure. Aptos worked on refining Move to suit their vision of a user-friendly and developer-friendly blockchain.
-
-- **Sui:** Developed by Mysten Labs, Sui aimed to leverage Move to create a highly scalable and customizable blockchain. They focused on optimizing Move for a new consensus mechanism and state management system, pushing the boundaries of what could be achieved with Move in terms of speed and flexibility.
-
-- **Other blockchains:** Starcoin, 0L, and Celo have implemented Move for smart contracts. Solana and other blockchains are working to add Move support.
-
-And now **Movement network** is creating Move-EVM interoperability and other solutions for Move adoption. 
+> ## Move ecosystem pioneers:
+> 
+> - **Aptos:** Aptos Labs, a team with roots in the Diem project, chose to carry the Move torch.. They saw Move's safety features and asset handling capabilities as crucial for building a reliable and secure blockchain infrastructure. Aptos worked on refining Move to suit their vision of a user-friendly and developer-friendly blockchain.
+> 
+> - **Sui:** Developed by Mysten Labs, Sui aimed to leverage Move to create a highly scalable and customizable blockchain. They focused on optimizing Move for a new consensus mechanism and state management system, pushing the boundaries of what could be achieved with Move in terms of speed and flexibility.
+> 
+> - **Other blockchains:** Starcoin, 0L, and Celo have implemented Move for smart contracts. Solana and other blockchains are working to add Move support.
+> 
+> And now **Movement network** is creating Move-EVM interoperability and other groundbreaking solutions for Move adoption. 
+> 
 
 ## The Legacy: Move's Growing Ecosystem
 

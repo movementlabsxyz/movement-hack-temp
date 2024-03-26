@@ -25,9 +25,16 @@ The engineering team at Diem, which included experts from Facebook, created Move
 >
 >- **Open Source and Community-Driven:** Move is open source, meaning anyone can see how it works and contribute to its development. This approach ensures that Move can evolve to meet changing needs.
 >
+
+Here's an architectural diagram of Move, from the language's creators [1]:
+
+![Move high-level architecture](./img/move_architecture.png "Move high-level architecture")
+
 ## Conclusion
 
-Move is a significant advancement in blockchain technology, offering a secure and efficient way to manage digital assets. Its introduction of resources, combined with the Move Prover and efficient bytecode compilation, makes it a robust tool for developers. Move's open-source nature and flexibility ensure it is well-equipped to support the future of digital finance with security and efficiency at its core.
+Move is a significant advancement in blockchain technology, offering a secure and efficient way to manage digital assets. Its introduction of resources, combined with the Move Prover and efficient bytecode compilation, makes it a robust tool for developers. 
+
+Move's open-source nature and flexibility ensure it is well-equipped to support the future of digital finance with security and efficiency at its core.
 
 {{#quiz ../quizzes/ch01-01-features-of-move.toml}}
 

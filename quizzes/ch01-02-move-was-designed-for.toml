@@ -1,0 +1,15 @@
+[[questions]]
+id = "01-02-move-was-designed-for-1"
+type = "MultipleChoice"
+prompt.prompt = """
+What was the Move language designed to do?
+"""
+answer.answer = "Safely manage digital assets on the blockchain"
+prompt.distractors = [
+  "Create ICOs, IGOs, IDOs, and other presale offerings",
+  "Help Facebook domimate the DeFi landscape",
+  "Give developers an alternative to C++ when writing smart contracts"
+]
+context = """
+Move was designed for safely managing digital assets.
+"""

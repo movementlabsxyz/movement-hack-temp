@@ -2,11 +2,11 @@
 id = "01-02-move-adoption"
 type = "MultipleChoice"
 prompt.prompt = """
-All of the following blockchains support some form of the Move language EXCEPT:
+All of the following networks support some form of the Move language EXCEPT:
 """
 answer.answer = "Dogecoin"
 prompt.distractors = [
-  "Movement network",
+  "Movement",
   "Aptos",
   "Sui"
 ]

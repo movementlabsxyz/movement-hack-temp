@@ -33,7 +33,7 @@ a.header {
 }
 
 .prompt { 
-    background: rgba(255,208,19, 0.5)!important;
+    background: rgb(255,208,19)!important;
     color: #000!important;
 }
 
@@ -74,7 +74,7 @@ h2 {
     color: #000!important;
 }
 
-.trigger {
+.trigger, .bug-report {
     display:none!important;
 }
 
