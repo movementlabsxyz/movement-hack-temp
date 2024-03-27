@@ -40,10 +40,6 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-      - name: Copy JS and CSS extensions
-        run: |
-          mkdir -p /home/runner/work/movement-hack/movement-hack/book/js-extensions/packages/consent-form/dist/
-          cp /home/runner/work/movement-hack/movement-hack/js-extensions/packages/consent-form/dist/index.css /home/runner/work/movement-hack/movement-hack/book/js-extensions/packages/consent-form/dist/index.css
       - name: Build with mdBook
         run: mdbook build
       - name: Upload artifact
