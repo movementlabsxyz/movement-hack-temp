@@ -18,14 +18,16 @@ let ConsentForm = () => {
           <h2>What is this?</h2>
           <div className="row">
             <p>
-              This website is an experiment by Movement Labs{" "}
-              <a href="https://willcrichton.net/">Will Crichton</a>,{" "}
-              <a href="https://gavinleroy.com/">Gavin Gray</a>, and{" "}
-              <a href="https://cs.brown.edu/~sk/">Shriram Krishnamurthi</a>. The goal of this
-              experiment is to help people
-              learn to build with Movement more effectively.
+              The goals of this course are:
             </p>
-            <img src="img/experiment/brown-logo.png" width="150" />
+            <ol>
+              <li>
+                to empower people to build with Movement and
+              </li>
+              <li>
+                to help people understand Movement's advantages.
+              </li>
+            </ol>
           </div>
         </section>
         <section>
@@ -65,28 +67,12 @@ let ConsentForm = () => {
         <div className="row">
           <button
             onClick={() => {
-              localStorage.setItem(CONSENT_KEY, "YES");
               ref.current!.style.display = "none";
-              document.documentElement.style.overflow = "auto";
             }}
           >
-            I understand and want to participate
-          </button>
-          <button
-            onClick={() => {
-              window.location.href = "https://doc.rust-lang.org/book/";
-            }}
-          >
-            I do not want to participate
+            Let's Move.
           </button>
         </div>
-        <section>
-          <i>
-            Interested in participating in other experiments about making Rust easier to learn?
-            Please sign up here:
-          </i>{" "}
-          <a href="https://forms.gle/U3jEUkb2fGXykp1DA">https://forms.gle/U3jEUkb2fGXykp1DA</a>
-        </section>
       </div>
     </div>
   );
