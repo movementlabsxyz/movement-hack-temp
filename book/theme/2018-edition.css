@@ -1,0 +1,93 @@
+span.caption {
+    font-size: .8em;
+    font-weight: 600;
+}
+
+span.caption code {
+    font-size: 0.875em;
+    font-weight: 400;
+}
+
+blockquote {
+    background: #FFD013;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+html {
+    background-color: #000!important;
+}
+
+.page, .sidebar-resize-handle {
+    background-color: #000;
+    color: #fff;
+}
+
+a.header {
+    color: #fff!important;
+}
+
+.sidebar-scrollbox {
+    background: #FFD013!important; 
+    color: #000!important;
+}
+
+.prompt { 
+    background: rgb(255,208,19)!important;
+    color: #000!important;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+
+.mdbook-quiz {
+    border-color: #FFD013!important;
+}
+
+.menu-bar {
+    background-color: rgba(255,208,19, 1)!important;
+    border: #000!important;
+    border-width: 2px!important;
+}
+
+.menu-title {
+    color: #000!important;
+}
+
+.start, input[type="submit"], button {
+    padding: 8px 15px !important;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff!important;
+    background-color: #0337FF!important;
+    transition: background-color .25s ease-in-out, color .25s ease-in-out, box-shadow .25s ease-in-out;
+}
+
+.start:hover, input[type="submit"]:hover, button:hover {
+    color: #000 !important;
+    background-color: #fff !important;
+}
+
+.expanded {
+    color: #000!important;
+}
+
+.trigger, .bug-report {
+    display:none!important;
+}
+
+#theme-toggle {
+    display: none!important;
+}
+
+blockquote h2, blockquote a.header {
+    margin-top: 20px;
+    color: #000!important;
+}
+
+#search-toggle {
+    padding: 0 8px!important;
+}
+
