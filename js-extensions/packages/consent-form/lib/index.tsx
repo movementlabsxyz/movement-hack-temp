@@ -13,7 +13,7 @@ let ConsentForm = () => {
   return (
     <div className="consent-form" ref={ref}>
       <div className="container">
-        <h1>Experiment: Interactive Movement Hack</h1>
+        <h1>Welcome to Movement Hack</h1>
         <section>
           <h2>What is this?</h2>
           <div className="row">
@@ -22,10 +22,10 @@ let ConsentForm = () => {
             </p>
             <ol>
               <li>
-                to empower people to build with Movement and
+                to empower you to build with Movement and
               </li>
               <li>
-                to help people understand Movement's advantages.
+                to help you understand Movement's advantages.
               </li>
             </ol>
           </div>
@@ -37,12 +37,12 @@ let ConsentForm = () => {
               <p>This course workbook is supplemented with community involvement:</p>
               <ol>
                 <li>
-                  <strong>Interactive quizzes are added in each section.</strong> These quizzes help
+                  <strong>Interactive quizzes are included in each section.</strong> These quizzes help
                   you test your understanding of building for Movement. The quizzes also help us determine which
                   sections need improvement. 
                 </li>
                 <li>
-                  <strong>Join the Discord and Telegram.</strong> We will hold weekly office hours and calls to support you on your developer journey.
+                  <strong>Join the [Discord](https://discord.gg/movementlabsxyz).</strong> We will hold weekly office hours and calls to support you as we build the Parthenon.
                 </li>
               </ol>
             </div>
@@ -53,15 +53,6 @@ let ConsentForm = () => {
           <h2>Why should I take Movement Hack? </h2>
           <p>
             If you'd like to learn to build on an emerging new Move Ecosystem infrstracture, this is the course for you!
-          </p>
-        </section>
-        <section>
-          <h2>What data do I have to give you?</h2>
-          <p>
-            We do not need any personal information about you. The only data we gather are: whenever
-            you take a quiz, we record your answers to the quiz. We also use cookies to determine
-            when a set of answers are coming from the same browser session. We hope the patterns of
-            answers will help us better understand the Movement learning experience.
           </p>
         </section>
         <div className="row">
