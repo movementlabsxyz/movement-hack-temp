@@ -40,6 +40,10 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+      - name: Install js-extensions
+        run: |
+          cd js-extensions
+          pnpm init-repo    
       - name: Build with mdBook
         run: mdbook build
       - name: Upload artifact
