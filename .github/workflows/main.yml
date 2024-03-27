@@ -31,6 +31,8 @@ jobs:
     env:
       MDBOOK_VERSION: 0.4.36
     steps:
+    
+
       - uses: actions/checkout@v4
       - name: Install mdBook
         run: |
@@ -41,6 +43,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
       - name: Install js-extensions
+        uses: pnpm/action-setup@v2
+          with:
+            version: 6.7.0
         run: |
           cd js-extensions
           pnpm init-repo    
