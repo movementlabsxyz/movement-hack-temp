@@ -2,7 +2,7 @@
 
 <small>There is a new edition of the book and this is an old link.</small>
 
-> Implementing the `Deref` trait allows us to customize the behavior of the _dereference operator_ `*`.
+> Implementing `Deref` trait allows us to customize the behavior of the _dereference operator_ `*`.
 > By implementing `Deref` in such a way that a smart pointer can be treated like a regular reference, we can write code that operates on references and use that code with smart pointers too.
 
 ```rust
