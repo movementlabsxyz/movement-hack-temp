@@ -33,7 +33,4 @@ You can use highlights to save information for yourself. You can also use highli
 
 ## 3. ...and more!
 
-The book's content may change as you go through the experiment. We will update this page as we add new features. Here's the changelog:
-
-* March 25, 2024
-  * First draft of chapters 1 - 5 written.
+The book's content may change as you work through it. Please send feedback to [contact email address].
