@@ -32,7 +32,7 @@ let ConsentForm = () => {
                   <strong>Interactive quizzes are included in each section.</strong> These quizzes help you test your understanding of building for Movement. The quizzes also help us determine which sections need improvement. 
                 </li>
                 <li>
-                  <strong>Join the [Discord](https://discord.gg/movementlabsxyz).</strong> We will hold weekly office hours and AMAs to support you as we build the Parthenon.
+                  <strong>Join the <a href="https://discord.gg/movementlabsxyz">Discord</a>.</strong> We will hold weekly office hours and AMAs to support you as we build the Parthenon.
                 </li>
               </ol>
             </div>
