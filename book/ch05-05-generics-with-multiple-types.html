@@ -180,11 +180,13 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2 id="generics-with-multiple-types-in-move"><a class="header" href="#generics-with-multiple-types-in-move">Generics with Multiple Types in Move</a></h2>
+                        <h1 id="generics-with-multiple-types-in-move"><a class="header" href="#generics-with-multiple-types-in-move">Generics with Multiple Types in Move</a></h1>
 <p>Generics aren't limited to single-type scenarios; Move allows defining structs and functions with multiple generic types, expanding the versatility and reusability of code. This feature is particularly useful when designing complex data structures or functions that need to operate on more than one type of data.</p>
 <p><strong>Example: Pair Storage</strong></p>
 <p>Imagine a module that needs to store pairs of items, which could be of any type. Using generics with multiple types, you can create a struct that accommodates pairs of different types.</p>
-<pre><code>module PairManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module PairManager {
     struct Pair&lt;T1, T2&gt; {
         first: T1,
         second: T2,
@@ -194,11 +196,13 @@
         Pair { first, second }
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>This <code>Pair</code> struct can hold any combination of types, making it a flexible solution for various scenarios, such as storing key-value pairs where keys and values are of different types.</p>
-<h3 id="practical-application-currency-conversion-rates"><a class="header" href="#practical-application-currency-conversion-rates">Practical Application: Currency Conversion Rates</a></h3>
+<h2 id="practical-application-currency-conversion-rates"><a class="header" href="#practical-application-currency-conversion-rates">Practical Application: Currency Conversion Rates</a></h2>
 <p>Consider an application that needs to manage currency conversion rates, which involve a pair of currencies and their conversion rate.</p>
-<pre><code>module CurrencyConverter {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module CurrencyConverter {
     struct CurrencyCode {}
 
     struct ConversionRate&lt;T1, T2&gt; {
@@ -211,23 +215,27 @@
         ConversionRate { from_currency: from, to_currency: to, rate }
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>In this example, <code>ConversionRate</code> uses generics to allow for flexibility in the types of currencies it can accept, potentially accommodating various currency representations.</p>
-<h3 id="working-with-multiple-generic-types"><a class="header" href="#working-with-multiple-generic-types">Working with Multiple Generic Types</a></h3>
+<h2 id="working-with-multiple-generic-types"><a class="header" href="#working-with-multiple-generic-types">Working with Multiple Generic Types</a></h2>
 <p>A common utility operation is swapping the values of two variables. With generics, you can create a versatile swap function that works with any type.</p>
-<pre><code>module Utils {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module Utils {
     public fun swap&lt;T1, T2&gt;(first: &amp;mut T1, second: &amp;mut T2) {
         let temp = *first;
         *first = *second;
         *second = temp;
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>This swap function can interchange the values of two variables of different types, showcasing the power of generics in creating highly reusable code components.</p>
-<h3 id="constraints-on-multiple-generic-types"><a class="header" href="#constraints-on-multiple-generic-types">Constraints on Multiple Generic Types</a></h3>
+<h2 id="constraints-on-multiple-generic-types"><a class="header" href="#constraints-on-multiple-generic-types">Constraints on Multiple Generic Types</a></h2>
 <p>When working with multiple generic types, you can apply constraints to each type parameter independently, ensuring they meet certain requirements or abilities.</p>
 <p><strong>Example: Key-Value Storage with Constraints</strong></p>
-<pre><code>module Storage {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module Storage {
     struct KeyValue&lt;T1: key, T2: store&gt; {
         key: T1,
         value: T2,
@@ -237,7 +245,7 @@
         KeyValue { key, value }
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>In this <code>KeyValue</code> struct, constraints ensure that the <code>key</code> has the <code>key</code> ability (making it suitable for use as a unique identifier) and the <code>value</code> has the <code>store</code> ability (ensuring it can be saved in global storage).</p>
 <h3 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h3>
 <p>From asset management to e-commerce, the practical examples illustrated here demonstrate how generics underpin Move's versatility and safety. Generics with multiple types enhance the capability to write flexible and reusable code in Move. Generics underline Move's strength in supporting the development of complex smart contracts and decentralized applications.</p>

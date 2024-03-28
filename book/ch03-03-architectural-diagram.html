@@ -228,6 +228,9 @@
         room.messages
     }
 <span class="boring">}</span></code></pre></pre>
+<p>There are three main types: <code>ChatRoom</code>, <code>Message</code> and a <code>&amp;signer</code> (<code>account</code>).</p>
+<p>They can be represented in the following way:</p>
+<p><img src="./img/ch03-01-diagram-chatroom-init-module.png" alt="The chat dApp&#39;s init module function diagram" title="Diagram: The chat dApp&#39;s init module function" /></p>
 <p><code>init_module</code> is a function that gets called once, when the module is first deployed.</p>
 <p><code>init_module</code> takes in a reference to a <code>signer</code> then creates a new <code>ChatRoom</code> object and moves it to the signer's account address.</p>
 <p>Here's one way to represent that with a diagram:</p>

@@ -212,11 +212,11 @@
 </li>
 </ul>
 <script type="text/javascript" src="quiz/quiz-embed.iife.js"></script><link rel="stylesheet" type="text/css" href="quiz/style.css"><div style="break-before: page; page-break-before: always;"></div><h1 id="the-history-of-move"><a class="header" href="#the-history-of-move">The History of Move</a></h1>
-<p>Welcome to the Movement! Because Move is a new language, we'll begin with a brief history. In this chapter you'll learn:</p>
+<p>Welcome to the Movement! Because Move is a new language, we'll begin with a brief history. In this chapter you'll discover:</p>
 <ul>
-<li>why the Move language was invented,</li>
-<li>how Move came to be used on multiple blockchain networks, and</li>
-<li>what Movement Labs is doing to spread Move adoption.</li>
+<li><a href="ch01-01-the-language.html">Why the Move language was invented</a></li>
+<li><a href="ch01-02-dispersion-of-move.html">How Move came to be used on multiple blockchain networks</a></li>
+<li><a href="ch01-03-enter-movement.html">What Movement Labs is doing to spread Move adoption</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="move-the-language-for-digital-assets"><a class="header" href="#move-the-language-for-digital-assets">Move: The language for digital assets</a></h1>
 <p>In this lesson, you'll learn why the Move language was created and what makes Move the ideal language for Digital assets.</p>
@@ -315,11 +315,11 @@ At the heart of Movement is a vibrant community of builders, innovators, and dre
 <p>At Movement Labs, we're not just building a product; we're building a legacy and we’re building a Movement. A Movement and legacy built on accessibility, interconnectivity, innovation, and community.</p>
 <div class="quiz-placeholder" data-quiz-name="ch01-03-movement-principles"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Movement network is built on sustainable principles for builders and users for long-term community growth.\n&quot;,&quot;id&quot;:&quot;01-03-movement-principles&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;Wen lambo&quot;},&quot;prompt&quot;:{&quot;distractors&quot;:[&quot;Community-driven&quot;,&quot;Unified ecosystem&quot;,&quot;Accessibility and inclusivity&quot;],&quot;prompt&quot;:&quot;Movement network is built on all of the following principles EXCEPT:\n&quot;}}]}"  data-quiz-fullscreen=""  data-quiz-cache-answers="" ></div>
 <script type="text/javascript" src="quiz/quiz-embed.iife.js"></script><link rel="stylesheet" type="text/css" href="quiz/style.css"><div style="break-before: page; page-break-before: always;"></div><h1 id="getting-started-with-move"><a class="header" href="#getting-started-with-move">Getting Started with Move</a></h1>
-<p>This chapter gets you building with Move. You will:</p>
+<p>This chapter gets you building with Move. You'll master:</p>
 <ul>
-<li>learn the technical advantages of Move,</li>
-<li>install Movement CLI, and</li>
-<li>deploy an end-to-end dApp in Move.</li>
+<li><a href="ch02-01-advantages-of-move.html">The advantages of Move</a></li>
+<li><a href="ch02-02-install-movement-cli.html">How to install Movement CLI</a></li>
+<li><a href="ch02-03-hello-move.html">How to deploy a Move contract</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="advantages-of-move"><a class="header" href="#advantages-of-move">Advantages of Move</a></h2>
 <p>In this lesson, you'll learn fundamental properties of Move, including resource-orientation and type linearity, and how Move addresses specific smart contract vulnerabilities.</p>
@@ -385,29 +385,29 @@ int main() {
 <p>Next, you'll install Movement CLI.</p>
 <p>Consult the <a href="https://docs.movementlabs.xyz">Movement Docs</a> and choose the setup option that works best for you.</p>
 <h3 id="todo-add-ui-to-submit-screenshot-on-galxe-as-proof-of-movement-cli-installation"><a class="header" href="#todo-add-ui-to-submit-screenshot-on-galxe-as-proof-of-movement-cli-installation">TODO: ADD UI TO SUBMIT SCREENSHOT ON GALXE AS PROOF OF MOVEMENT CLI INSTALLATION</a></h3>
-<div style="break-before: page; page-break-before: always;"></div><h3 id="hello-move"><a class="header" href="#hello-move">Hello, Move!</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hello-move"><a class="header" href="#hello-move">Hello, Move!</a></h1>
 <p>In this lesson, you'll build a simple dApp that allows users to post messages to a chat room.</p>
 <p>Try the app here: https://main.d2761w90g9sxb3.amplifyapp.com/</p>
-<h3 id="requirements"><a class="header" href="#requirements">Requirements</a></h3>
+<h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
 <p>Install Movement CLI:</p>
-<pre><code class="language-bash">bash &lt;(curl -fsSL https://raw.githubusercontent.com/movemntdev/M1/main/scripts/install.sh) --latest
+<pre><code class="language-bash">&lt;(curl -fsSL https://raw.githubusercontent.com/movemntdev/M1/main/scripts/install.sh) --latest
 </code></pre>
 <p>Clone the dApp repository:</p>
 <pre><code class="language-bash">git clone https://github.com/movementlabsxyz/movement-dapp-workshop/
 cd movement-dapp-workshop
 </code></pre>
-<h3 id="building-the-chat-dapp"><a class="header" href="#building-the-chat-dapp">Building the Chat dApp</a></h3>
+<h2 id="building-the-chat-dapp"><a class="header" href="#building-the-chat-dapp">Building the Chat dApp</a></h2>
 <p>This dApp is built using the Aptos Move language. The dApp is located in the aptos directory. Once inside the repository, navigate to the aptos directory:</p>
 <pre><code class="language-bash">cd aptos
 </code></pre>
-<h3 id="publish-module"><a class="header" href="#publish-module">Publish Module</a></h3>
+<h2 id="publish-module"><a class="header" href="#publish-module">Publish Module</a></h2>
 <p>Aptos language requires you to initialize the Move environment:</p>
 <pre><code class="language-bash">movement aptos init
 </code></pre>
 <p>Then you can publish the module:</p>
 <pre><code class="language-bash">movement aptos move publish --named-addresses chat_addr=default
 </code></pre>
-<h3 id="test-front-end"><a class="header" href="#test-front-end">Test Front End</a></h3>
+<h2 id="test-front-end"><a class="header" href="#test-front-end">Test Front End</a></h2>
 <p>To test the front end, navigate to the frontend directory and run the following command to start the front end server.</p>
 <pre><code class="language-bash">npm i &amp;&amp; npm run dev
 </code></pre>
@@ -418,20 +418,20 @@ cd movement-dapp-workshop
 </code></pre>
 <p>Make sure the address starts with <code>0x</code> else add it. That should be available in <code>.aptos/config.yaml</code> file as the <code>account</code> field.</p>
 <p>Now you can try running your transactions on the frontend and see the chat messages being posted.</p>
-<h3 id="todo-add-galxe-integration-to-submit-github-repo-link-here"><a class="header" href="#todo-add-galxe-integration-to-submit-github-repo-link-here">TODO: Add Galxe integration to submit GitHub repo link here</a></h3>
+<h2 id="todo-add-galxe-integration-to-submit-github-repo-link-here"><a class="header" href="#todo-add-galxe-integration-to-submit-github-repo-link-here">TODO: Add Galxe integration to submit GitHub repo link here</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="planning-your-capstone-project"><a class="header" href="#planning-your-capstone-project">Planning your capstone project</a></h1>
 <p>You'll be investing a decent amount of time building your capstone project. Even an hour or two a day working on it is enough, but it takes commitment and dedication to get a worthwhile project done. So, whether it's a public good, a for-profit dApp or service, or something completely different, your project should be something that moves you.</p>
 <p>This chapter will guide you to plan your capstone project in the following ways:</p>
 <ul>
-<li>Understanding principles of domain modeling</li>
-<li>Writing the user journey for your project</li>
-<li>Creating an archictual diagram to model your project's domain</li>
+<li><a href="ch03-01-domain-modeling.html">Understanding principles of domain modeling</a></li>
+<li><a href="ch03-02-user-journey.html">Writing the user journey for your project</a></li>
+<li><a href="ch03-03-architectural-diagram.html">Creating an archictual diagram to model your project's domain</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="domain-modeling-introduction"><a class="header" href="#domain-modeling-introduction">Domain Modeling Introduction</a></h1>
 <p>To plan your dApp, you'll write a user journey and then model your dApp's domain.</p>
 <p>A domain model is a visual representation of the concepts and objects related to your dApp. There's no "right" or "wrong" format for domain modeling. As long as the model accurately represents all the components of your dApp's domain in a way that helps you buidl, you're good!</p>
 <h2 id="example-the-domain-model-for-move"><a class="header" href="#example-the-domain-model-for-move">Example: The Domain Model for Move</a></h2>
-<p>Todo</p>
+<p>Todo: Explain diagram from lesson 1:1</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="user-journey"><a class="header" href="#user-journey">User Journey</a></h1>
 <p>A user journey, or user story is a narrative about your dApp, from your dApp user's perspective. It shows their experience with your dApp, step by step.</p>
 <blockquote>
@@ -491,6 +491,9 @@ Copy your user story's text and <a href="">submit here for credit on Galxe.</a><
         room.messages
     }
 <span class="boring">}</span></code></pre></pre>
+<p>There are three main types: <code>ChatRoom</code>, <code>Message</code> and a <code>&amp;signer</code> (<code>account</code>).</p>
+<p>They can be represented in the following way:</p>
+<p><img src="./img/ch03-01-diagram-chatroom-init-module.png" alt="The chat dApp&#39;s init module function diagram" title="Diagram: The chat dApp&#39;s init module function" /></p>
 <p><code>init_module</code> is a function that gets called once, when the module is first deployed.</p>
 <p><code>init_module</code> takes in a reference to a <code>signer</code> then creates a new <code>ChatRoom</code> object and moves it to the signer's account address.</p>
 <p>Here's one way to represent that with a diagram:</p>
@@ -513,11 +516,12 @@ Copy your user story's text and <a href="">submit here for credit on Galxe.</a><
 <div style="break-before: page; page-break-before: always;"></div><h1 id="basic-move-syntax"><a class="header" href="#basic-move-syntax">Basic Move Syntax</a></h1>
 <p>In this chapter, you'll work with the basics of Move:</p>
 <ul>
-<li>Primitive types</li>
-<li>Comments in Move</li>
-<li>Expressions and scope</li>
-<li>Control flow</li>
-<li>Modules and imports</li>
+<li><a href="ch04-01-primitive-types.html">Primitive Types</a></li>
+<li><a href="ch04-02-comments.html">Comments</a></li>
+<li><a href="ch04-03-expressions-and-scope.html">Expressions and Scope</a></li>
+<li><a href="ch04-04-control-flow.html">Control Flow</a></li>
+<li><a href="ch04-05-modules-and-imports.html">Modules and Imports</a></li>
+<li><a href="ch04-06-testing.html">Testing</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="primitive-types"><a class="header" href="#primitive-types">Primitive types</a></h1>
 <p>After completing this lession, you'll be able to define and assign values to primitive types (integer types, as operator, boolean, address).</p>
@@ -1033,33 +1037,37 @@ module EnhancedUserManager {
 <div style="break-before: page; page-break-before: always;"></div><h1 id="custom-types-and-generics"><a class="header" href="#custom-types-and-generics">Custom types and generics</a></h1>
 <p>Remember in the first chapter, where you learned about linear types as a safety feature of Move?</p>
 <p>In this chapter you'll dig into how those types work to give Move developers Superpowers.</p>
-<p>Through real-world examples, you'll develop a solid foundation in programming with</p>
+<p>Through real-world examples, you'll develop a solid foundation in programming with custom types and generics:</p>
 <ul>
-<li>custom types (structs),</li>
-<li>functions to get and set values of struct fields,</li>
-<li>generics,</li>
-<li>how generics can constrain type abilities, and</li>
-<li>generics containing multiple types.</li>
+<li><a href="ch05-01-custom-types.html">Custom Types</a></li>
+<li><a href="ch05-02-getter-functions.html">Getter and Setter Functions</a></li>
+<li><a href="ch05-03-generics-intro.html">Generics Introduction</a></li>
+<li><a href="ch05-04-generics-abilities.html">Generics to Constrain Abilities</a></li>
+<li><a href="ch05-05-generics-with-multiple-types.html">Generics with Multiple Type Parameters</a></li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h2 id="custom-types-structs"><a class="header" href="#custom-types-structs">Custom types (structs)</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="custom-types-structs"><a class="header" href="#custom-types-structs">Custom types (structs)</a></h1>
 <p>In this lesson, you'll create structs to define custom types. And you'll apply abilities to structs to make them work in real-world applications.</p>
 <p>Structs in Move are foundational for defining custom types, allowing developers to encapsulate and manage complex data within blockchain applications. This lesson delves into creating structs with various real-world examples, illustrating their versatility and power in data modeling.</p>
-<h3 id="struct-definition"><a class="header" href="#struct-definition">Struct Definition</a></h3>
+<h2 id="struct-definition"><a class="header" href="#struct-definition">Struct Definition</a></h2>
 <p>A struct is defined using the struct keyword, followed by its name and a list of fields enclosed in curly braces. Each field must have a specified type.</p>
 <p><strong>Example: A User Profile</strong></p>
-<pre><code>module UserProfile {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module UserProfile {
     struct Profile {
         username: vector&lt;u8&gt;,
         email: vector&lt;u8&gt;,
         age: u64,
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>This <code>Profile</code> struct represents a user profile in an application, with fields for the username, email, and age.</p>
-<h3 id="nested-structs"><a class="header" href="#nested-structs">Nested Structs</a></h3>
+<h2 id="nested-structs"><a class="header" href="#nested-structs">Nested Structs</a></h2>
 <p>Structs can contain other structs, enabling the modeling of complex hierarchical data.</p>
 <p><strong>Example: Product Catalog</strong></p>
-<pre><code>module ProductCatalog {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module ProductCatalog {
     struct Price {
         amount: u64,
         currency: vector&lt;u8&gt;,
@@ -1075,9 +1083,9 @@ module EnhancedUserManager {
         products: vector&lt;Product&gt;,
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>Here, ProductCatalog defines a system for managing products, each with a <code>Price</code>. The Catalog struct holds a collection of Product instances.</p>
-<h3 id="struct-abilities"><a class="header" href="#struct-abilities">Struct Abilities</a></h3>
+<h2 id="struct-abilities"><a class="header" href="#struct-abilities">Struct Abilities</a></h2>
 <p>Structs in Move can be annotated with abilities that define how they can be used, such as copy, drop, store, or key.</p>
 <p><strong>Example: A Tradable Asset</strong></p>
 <p>module AssetManager {
@@ -1091,7 +1099,9 @@ The Asset struct is marked with the store ability, indicating it can be stored p
 Creating and Initializing Structs
 Struct instances are typically created and initialized within functions. Move allows for direct field initialization or using variable names that match struct fields.</p>
 <p><strong>Example: Creating a New Asset</strong></p>
-<pre><code>module AssetManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module AssetManager {
     // Assuming Asset struct is defined above...
 ​
     public fun create_asset(owner: address, asset_id: u64, asset_value: u64): Asset {
@@ -1099,12 +1109,14 @@ Struct instances are typically created and initialized within functions. Move al
         // Or simply: Asset { owner, id: asset_id, value: asset_value }
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>This function demonstrates creating a new Asset, highlighting the flexibility in struct initialization.</p>
-<h3 id="accessing-struct-fields"><a class="header" href="#accessing-struct-fields">Accessing Struct Fields</a></h3>
+<h2 id="accessing-struct-fields"><a class="header" href="#accessing-struct-fields">Accessing Struct Fields</a></h2>
 <p>Access to struct fields is determined by their visibility. Within the module, fields can be accessed directly. Outside, accessor methods are needed.</p>
 <p><strong>Example: Accessing and Modifying Asset Value</strong></p>
-<pre><code>module AssetManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module AssetManager {
     // Assuming Asset struct and create_asset function are defined...
 
     public fun get_asset_value(asset: &amp;Asset): u64 {
@@ -1115,12 +1127,14 @@ Struct instances are typically created and initialized within functions. Move al
         asset.value = new_value;
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>These functions provide read and write access to an Asset's value, showcasing field access control.</p>
-<h3 id="structs-with-vectors"><a class="header" href="#structs-with-vectors">Structs with Vectors</a></h3>
+<h2 id="structs-with-vectors"><a class="header" href="#structs-with-vectors">Structs with Vectors</a></h2>
 <p>Vectors within structs enable dynamic collections of elements, useful for managing lists of items or records.</p>
 <p><strong>Example: A Voting System</strong></p>
-<pre><code>module VotingSystem {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module VotingSystem {
     struct Vote {
         candidate_id: u64,
         voter_id: address,
@@ -1134,16 +1148,18 @@ Struct instances are typically created and initialized within functions. Move al
         Vector::push_back(&amp;mut ballot.votes, vote);
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>In <code>VotingSystem</code>, <code>Ballot</code> holds a collection of <code>Vote</code> structs, with functionality to cast new votes.</p>
-<h3 id="conclusion-6"><a class="header" href="#conclusion-6">Conclusion</a></h3>
+<h2 id="conclusion-6"><a class="header" href="#conclusion-6">Conclusion</a></h2>
 <p>Structs in Move are a powerful tool for defining custom types, enabling the modeling of complex data structures essential for blockchain applications. From simple user profiles to intricate product catalogs, structs offer the flexibility to create nuanced and sophisticated data models.</p>
-<div style="break-before: page; page-break-before: always;"></div><h2 id="getter-and-setter-functions"><a class="header" href="#getter-and-setter-functions">Getter and setter functions</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="getter-and-setter-functions"><a class="header" href="#getter-and-setter-functions">Getter and setter functions</a></h1>
 <p>In this lesson, you'll implement "getter" and "setter" functions to access and change the values of fields in custom types.</p>
-<h3 id="getter-functions"><a class="header" href="#getter-functions">Getter Functions</a></h3>
+<h2 id="getter-functions"><a class="header" href="#getter-functions">Getter Functions</a></h2>
 <p>Getter functions are public functions that allow reading the values of private fields in a struct. They are essential for accessing data encapsulated within a struct from outside the module.</p>
 <p><strong>Example: Accessing Account Information</strong></p>
-<pre><code>module AccountManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module AccountManager {
     struct Account {
         id: address,
         balance: u64,
@@ -1163,12 +1179,14 @@ Struct instances are typically created and initialized within functions. Move al
         account.balance
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>In this example, <code>get_id</code> and <code>get_balance</code> are getter functions allowing external access to an Account struct's id and balance fields, respectively.</p>
-<h3 id="setter-functions"><a class="header" href="#setter-functions">Setter Functions</a></h3>
+<h2 id="setter-functions"><a class="header" href="#setter-functions">Setter Functions</a></h2>
 <p>Getter functions allow external code to read struct fields values. Setter functions allowing external code to "write" or modify the values of private fields in a struct. These functions allow you to update data in a controlled manner, ensuring any modifications are valid and safe.</p>
 <p><strong>Example: Updating Account Balance</strong></p>
-<pre><code>module AccountManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module AccountManager {
     // Assuming Account struct is defined as before...
 ​
     // Setter for updating account balance
@@ -1177,9 +1195,9 @@ Struct instances are typically created and initialized within functions. Move al
         account.balance = new_balance;
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>The <code>set_balance</code> function allows the balance of an Account to be updated from outside the module. It takes a mutable reference to an Account and a new balance value, updating the balance field directly.</p>
-<h3 id="considerations-for-getter-and-setter-functions"><a class="header" href="#considerations-for-getter-and-setter-functions">Considerations for Getter and Setter Functions</a></h3>
+<h2 id="considerations-for-getter-and-setter-functions"><a class="header" href="#considerations-for-getter-and-setter-functions">Considerations for Getter and Setter Functions</a></h2>
 <ul>
 <li>
 <p><strong>Validation:</strong> Setter functions can include validation logic to ensure that attempts to modify a struct's field adhere to specific rules or constraints. This is crucial for maintaining the integrity of the application's state.</p>
@@ -1191,15 +1209,16 @@ Struct instances are typically created and initialized within functions. Move al
 <p><strong>Security:</strong> Getter and setter functions should be designed with security in mind, especially when dealing with sensitive or critical data. Proper validation and access controls can help prevent unauthorized or harmful modifications.</p>
 </li>
 </ul>
-<h3 id="conclusion-7"><a class="header" href="#conclusion-7">Conclusion</a></h3>
-<p>Getter and setter functions in Move provide a safe and structured way to access and modify the fields of a struct from outside the module where it's defined. By carefully implementing these functions, developers can ensure data encapsulated within structs is accessible and mutable in a controlled and secure manner, aligning with the principles of safety and resource management central to Move's design.</p>
-<div style="break-before: page; page-break-before: always;"></div><h2 id="generics-introduction"><a class="header" href="#generics-introduction">Generics Introduction</a></h2>
+<h2 id="conclusion-7"><a class="header" href="#conclusion-7">Conclusion</a></h2>
+<p>Getter and setter functions in Move provide a safe and structured way to access and modify the fields of a struct from outside the module where it's defined. By carefully implementing these functions, developers can ensure data encapsulated within structs is accessible and mutable in a controlled and secure manner.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="generics-introduction"><a class="header" href="#generics-introduction">Generics Introduction</a></h1>
 <p>Generics are a cornerstone of Move's design, offering flexibility and reusability in smart contract development. This guide will break down the concept of generics in Move with practical, real-world examples.</p>
-<h3 id="understanding-generics"><a class="header" href="#understanding-generics">Understanding Generics</a></h3>
 <p>Generics allow the creation of functions and structs that can operate on many data types, making code more reusable and adaptable.</p>
-<h3 id="move-and-copy-generics"><a class="header" href="#move-and-copy-generics">Move and copy Generics</a></h3>
+<h2 id="move-and-copy-generics"><a class="header" href="#move-and-copy-generics">Move and copy Generics</a></h2>
 <p>Suppose you want to transfer different types of assets (e.g., tokens, NFTs) using the same function. Generics make this possible.</p>
-<pre><code>module AssetManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module AssetManager {
     struct Asset&lt;T&gt; has key, store {
         id: u64,
         content: T,
@@ -1209,11 +1228,13 @@ Struct instances are typically created and initialized within functions. Move al
         // Implementation for transferring asset to new_owner
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>This function can now be used to transfer any asset, regardless of its content type, as long as it conforms to the key + store constraints, ensuring the asset can be stored and uniquely identified.</p>
-<h3 id="the-copy-keyword-in-generics"><a class="header" href="#the-copy-keyword-in-generics">The <code>copy</code> Keyword in Generics</a></h3>
+<h2 id="the-copy-keyword-in-generics"><a class="header" href="#the-copy-keyword-in-generics">The <code>copy</code> Keyword in Generics</a></h2>
 <p>Suppose you need to clone a container holding any type of item.</p>
-<pre><code>module BoxManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module BoxManager {
     struct Box&lt;T&gt; has copy {
         item: T,
     }
@@ -1222,11 +1243,13 @@ Struct instances are typically created and initialized within functions. Move al
         Box { item: *original.item }
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>Here, <code>clone_box</code> can duplicate any box with contents that have the copy ability, thanks to generics.</p>
-<h3 id="references-and-borrow-checking"><a class="header" href="#references-and-borrow-checking">References and Borrow Checking</a></h3>
+<h2 id="references-and-borrow-checking"><a class="header" href="#references-and-borrow-checking">References and Borrow Checking</a></h2>
 <p>Generics combined with references enable functions to work with any account model while ensuring safety through borrow checking.</p>
-<pre><code>module AccountManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module AccountManager {
     struct Account&lt;T&gt; {
         balance: T,
     }
@@ -1235,14 +1258,17 @@ Struct instances are typically created and initialized within functions. Move al
         account.balance = account.balance + amount;
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>This function allows adding funds to any account type, leveraging Move's generics and references to ensure type safety and flexibility.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="generics-to-constrain-abilities"><a class="header" href="#generics-to-constrain-abilities">Generics to Constrain Abilities</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h2 id="generics-with-multiple-types-in-move"><a class="header" href="#generics-with-multiple-types-in-move">Generics with Multiple Types in Move</a></h2>
+<p>Todo</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="generics-with-multiple-types-in-move"><a class="header" href="#generics-with-multiple-types-in-move">Generics with Multiple Types in Move</a></h1>
 <p>Generics aren't limited to single-type scenarios; Move allows defining structs and functions with multiple generic types, expanding the versatility and reusability of code. This feature is particularly useful when designing complex data structures or functions that need to operate on more than one type of data.</p>
 <p><strong>Example: Pair Storage</strong></p>
 <p>Imagine a module that needs to store pairs of items, which could be of any type. Using generics with multiple types, you can create a struct that accommodates pairs of different types.</p>
-<pre><code>module PairManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module PairManager {
     struct Pair&lt;T1, T2&gt; {
         first: T1,
         second: T2,
@@ -1252,11 +1278,13 @@ Struct instances are typically created and initialized within functions. Move al
         Pair { first, second }
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>This <code>Pair</code> struct can hold any combination of types, making it a flexible solution for various scenarios, such as storing key-value pairs where keys and values are of different types.</p>
-<h3 id="practical-application-currency-conversion-rates"><a class="header" href="#practical-application-currency-conversion-rates">Practical Application: Currency Conversion Rates</a></h3>
+<h2 id="practical-application-currency-conversion-rates"><a class="header" href="#practical-application-currency-conversion-rates">Practical Application: Currency Conversion Rates</a></h2>
 <p>Consider an application that needs to manage currency conversion rates, which involve a pair of currencies and their conversion rate.</p>
-<pre><code>module CurrencyConverter {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module CurrencyConverter {
     struct CurrencyCode {}
 
     struct ConversionRate&lt;T1, T2&gt; {
@@ -1269,23 +1297,27 @@ Struct instances are typically created and initialized within functions. Move al
         ConversionRate { from_currency: from, to_currency: to, rate }
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>In this example, <code>ConversionRate</code> uses generics to allow for flexibility in the types of currencies it can accept, potentially accommodating various currency representations.</p>
-<h3 id="working-with-multiple-generic-types"><a class="header" href="#working-with-multiple-generic-types">Working with Multiple Generic Types</a></h3>
+<h2 id="working-with-multiple-generic-types"><a class="header" href="#working-with-multiple-generic-types">Working with Multiple Generic Types</a></h2>
 <p>A common utility operation is swapping the values of two variables. With generics, you can create a versatile swap function that works with any type.</p>
-<pre><code>module Utils {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module Utils {
     public fun swap&lt;T1, T2&gt;(first: &amp;mut T1, second: &amp;mut T2) {
         let temp = *first;
         *first = *second;
         *second = temp;
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>This swap function can interchange the values of two variables of different types, showcasing the power of generics in creating highly reusable code components.</p>
-<h3 id="constraints-on-multiple-generic-types"><a class="header" href="#constraints-on-multiple-generic-types">Constraints on Multiple Generic Types</a></h3>
+<h2 id="constraints-on-multiple-generic-types"><a class="header" href="#constraints-on-multiple-generic-types">Constraints on Multiple Generic Types</a></h2>
 <p>When working with multiple generic types, you can apply constraints to each type parameter independently, ensuring they meet certain requirements or abilities.</p>
 <p><strong>Example: Key-Value Storage with Constraints</strong></p>
-<pre><code>module Storage {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module Storage {
     struct KeyValue&lt;T1: key, T2: store&gt; {
         key: T1,
         value: T2,
@@ -1295,11 +1327,17 @@ Struct instances are typically created and initialized within functions. Move al
         KeyValue { key, value }
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>In this <code>KeyValue</code> struct, constraints ensure that the <code>key</code> has the <code>key</code> ability (making it suitable for use as a unique identifier) and the <code>value</code> has the <code>store</code> ability (ensuring it can be saved in global storage).</p>
 <h3 id="conclusion-8"><a class="header" href="#conclusion-8">Conclusion</a></h3>
 <p>From asset management to e-commerce, the practical examples illustrated here demonstrate how generics underpin Move's versatility and safety. Generics with multiple types enhance the capability to write flexible and reusable code in Move. Generics underline Move's strength in supporting the development of complex smart contracts and decentralized applications.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="moves-storage-model"><a class="header" href="#moves-storage-model">Move's Storage Model</a></h1>
+<p>In this chapter you'll program with Move's storage model:</p>
+<ul>
+<li><a href="ch06-01-ownership-and-references.html">Ownership and References</a></li>
+<li><a href="ch06-02-resources.html">Resources</a></li>
+<li><a href="ch06-03-collections.html">Collections</a></li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ownership-and-references"><a class="header" href="#ownership-and-references">Ownership and References</a></h1>
 <p>In this lesson, you'll gain a deep understanding of ownership, including when to use mutable and immutable references in a variety of contexts.</p>
 <p>Understanding ownership, move semantics, copy functionality, and references is crucial for effective Move programming. This guide will dive into these concepts with real-world examples, highlighting their importance in Move's Rust-like ownership model.</p>

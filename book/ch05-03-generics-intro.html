@@ -180,13 +180,14 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2 id="generics-introduction"><a class="header" href="#generics-introduction">Generics Introduction</a></h2>
+                        <h1 id="generics-introduction"><a class="header" href="#generics-introduction">Generics Introduction</a></h1>
 <p>Generics are a cornerstone of Move's design, offering flexibility and reusability in smart contract development. This guide will break down the concept of generics in Move with practical, real-world examples.</p>
-<h3 id="understanding-generics"><a class="header" href="#understanding-generics">Understanding Generics</a></h3>
 <p>Generics allow the creation of functions and structs that can operate on many data types, making code more reusable and adaptable.</p>
-<h3 id="move-and-copy-generics"><a class="header" href="#move-and-copy-generics">Move and copy Generics</a></h3>
+<h2 id="move-and-copy-generics"><a class="header" href="#move-and-copy-generics">Move and copy Generics</a></h2>
 <p>Suppose you want to transfer different types of assets (e.g., tokens, NFTs) using the same function. Generics make this possible.</p>
-<pre><code>module AssetManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module AssetManager {
     struct Asset&lt;T&gt; has key, store {
         id: u64,
         content: T,
@@ -196,11 +197,13 @@
         // Implementation for transferring asset to new_owner
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>This function can now be used to transfer any asset, regardless of its content type, as long as it conforms to the key + store constraints, ensuring the asset can be stored and uniquely identified.</p>
-<h3 id="the-copy-keyword-in-generics"><a class="header" href="#the-copy-keyword-in-generics">The <code>copy</code> Keyword in Generics</a></h3>
+<h2 id="the-copy-keyword-in-generics"><a class="header" href="#the-copy-keyword-in-generics">The <code>copy</code> Keyword in Generics</a></h2>
 <p>Suppose you need to clone a container holding any type of item.</p>
-<pre><code>module BoxManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module BoxManager {
     struct Box&lt;T&gt; has copy {
         item: T,
     }
@@ -209,11 +212,13 @@
         Box { item: *original.item }
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>Here, <code>clone_box</code> can duplicate any box with contents that have the copy ability, thanks to generics.</p>
-<h3 id="references-and-borrow-checking"><a class="header" href="#references-and-borrow-checking">References and Borrow Checking</a></h3>
+<h2 id="references-and-borrow-checking"><a class="header" href="#references-and-borrow-checking">References and Borrow Checking</a></h2>
 <p>Generics combined with references enable functions to work with any account model while ensuring safety through borrow checking.</p>
-<pre><code>module AccountManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module AccountManager {
     struct Account&lt;T&gt; {
         balance: T,
     }
@@ -222,7 +227,7 @@
         account.balance = account.balance + amount;
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>This function allows adding funds to any account type, leveraging Move's generics and references to ensure type safety and flexibility.</p>
 
                     </main>

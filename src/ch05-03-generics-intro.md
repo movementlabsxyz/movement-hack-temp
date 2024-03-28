@@ -1,16 +1,14 @@
-## Generics Introduction
+# Generics Introduction
 
 Generics are a cornerstone of Move's design, offering flexibility and reusability in smart contract development. This guide will break down the concept of generics in Move with practical, real-world examples.
 
-### Understanding Generics
-
 Generics allow the creation of functions and structs that can operate on many data types, making code more reusable and adaptable.
 
-### Move and copy Generics
+## Move and copy Generics
 
 Suppose you want to transfer different types of assets (e.g., tokens, NFTs) using the same function. Generics make this possible.
 
-```
+```rust
 module AssetManager {
     struct Asset<T> has key, store {
         id: u64,
@@ -25,11 +23,11 @@ module AssetManager {
 
 This function can now be used to transfer any asset, regardless of its content type, as long as it conforms to the key + store constraints, ensuring the asset can be stored and uniquely identified.
 
-### The `copy` Keyword in Generics
+## The `copy` Keyword in Generics
 
 Suppose you need to clone a container holding any type of item.
 
-```
+```rust
 module BoxManager {
     struct Box<T> has copy {
         item: T,
@@ -43,11 +41,11 @@ module BoxManager {
 
 Here, `clone_box` can duplicate any box with contents that have the copy ability, thanks to generics.
 
-### References and Borrow Checking
+## References and Borrow Checking
 
 Generics combined with references enable functions to work with any account model while ensuring safety through borrow checking.
 
-```
+```rust
 module AccountManager {
     struct Account<T> {
         balance: T,

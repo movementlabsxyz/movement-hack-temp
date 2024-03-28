@@ -6,4 +6,4 @@ A domain model is a visual representation of the concepts and objects related to
 
 ## Example: The Domain Model for Move
 
-Todo
+Todo: Explain diagram from lesson 1:1

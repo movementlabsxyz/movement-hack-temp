@@ -180,12 +180,14 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2 id="getter-and-setter-functions"><a class="header" href="#getter-and-setter-functions">Getter and setter functions</a></h2>
+                        <h1 id="getter-and-setter-functions"><a class="header" href="#getter-and-setter-functions">Getter and setter functions</a></h1>
 <p>In this lesson, you'll implement "getter" and "setter" functions to access and change the values of fields in custom types.</p>
-<h3 id="getter-functions"><a class="header" href="#getter-functions">Getter Functions</a></h3>
+<h2 id="getter-functions"><a class="header" href="#getter-functions">Getter Functions</a></h2>
 <p>Getter functions are public functions that allow reading the values of private fields in a struct. They are essential for accessing data encapsulated within a struct from outside the module.</p>
 <p><strong>Example: Accessing Account Information</strong></p>
-<pre><code>module AccountManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module AccountManager {
     struct Account {
         id: address,
         balance: u64,
@@ -205,12 +207,14 @@
         account.balance
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>In this example, <code>get_id</code> and <code>get_balance</code> are getter functions allowing external access to an Account struct's id and balance fields, respectively.</p>
-<h3 id="setter-functions"><a class="header" href="#setter-functions">Setter Functions</a></h3>
+<h2 id="setter-functions"><a class="header" href="#setter-functions">Setter Functions</a></h2>
 <p>Getter functions allow external code to read struct fields values. Setter functions allowing external code to "write" or modify the values of private fields in a struct. These functions allow you to update data in a controlled manner, ensuring any modifications are valid and safe.</p>
 <p><strong>Example: Updating Account Balance</strong></p>
-<pre><code>module AccountManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module AccountManager {
     // Assuming Account struct is defined as before...
 ​
     // Setter for updating account balance
@@ -219,9 +223,9 @@
         account.balance = new_balance;
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>The <code>set_balance</code> function allows the balance of an Account to be updated from outside the module. It takes a mutable reference to an Account and a new balance value, updating the balance field directly.</p>
-<h3 id="considerations-for-getter-and-setter-functions"><a class="header" href="#considerations-for-getter-and-setter-functions">Considerations for Getter and Setter Functions</a></h3>
+<h2 id="considerations-for-getter-and-setter-functions"><a class="header" href="#considerations-for-getter-and-setter-functions">Considerations for Getter and Setter Functions</a></h2>
 <ul>
 <li>
 <p><strong>Validation:</strong> Setter functions can include validation logic to ensure that attempts to modify a struct's field adhere to specific rules or constraints. This is crucial for maintaining the integrity of the application's state.</p>
@@ -233,8 +237,8 @@
 <p><strong>Security:</strong> Getter and setter functions should be designed with security in mind, especially when dealing with sensitive or critical data. Proper validation and access controls can help prevent unauthorized or harmful modifications.</p>
 </li>
 </ul>
-<h3 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h3>
-<p>Getter and setter functions in Move provide a safe and structured way to access and modify the fields of a struct from outside the module where it's defined. By carefully implementing these functions, developers can ensure data encapsulated within structs is accessible and mutable in a controlled and secure manner, aligning with the principles of safety and resource management central to Move's design.</p>
+<h2 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h2>
+<p>Getter and setter functions in Move provide a safe and structured way to access and modify the fields of a struct from outside the module where it's defined. By carefully implementing these functions, developers can ensure data encapsulated within structs is accessible and mutable in a controlled and secure manner.</p>
 
                     </main>
 

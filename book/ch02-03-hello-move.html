@@ -180,29 +180,29 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h3 id="hello-move"><a class="header" href="#hello-move">Hello, Move!</a></h3>
+                        <h1 id="hello-move"><a class="header" href="#hello-move">Hello, Move!</a></h1>
 <p>In this lesson, you'll build a simple dApp that allows users to post messages to a chat room.</p>
 <p>Try the app here: https://main.d2761w90g9sxb3.amplifyapp.com/</p>
-<h3 id="requirements"><a class="header" href="#requirements">Requirements</a></h3>
+<h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
 <p>Install Movement CLI:</p>
-<pre><code class="language-bash">bash &lt;(curl -fsSL https://raw.githubusercontent.com/movemntdev/M1/main/scripts/install.sh) --latest
+<pre><code class="language-bash">&lt;(curl -fsSL https://raw.githubusercontent.com/movemntdev/M1/main/scripts/install.sh) --latest
 </code></pre>
 <p>Clone the dApp repository:</p>
 <pre><code class="language-bash">git clone https://github.com/movementlabsxyz/movement-dapp-workshop/
 cd movement-dapp-workshop
 </code></pre>
-<h3 id="building-the-chat-dapp"><a class="header" href="#building-the-chat-dapp">Building the Chat dApp</a></h3>
+<h2 id="building-the-chat-dapp"><a class="header" href="#building-the-chat-dapp">Building the Chat dApp</a></h2>
 <p>This dApp is built using the Aptos Move language. The dApp is located in the aptos directory. Once inside the repository, navigate to the aptos directory:</p>
 <pre><code class="language-bash">cd aptos
 </code></pre>
-<h3 id="publish-module"><a class="header" href="#publish-module">Publish Module</a></h3>
+<h2 id="publish-module"><a class="header" href="#publish-module">Publish Module</a></h2>
 <p>Aptos language requires you to initialize the Move environment:</p>
 <pre><code class="language-bash">movement aptos init
 </code></pre>
 <p>Then you can publish the module:</p>
 <pre><code class="language-bash">movement aptos move publish --named-addresses chat_addr=default
 </code></pre>
-<h3 id="test-front-end"><a class="header" href="#test-front-end">Test Front End</a></h3>
+<h2 id="test-front-end"><a class="header" href="#test-front-end">Test Front End</a></h2>
 <p>To test the front end, navigate to the frontend directory and run the following command to start the front end server.</p>
 <pre><code class="language-bash">npm i &amp;&amp; npm run dev
 </code></pre>
@@ -213,7 +213,7 @@ cd movement-dapp-workshop
 </code></pre>
 <p>Make sure the address starts with <code>0x</code> else add it. That should be available in <code>.aptos/config.yaml</code> file as the <code>account</code> field.</p>
 <p>Now you can try running your transactions on the frontend and see the chat messages being posted.</p>
-<h3 id="todo-add-galxe-integration-to-submit-github-repo-link-here"><a class="header" href="#todo-add-galxe-integration-to-submit-github-repo-link-here">TODO: Add Galxe integration to submit GitHub repo link here</a></h3>
+<h2 id="todo-add-galxe-integration-to-submit-github-repo-link-here"><a class="header" href="#todo-add-galxe-integration-to-submit-github-repo-link-here">TODO: Add Galxe integration to submit GitHub repo link here</a></h2>
 
                     </main>
 

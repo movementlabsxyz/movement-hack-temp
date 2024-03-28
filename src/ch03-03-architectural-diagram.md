@@ -48,6 +48,13 @@ To create a diagram of Move Chat, start by looking at the types and functions sp
     }
 ```
 
+There are three main types: `ChatRoom`, `Message` and a `&signer` (`account`).
+
+They can be represented in the following way:
+
+![The chat dApp's init module function diagram](./img/ch03-01-diagram-chatroom-init-module.png "Diagram: The chat dApp's init module function")
+
+
 `init_module` is a function that gets called once, when the module is first deployed. 
 
 `init_module` takes in a reference to a `signer` then creates a new `ChatRoom` object and moves it to the signer's account address.

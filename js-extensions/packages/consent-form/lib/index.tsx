@@ -18,7 +18,7 @@ let ConsentForm = () => {
           <h2>What is this?</h2>
           <div className="row">
             <p>
-              This course is designed to empower you to build with Movement and to help you understand Movement's advantages.
+              This course is designed to empower you to build with Movement and to help you understand Movement's advantages. Members of our Movement Masons guild can take this course to level up and earn rewards.
             </p>
           </div>
         </section>
@@ -26,15 +26,13 @@ let ConsentForm = () => {
           <h2>How does it work?</h2>
           <div className="row">
             <div>
-              <p>This course workbook is supplemented with community involvement:</p>
+              <p>This course workbook is supplemented by community support:</p>
               <ol>
                 <li>
-                  <strong>Interactive quizzes are included in each section.</strong> These quizzes help
-                  you test your understanding of building for Movement. The quizzes also help us determine which
-                  sections need improvement. 
+                  <strong>Interactive quizzes are included in each section.</strong> These quizzes help you test your understanding of building for Movement. The quizzes also help us determine which sections need improvement. 
                 </li>
                 <li>
-                  <strong>Join the [Discord](https://discord.gg/movementlabsxyz).</strong> We will hold weekly office hours and calls to support you as we build the Parthenon.
+                  <strong>Join the [Discord](https://discord.gg/movementlabsxyz).</strong> We will hold weekly office hours and AMAs to support you as we build the Parthenon.
                 </li>
               </ol>
             </div>

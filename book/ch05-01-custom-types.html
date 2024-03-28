@@ -180,25 +180,29 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2 id="custom-types-structs"><a class="header" href="#custom-types-structs">Custom types (structs)</a></h2>
+                        <h1 id="custom-types-structs"><a class="header" href="#custom-types-structs">Custom types (structs)</a></h1>
 <p>In this lesson, you'll create structs to define custom types. And you'll apply abilities to structs to make them work in real-world applications.</p>
 <p>Structs in Move are foundational for defining custom types, allowing developers to encapsulate and manage complex data within blockchain applications. This lesson delves into creating structs with various real-world examples, illustrating their versatility and power in data modeling.</p>
-<h3 id="struct-definition"><a class="header" href="#struct-definition">Struct Definition</a></h3>
+<h2 id="struct-definition"><a class="header" href="#struct-definition">Struct Definition</a></h2>
 <p>A struct is defined using the struct keyword, followed by its name and a list of fields enclosed in curly braces. Each field must have a specified type.</p>
 <p><strong>Example: A User Profile</strong></p>
-<pre><code>module UserProfile {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module UserProfile {
     struct Profile {
         username: vector&lt;u8&gt;,
         email: vector&lt;u8&gt;,
         age: u64,
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>This <code>Profile</code> struct represents a user profile in an application, with fields for the username, email, and age.</p>
-<h3 id="nested-structs"><a class="header" href="#nested-structs">Nested Structs</a></h3>
+<h2 id="nested-structs"><a class="header" href="#nested-structs">Nested Structs</a></h2>
 <p>Structs can contain other structs, enabling the modeling of complex hierarchical data.</p>
 <p><strong>Example: Product Catalog</strong></p>
-<pre><code>module ProductCatalog {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module ProductCatalog {
     struct Price {
         amount: u64,
         currency: vector&lt;u8&gt;,
@@ -214,9 +218,9 @@
         products: vector&lt;Product&gt;,
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>Here, ProductCatalog defines a system for managing products, each with a <code>Price</code>. The Catalog struct holds a collection of Product instances.</p>
-<h3 id="struct-abilities"><a class="header" href="#struct-abilities">Struct Abilities</a></h3>
+<h2 id="struct-abilities"><a class="header" href="#struct-abilities">Struct Abilities</a></h2>
 <p>Structs in Move can be annotated with abilities that define how they can be used, such as copy, drop, store, or key.</p>
 <p><strong>Example: A Tradable Asset</strong></p>
 <p>module AssetManager {
@@ -230,7 +234,9 @@ The Asset struct is marked with the store ability, indicating it can be stored p
 Creating and Initializing Structs
 Struct instances are typically created and initialized within functions. Move allows for direct field initialization or using variable names that match struct fields.</p>
 <p><strong>Example: Creating a New Asset</strong></p>
-<pre><code>module AssetManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module AssetManager {
     // Assuming Asset struct is defined above...
 ​
     public fun create_asset(owner: address, asset_id: u64, asset_value: u64): Asset {
@@ -238,12 +244,14 @@ Struct instances are typically created and initialized within functions. Move al
         // Or simply: Asset { owner, id: asset_id, value: asset_value }
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>This function demonstrates creating a new Asset, highlighting the flexibility in struct initialization.</p>
-<h3 id="accessing-struct-fields"><a class="header" href="#accessing-struct-fields">Accessing Struct Fields</a></h3>
+<h2 id="accessing-struct-fields"><a class="header" href="#accessing-struct-fields">Accessing Struct Fields</a></h2>
 <p>Access to struct fields is determined by their visibility. Within the module, fields can be accessed directly. Outside, accessor methods are needed.</p>
 <p><strong>Example: Accessing and Modifying Asset Value</strong></p>
-<pre><code>module AssetManager {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module AssetManager {
     // Assuming Asset struct and create_asset function are defined...
 
     public fun get_asset_value(asset: &amp;Asset): u64 {
@@ -254,12 +262,14 @@ Struct instances are typically created and initialized within functions. Move al
         asset.value = new_value;
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>These functions provide read and write access to an Asset's value, showcasing field access control.</p>
-<h3 id="structs-with-vectors"><a class="header" href="#structs-with-vectors">Structs with Vectors</a></h3>
+<h2 id="structs-with-vectors"><a class="header" href="#structs-with-vectors">Structs with Vectors</a></h2>
 <p>Vectors within structs enable dynamic collections of elements, useful for managing lists of items or records.</p>
 <p><strong>Example: A Voting System</strong></p>
-<pre><code>module VotingSystem {
+<pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>module VotingSystem {
     struct Vote {
         candidate_id: u64,
         voter_id: address,
@@ -273,9 +283,9 @@ Struct instances are typically created and initialized within functions. Move al
         Vector::push_back(&amp;mut ballot.votes, vote);
     }
 }
-</code></pre>
+<span class="boring">}</span></code></pre></pre>
 <p>In <code>VotingSystem</code>, <code>Ballot</code> holds a collection of <code>Vote</code> structs, with functionality to cast new votes.</p>
-<h3 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h3>
+<h2 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h2>
 <p>Structs in Move are a powerful tool for defining custom types, enabling the modeling of complex data structures essential for blockchain applications. From simple user profiles to intricate product catalogs, structs offer the flexibility to create nuanced and sophisticated data models.</p>
 
                     </main>

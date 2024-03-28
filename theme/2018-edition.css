@@ -99,11 +99,15 @@ blockquote h2, blockquote a.header {
     --highlight: #FFD013!important;
 }
 
-code, .hljs {
+pre, code, .hljs {
     color:white!important;
     background: #070D0D;
 }
 
 .hljs-comment {
-    color: green!important;
+    color: greenyellow!important;
+}
+
+img {
+    background-color: white;
 }

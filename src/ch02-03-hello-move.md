@@ -1,14 +1,14 @@
-### Hello, Move!
+# Hello, Move!
 In this lesson, you'll build a simple dApp that allows users to post messages to a chat room.
 
 Try the app here: https://main.d2761w90g9sxb3.amplifyapp.com/ 
 
-### Requirements
+## Requirements
 
 Install Movement CLI:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/movemntdev/M1/main/scripts/install.sh) --latest
+<(curl -fsSL https://raw.githubusercontent.com/movemntdev/M1/main/scripts/install.sh) --latest
 ```
 Clone the dApp repository:
 
@@ -17,7 +17,7 @@ git clone https://github.com/movementlabsxyz/movement-dapp-workshop/
 cd movement-dapp-workshop
 ```
 
-### Building the Chat dApp
+## Building the Chat dApp
 
 This dApp is built using the Aptos Move language. The dApp is located in the aptos directory. Once inside the repository, navigate to the aptos directory:
 
@@ -25,7 +25,7 @@ This dApp is built using the Aptos Move language. The dApp is located in the apt
 cd aptos
 ```
 
-### Publish Module
+## Publish Module
 
 Aptos language requires you to initialize the Move environment:
 
@@ -39,7 +39,7 @@ Then you can publish the module:
 movement aptos move publish --named-addresses chat_addr=default
 ```
 
-### Test Front End
+## Test Front End
 
 To test the front end, navigate to the frontend directory and run the following command to start the front end server.
 
@@ -61,4 +61,4 @@ Make sure the address starts with `0x` else add it. That should be available in 
 
 Now you can try running your transactions on the frontend and see the chat messages being posted.
 
-### TODO: Add Galxe integration to submit GitHub repo link here
+## TODO: Add Galxe integration to submit GitHub repo link here

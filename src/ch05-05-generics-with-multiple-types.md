@@ -1,4 +1,4 @@
-## Generics with Multiple Types in Move
+# Generics with Multiple Types in Move
 
 Generics aren't limited to single-type scenarios; Move allows defining structs and functions with multiple generic types, expanding the versatility and reusability of code. This feature is particularly useful when designing complex data structures or functions that need to operate on more than one type of data.
 
@@ -6,7 +6,7 @@ Generics aren't limited to single-type scenarios; Move allows defining structs a
 
 Imagine a module that needs to store pairs of items, which could be of any type. Using generics with multiple types, you can create a struct that accommodates pairs of different types.
 
-```
+```rust
 module PairManager {
     struct Pair<T1, T2> {
         first: T1,
@@ -21,11 +21,11 @@ module PairManager {
 
 This `Pair` struct can hold any combination of types, making it a flexible solution for various scenarios, such as storing key-value pairs where keys and values are of different types.
 
-### Practical Application: Currency Conversion Rates
+## Practical Application: Currency Conversion Rates
 
 Consider an application that needs to manage currency conversion rates, which involve a pair of currencies and their conversion rate.
 
-```
+```rust
 module CurrencyConverter {
     struct CurrencyCode {}
 
@@ -43,11 +43,11 @@ module CurrencyConverter {
 
 In this example, `ConversionRate` uses generics to allow for flexibility in the types of currencies it can accept, potentially accommodating various currency representations.
 
-### Working with Multiple Generic Types
+## Working with Multiple Generic Types
 
 A common utility operation is swapping the values of two variables. With generics, you can create a versatile swap function that works with any type.
 
-```
+```rust
 module Utils {
     public fun swap<T1, T2>(first: &mut T1, second: &mut T2) {
         let temp = *first;
@@ -59,13 +59,13 @@ module Utils {
 
 This swap function can interchange the values of two variables of different types, showcasing the power of generics in creating highly reusable code components.
 
-### Constraints on Multiple Generic Types
+## Constraints on Multiple Generic Types
 
 When working with multiple generic types, you can apply constraints to each type parameter independently, ensuring they meet certain requirements or abilities.
 
 **Example: Key-Value Storage with Constraints**
 
-```
+```rust
 module Storage {
     struct KeyValue<T1: key, T2: store> {
         key: T1,

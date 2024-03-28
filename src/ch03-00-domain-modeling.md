@@ -4,6 +4,6 @@ You'll be investing a decent amount of time building your capstone project. Even
 
 This chapter will guide you to plan your capstone project in the following ways:
 
-* Understanding principles of domain modeling
-* Writing the user journey for your project
-* Creating an archictual diagram to model your project's domain 
+- [Understanding principles of domain modeling](ch03-01-domain-modeling.md)
+- [Writing the user journey for your project](ch03-02-user-journey.md)
+- [Creating an archictual diagram to model your project's domain](ch03-03-architectural-diagram.md) 
