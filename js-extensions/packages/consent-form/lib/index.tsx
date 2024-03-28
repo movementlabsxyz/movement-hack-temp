@@ -26,15 +26,9 @@ let ConsentForm = () => {
           <h2>How does it work?</h2>
           <div className="row">
             <div>
-              <p>This course workbook is supplemented by community support:</p>
-              <ol>
-                <li>
-                  <strong>Interactive quizzes are included in each section.</strong> These quizzes help you test your understanding of building for Movement. The quizzes also help us determine which sections need improvement. 
-                </li>
-                <li>
-                  <strong>Join the <a href="https://discord.gg/movementlabsxyz">Discord</a>.</strong> We will hold weekly office hours and AMAs to support you as we build the Parthenon.
-                </li>
-              </ol>
+              <p>This course workbook is supplemented by community support. Join the <a href="https://discord.gg/movementlabsxyz">Discord</a>. We will hold weekly office hours and AMAs to support you as we all build the Parthenon.</p>
+              
+              <p><strong>Interactive quizzes are included in each section.</strong> These quizzes help you test your understanding of building for Movement. The quizzes also help us determine which sections need improvement.</p> 
             </div>
             <img src="img/experiment/quiz-example.png" width="300" />
           </div>
