@@ -8,7 +8,7 @@ In this lesson you'll learn how to use vectors and tables to manage collections.
 
 In Sui Move, Table is used for efficiently mapping keys to values.
 
-```
+```rust
 module AccountBalanceManager {
     use sui::table::Table;
 ​
@@ -36,7 +36,7 @@ This Sui Move example demonstrates managing account balances using Table, offeri
 
 Aptos Move utilizes Table for similar key-value pair management but within its own standard library context.
 
-```
+```rust
 module ToDoList {
     use aptos_std::table::{Self, Table};
 ​

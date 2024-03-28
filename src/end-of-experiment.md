@@ -1,5 +1,5 @@
-# End of Experiment
+# End of Mastering Move Basics
 
-Thank you for participating in our experiment! We hope you got something useful from our additions. Your participation will help make Rust better for everyone.
+Thank you for participating in our experiment! We hope you got something useful from our additions. Your participation will help make Movement better for everyone.
 
-You can follow [@tonofcrates](https://twitter.com/tonofcrates) on Twitter if you want to hear about future updates to this experiment.
+You can follow [@movementlabsxyz](https://twitter.com/movementlabsxyz) on Twitter if you want to hear about future updates to this course.

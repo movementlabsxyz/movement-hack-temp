@@ -27,7 +27,7 @@ Another mechanic is **highlighting**: you can select any piece of text, and eith
 
 👉 Try highlighting this text! 👈
 
-You can use highlights to save information for yourself. You can also use highlights to give us feedback &mdash; for example, if you think a section of content is confusing, you can let us know.
+You can use highlights to save information for yourself. 
 
 > **Note:** your highlights will disappear if we change the content that you've highlighted. Also, your highlights are stored as a cookie. If you block cookies or change browsers, then you won't see your previous highlights.
 
@@ -35,5 +35,5 @@ You can use highlights to save information for yourself. You can also use highli
 
 The book's content may change as you go through the experiment. We will update this page as we add new features. Here's the changelog:
 
-* March 13, 2023
-  * First draft written.
+* March 25, 2024
+  * First draft of chapters 1 - 5 written.

@@ -42,7 +42,6 @@
     - [Ownership and References](ch06-01-ownership-and-references.md)
     - [Resources](ch06-02-resources.md)
     - [Collections](ch06-03-collections.md)
-    - [Resource Applications](ch06-04-resource-applications.md)
  
 <!--
 

@@ -91,3 +91,19 @@ blockquote h2, blockquote a.header {
     padding: 0 8px!important;
 }
 
+.highlight-mengshou-wrap {
+    background: #FFD013!important;
+}
+
+.light {
+    --highlight: #FFD013!important;
+}
+
+code, .hljs {
+    color:white!important;
+    background: #070D0D;
+}
+
+.hljs-comment {
+    color: green!important;
+}
