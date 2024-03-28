@@ -51,7 +51,7 @@ let ConsentForm = () => {
               ref.current!.style.display = "none";
             }}
           >
-            Let's Move.
+            Let's Move
           </button>
         </div>
       </div>
