@@ -18,7 +18,7 @@ let ConsentForm = () => {
           <h2>What is this?</h2>
           <div className="row">
             <p>
-              This course is designed to empower you to build with Movement and to help you understand Movement's advantages. Members of Movement's Masons guild can take this course to level up and earn rewards.
+              This course is designed to empower you to build with Movement and to help you understand Movement's advantages. Members of Movement's  Mason guild can take this course to level up and earn rewards.
             </p>
           </div>
         </section>
