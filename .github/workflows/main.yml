@@ -33,13 +33,6 @@ jobs:
       MDBOOK_QUIZ_VERSION: 0.3.3
     steps:
       - uses: actions/checkout@v4
-      - name: Install binaries
-        run: |
-          mkdir bin
-          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.25/mdbook-v0.4.25-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
-          curl -sSL https://github.com/cognitive-engineering-lab/mdbook-quiz/releases/download/v${MDBOOK_QUIZ_VERSION}/mdbook-quiz_x86_64-unknown-linux-gnu_full.tar.gz | tar -xz --directory=bin
-          curl -sSL https://github.com/cognitive-engineering-lab/aquascope/releases/download/v${AQUASCOPE_VERSION}/aquascope-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
-          echo "$(pwd)/bin" >> ${GITHUB_PATH}
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
