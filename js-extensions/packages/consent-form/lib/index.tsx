@@ -52,10 +52,3 @@ let ConsentForm = () => {
     </div>
   );
 };
-
-if (localStorage.getItem(CONSENT_KEY) === null) {
-  let el = document.createElement("div");
-  document.body.appendChild(el);
-  let root = ReactDOM.createRoot(el);
-  root.render(<ConsentForm />);
-}
