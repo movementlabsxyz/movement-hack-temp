@@ -1,6 +1,6 @@
 # Basic Move Syntax
 
-In this chapter, you'll work with the basics of Move:
+In this chapter, you'll master the basics of the Move language:
 
 - [Primitive Types](ch04-01-primitive-types.md)
 - [Comments](ch04-02-comments.md)
