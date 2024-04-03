@@ -16,7 +16,7 @@ additional-js = [
   "js-extensions/packages/feedback/dist/index.js",
 ]
 
-git-repository-url = "https://github.com/cognitive-engineering-lab/rust-book"
+git-repository-url = "https://github.com/movementlabsxyz/movement-hack"
 
 [preprocessor.quiz]
 fullscreen = true

@@ -6,7 +6,7 @@ Here are some unique mechanics of this course:
 
 ## 1. Quizzes
 
-The main mechanic is **quizzes**: each chapter has one more more quizzes about the chapter's content. Earn points on (Galxe)[https://galxe.com/CDvuo9eNCH4Q5tGTKb7TdK/]
+The main mechanic is **quizzes**: each chapter has one more more quizzes about the chapter's content. Earn points on [Galxe](https://galxe.com/CDvuo9eNCH4Q5tGTKb7TdK/)
 
 If you spot any other issue in this book, you can file an issue on our Github repository: <https://github.com/movementlabsxyz/movement-hack>
 

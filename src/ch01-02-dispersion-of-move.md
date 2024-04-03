@@ -37,5 +37,3 @@ Today, Move is more than just a programming language; it's a growing ecosystem t
 ## Conclusion
 
 The dispersion of Move from Facebook's Diem project to Sui, Aptos, and beyond is a testament to the language's robust design and the blockchain community's commitment to innovation. Move's story illustrates how good ideas can transcend their origins, finding new life and purpose in a wide range of applications. As Move continues to evolve and be adopted by more projects, its story remains an inspiring example of how collaboration and open-source principles drive progress in the blockchain space.
-
-{{#quiz ../quizzes/ch01-02-move-adoption.toml}}

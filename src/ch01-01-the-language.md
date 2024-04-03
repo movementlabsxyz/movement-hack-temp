@@ -36,8 +36,6 @@ Move is a significant advancement in blockchain technology, offering a secure an
 
 Move's open-source nature and flexibility ensure it is well-equipped to support the future of digital finance with security and efficiency at its core.
 
-{{#quiz ../quizzes/ch01-01-features-of-move.toml}}
-
 ## References
 
 1. The language of money, Part one: Why build Move? Diem blog: [https://www.diem.com/en-us/blog/why-build-move/](https://www.diem.com/en-us/blog/why-build-move/)

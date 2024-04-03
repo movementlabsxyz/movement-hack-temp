@@ -151,7 +151,7 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/cognitive-engineering-lab/rust-book" title="Git repository" aria-label="Git repository">
+                        <a href="https://github.com/movementlabsxyz/movement-hack" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
 
@@ -239,7 +239,6 @@ int main() {
 <p><strong>8. Unknown Function Calls:</strong> In Ethereum, sending Ether to unknown functions can lead to vulnerabilities. Move's explicit resource accounting can help avoid such scenarios by making it clear where and how resources are flowing.</p>
 </blockquote>
 <p>Move’s focus on safety, predictability, and explicit resource management addresses these vulnerabilities effectively, helping developers write safer smart contracts. This is particularly crucial in blockchain environments, where contract bugs and vulnerabilities can lead to significant financial losses and are often irreversible due to the immutable nature of blockchain technology.</p>
-<div class="quiz-placeholder" data-quiz-name="ch02-01-evm-vulnerabilities"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;This C program will compile despite the unsafe access of `value`. Accessing freed memory results in a \&quot;use-after-free\&quot; vulnerability, which can lead to undefined behavior, crashes, or security exploits.\n&quot;,&quot;id&quot;:&quot;02-01-evm-vulns&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;In Move, once a resource is moved, it cannot be accessed again within the same transaction, thereby mitigating reentrancy risks.&quot;},&quot;prompt&quot;:{&quot;distractors&quot;:[&quot;In Move, once a resource is copied, it cannot be accessed again within the same transaction, thereby mitigating reentrancy risks.&quot;,&quot;In Move, once a resource is referenced, it cannot be accessed again within the same transaction, thereby mitigating reentrancy risks.&quot;,&quot;In Move, once a resource is mutated, it cannot be accessed again within the same transaction, thereby mitigating reentrancy risks.&quot;],&quot;prompt&quot;:&quot;In a reentrancy attack, a malicious contract calls back into the calling contract before the first execution completes. Which feature of Move helps prevent reentrancy attacks?\n&quot;}}]}"  data-quiz-fullscreen=""  data-quiz-cache-answers="" ></div>
 <script type="text/javascript" src="quiz/quiz-embed.iife.js"></script><link rel="stylesheet" type="text/css" href="quiz/style.css">
                     </main>
 

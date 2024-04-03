@@ -40,4 +40,10 @@ This is bigger than any single technology or platform. This is about shaping the
 
 At Movement Labs, we're not just building a product; we're building a legacy and we’re building a Movement. A Movement and legacy built on accessibility, interconnectivity, innovation, and community.
 
-{{#quiz ../quizzes/ch01-03-movement-principles.toml}}
+## Check your knowledge and earn rewards
+
+<iframe data-tally-src="https://tally.so/embed/mJ6YyR?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="273" frameborder="0" marginheight="0" marginwidth="0" title="Movement Hack Chapter 1 Quiz"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+
+## Join the Movement
+
+If you haven't joined the [Discord](https://discord.gg/movementlabsxyz) yet, do it now to stay in sync with all the next moves!

@@ -71,9 +71,7 @@ The angle bracket (>) represents moving a resource to an account.
 * **Step 1:** `init_module` creates a new `ChatRoom` resource
 * **Step 2:** The `ChatRoom` resource is moved to `account`.
 
-> ## Track Your Progress: Architectural Diagram
->
-> * Create a diagram representing the `create_chat_room` function. 
-> * Just create text boxes and add the code for each relevant struct and function. Then diagram the steps to represent what happens when the function is called. 
-> * Take a screen shot or save the image and <a href="">upload here to get credit on Galxe.</a>
->
+## Chapter quiz: Submit user journey and architecture diagram for your dApp!
+
+<iframe data-tally-src="https://tally.so/embed/3qd7DY?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="273" frameborder="0" marginheight="0" marginwidth="0" title="Movement Hack Chapter 3 Quiz"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+

@@ -87,5 +87,3 @@ The resource-orientation and type-linearity of the Move programming language pla
 >
 
 Move’s focus on safety, predictability, and explicit resource management addresses these vulnerabilities effectively, helping developers write safer smart contracts. This is particularly crucial in blockchain environments, where contract bugs and vulnerabilities can lead to significant financial losses and are often irreversible due to the immutable nature of blockchain technology.
-
-{{#quiz ../quizzes/ch02-01-evm-vulnerabilities.toml}}
