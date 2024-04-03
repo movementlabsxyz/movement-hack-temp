@@ -4,7 +4,7 @@ After completing this lession, you'll be able to define and assign values to pri
 
 ## Understanding Primitive Types in Move with Everyday Examples
 
-In the world of Move, the programming language used for blockchain development, there are some basic building blocks known as primitive types. These are the simple types used to represent numbers, whether something is true or false (boolean values), and unique identifiers for accounts or wallets on the blockchain (addresses). Let's dive into what these primitive types look like, using examples you might encounter in everyday life.
+In the world of Move, the programming language used for blockchain development, there are some basic building blocks known as primitive types. These are the simple types used to represent numbers, whether something is true or false (boolean values), and unique identifiers for accounts or wallets on the blockchain (addresses). Let's dive into what these primitive types look like, using examples you might encounter in real life.
 
 ## Integer Types: Counting and Measuring
 
@@ -39,8 +39,6 @@ script {
 }
 ```
 
-{{#quiz ../quizzes/ch04-01-integer-types.toml}}
-
 ## Operator `as`: Changing Your Perspective
 
 Sometimes, you need to compare things of different sizes, like if a cup of water will fill a bucket. In Move, you can change the "size" of your integer using the as operator, to make sure you're comparing apples to apples.
@@ -58,8 +56,6 @@ script {
 }
 ```
 
-{{#quiz ../quizzes/ch04-01-as-operator.toml}}
-
 ## Boolean: Yes or No, True or False
 
 Booleans are straightforward – they can only be true or false. Think of them like answering a yes-or-no question: "Is it sunny outside?"
@@ -75,7 +71,6 @@ script {
     }
 }
 ```
-{{#quiz ../quizzes/ch04-01-bool.toml}}
 
 ## Address: Identifying Where Things Belong
 
@@ -95,8 +90,6 @@ script {
     }
 }
 ```
-
-{{#quiz ../quizzes/ch04-01-address.toml}}
 
 ## Wrap-Up
 

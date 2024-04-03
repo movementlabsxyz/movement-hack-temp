@@ -56,7 +56,5 @@ Block comments offer flexibility for detailed annotations or for excluding chunk
 
 * **Disable With Care:** While commenting out code is handy for quick tests, avoid leaving chunks of unused code in your final version. It clutters the codebase and can confuse others.
 
-{{#quiz ../quizzes/ch04-02-comments.toml}}
-
 ## Conclusion
 Comments are a simple yet powerful feature in Move, enhancing the readability and maintainability of your blockchain applications. Whether you're jotting down a quick note with a line comment or explaining a complex algorithm with a block comment, these annotations are key to building understandable and collaborative codebases.

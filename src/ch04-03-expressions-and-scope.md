@@ -125,8 +125,6 @@ script {
 
 In this example, the calculate_reward function includes a block to determine the bonus_multiplier based on the player's points. The block evaluates the conditions and directly returns the multiplier value, which is then used to calculate the total reward. The absence of a semicolon after the conditionals within the block signifies that the result of the last evaluated expression is the return value of the entire block.
 
-{{#quiz ../quizzes/ch04-03-expressions-and-scope.toml}}
-
 ## Conclusion
 
 Expressions and scope in Move are not just theoretical concepts but practical tools that shape how you interact with the blockchain. They allow you to perform calculations, make decisions, and structure your code in a way that aligns with the decentralized and secure nature of blockchain applications. By mastering these elements, you'll be well-equipped to tackle the challenges of blockchain development with Move.

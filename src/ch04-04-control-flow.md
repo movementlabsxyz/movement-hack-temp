@@ -97,8 +97,6 @@ script {
 
 In this example, assert! ensures that the token amount to be transferred is not zero, aborting the transaction with an error code if the condition fails.
 
-{{#quiz ../quizzes/ch04-04-control-flow.toml}}
-
 ## Conclusion
 
 Control flow structures in Move, such as if expressions, while and loop loops, and the assert! function, are essential for creating dynamic and safe smart contracts. By leveraging these constructs, developers can write more robust and efficient applications on the blockchain. Practicing with these examples will help you become proficient in controlling the flow of your Move programs and debugging them effectively.
