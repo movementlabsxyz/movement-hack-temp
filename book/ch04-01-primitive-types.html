@@ -183,7 +183,7 @@
                         <h1 id="primitive-types"><a class="header" href="#primitive-types">Primitive types</a></h1>
 <p>After completing this lession, you'll be able to define and assign values to primitive types (integer types, as operator, boolean, address).</p>
 <h2 id="understanding-primitive-types-in-move-with-everyday-examples"><a class="header" href="#understanding-primitive-types-in-move-with-everyday-examples">Understanding Primitive Types in Move with Everyday Examples</a></h2>
-<p>In the world of Move, the programming language used for blockchain development, there are some basic building blocks known as primitive types. These are the simple types used to represent numbers, whether something is true or false (boolean values), and unique identifiers for accounts or wallets on the blockchain (addresses). Let's dive into what these primitive types look like, using examples you might encounter in everyday life.</p>
+<p>In the world of Move, the programming language used for blockchain development, there are some basic building blocks known as primitive types. These are the simple types used to represent numbers, whether something is true or false (boolean values), and unique identifiers for accounts or wallets on the blockchain (addresses). Let's dive into what these primitive types look like, using examples you might encounter in real life.</p>
 <h2 id="integer-types-counting-and-measuring"><a class="header" href="#integer-types-counting-and-measuring">Integer Types: Counting and Measuring</a></h2>
 <p>Move uses three types of integers: <code>u8</code>, <code>u64</code>, and <code>u128</code>. You can think of integers like the numbers you use to count things. For example:</p>
 <ul>
@@ -219,7 +219,6 @@
     }
 }
 <span class="boring">}</span></code></pre></pre>
-<div class="quiz-placeholder" data-quiz-name="ch04-01-integer-types"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;If you have heard of Dogecoin supporting Move, please let us know so we can update this quiz!\n&quot;,&quot;id&quot;:&quot;04-01-integer-types&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;Dogecoin&quot;},&quot;prompt&quot;:{&quot;distractors&quot;:[&quot;Movement network&quot;,&quot;Aptos&quot;,&quot;Sui&quot;],&quot;prompt&quot;:&quot;All of the following blockchains support some form of the Move language EXCEPT:\n&quot;}}]}"  data-quiz-fullscreen=""  data-quiz-cache-answers="" ></div>
 <h2 id="operator-as-changing-your-perspective"><a class="header" href="#operator-as-changing-your-perspective">Operator <code>as</code>: Changing Your Perspective</a></h2>
 <p>Sometimes, you need to compare things of different sizes, like if a cup of water will fill a bucket. In Move, you can change the "size" of your integer using the as operator, to make sure you're comparing apples to apples.</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
@@ -235,7 +234,6 @@
     }
 }
 <span class="boring">}</span></code></pre></pre>
-<div class="quiz-placeholder" data-quiz-name="ch04-01-as-operator"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;If you have heard of Dogecoin supporting Move, please let us know so we can update this quiz!\n&quot;,&quot;id&quot;:&quot;04-01-as-operator&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;Dogecoin&quot;},&quot;prompt&quot;:{&quot;distractors&quot;:[&quot;Movement network&quot;,&quot;Aptos&quot;,&quot;Sui&quot;],&quot;prompt&quot;:&quot;All of the following blockchains support some form of the Move language EXCEPT:\n&quot;}}]}"  data-quiz-fullscreen=""  data-quiz-cache-answers="" ></div>
 <h2 id="boolean-yes-or-no-true-or-false"><a class="header" href="#boolean-yes-or-no-true-or-false">Boolean: Yes or No, True or False</a></h2>
 <p>Booleans are straightforward – they can only be true or false. Think of them like answering a yes-or-no question: "Is it sunny outside?"</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
@@ -250,7 +248,6 @@
     }
 }
 <span class="boring">}</span></code></pre></pre>
-<div class="quiz-placeholder" data-quiz-name="ch04-01-bool"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;If you have heard of Dogecoin supporting Move, please let us know so we can update this quiz!\n&quot;,&quot;id&quot;:&quot;04-01-bool&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;Dogecoin&quot;},&quot;prompt&quot;:{&quot;distractors&quot;:[&quot;Movement network&quot;,&quot;Aptos&quot;,&quot;Sui&quot;],&quot;prompt&quot;:&quot;All of the following blockchains support some form of the Move language EXCEPT:\n&quot;}}]}"  data-quiz-fullscreen=""  data-quiz-cache-answers="" ></div>
 <h2 id="address-identifying-where-things-belong"><a class="header" href="#address-identifying-where-things-belong">Address: Identifying Where Things Belong</a></h2>
 <p>In the blockchain world, an address is like the address of your house, but for your digital wallet or account. It's how you receive things (like cryptocurrency) or where you send them from.</p>
 <pre><pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
@@ -268,10 +265,9 @@
     }
 }
 <span class="boring">}</span></code></pre></pre>
-<div class="quiz-placeholder" data-quiz-name="ch04-01-address"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;If you have heard of Dogecoin supporting Move, please let us know so we can update this quiz!\n&quot;,&quot;id&quot;:&quot;04-01-address&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;Dogecoin&quot;},&quot;prompt&quot;:{&quot;distractors&quot;:[&quot;Movement network&quot;,&quot;Aptos&quot;,&quot;Sui&quot;],&quot;prompt&quot;:&quot;All of the following blockchains support some form of the Move language EXCEPT:\n&quot;}}]}"  data-quiz-fullscreen=""  data-quiz-cache-answers="" ></div>
 <h2 id="wrap-up"><a class="header" href="#wrap-up">Wrap-Up</a></h2>
 <p>In Move, these primitive types form the foundation of the language, allowing you to count, measure, make decisions, and identify accounts on the blockchain. By understanding integers, booleans, and addresses, you're well on your way to mastering the basics of Move and blockchain programming.</p>
-<script type="text/javascript" src="quiz/quiz-embed.iife.js"></script><link rel="stylesheet" type="text/css" href="quiz/style.css">
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
