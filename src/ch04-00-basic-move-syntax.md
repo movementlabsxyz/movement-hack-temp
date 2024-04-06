@@ -1,6 +1,8 @@
 # Basic Move Syntax
 
-In this chapter, you'll master the basics of the Move language:
+By now, you have some experience publishing modules to the blockchain and interacting with them. And you've begun planning your dream dApp. Congratulations! You are well on your way to being a master Move developer. 
+
+In this chapter, you'll learn or review the basics of the Move language:
 
 - [Primitive Types](ch04-01-primitive-types.md)
 - [Comments](ch04-02-comments.md)

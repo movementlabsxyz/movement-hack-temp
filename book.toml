@@ -1,32 +1,6 @@
 [book]
+authors = ["suizzle"]
+language = "en"
+multilingual = false
+src = "src"
 title = "Movement Hack"
-authors = ["Andy Golay", "Contributions from the Movement Community"]
-
-[output.html]
-additional-css = [
-  "ferris.css",
-  "theme/2018-edition.css",
-  "js-extensions/packages/consent-form/dist/index.css",
-  "js-extensions/packages/feedback/dist/index.css",  
-]
-additional-js = [
-  "ferris.js",
-  "js-extensions/packages/telemetry/dist/index.js",
-  "js-extensions/packages/consent-form/dist/index.js",
-  "js-extensions/packages/feedback/dist/index.js",
-]
-
-git-repository-url = "https://github.com/movementlabsxyz/movement-hack"
-
-[preprocessor.quiz]
-fullscreen = true
-validate = true
-cache-answers = true
-more-words = "words.dic"
-
-[preprocessor.aquascope]
-
-[build]
-extra-watch-dirs = ["quizzes", "../mdbook-quiz/target/debug", "js-extensions/packages/feedback/dist"]
-
-# [output.linkcheck]

@@ -29,10 +29,6 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="ferris.css">
-        <link rel="stylesheet" href="theme/2018-edition.css">
-        <link rel="stylesheet" href="js-extensions/packages/consent-form/dist/index.css">
-        <link rel="stylesheet" href="js-extensions/packages/feedback/dist/index.css">
 
     </head>
     <body class="sidebar-visible no-js">
@@ -151,9 +147,6 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/movementlabsxyz/movement-hack" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-github"></i>
-                        </a>
 
                     </div>
                 </div>
@@ -186,7 +179,7 @@
 <h2 id="the-beginning-facebooks-vision"><a class="header" href="#the-beginning-facebooks-vision">The Beginning: Facebook's Vision</a></h2>
 <p>Move began as part of Facebook's ambitious blockchain project, first named Libra and later rebranded as Diem. The goal was to create a global payment system that was accessible and efficient.</p>
 <p>Facebook realized early on that existing blockchain languages and platforms had limitations, especially with security and the precise handling of digital assets. To overcome these challenges, they developed Move: a language designed from the ground up to safely manage digital assets on the blockchain.</p>
-<div class="quiz-placeholder" data-quiz-name="ch01-02-move-was-designed-for"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Move was designed for safely managing digital assets.\n&quot;,&quot;id&quot;:&quot;01-02-move-was-designed-for-1&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;Safely manage digital assets on the blockchain&quot;},&quot;prompt&quot;:{&quot;distractors&quot;:[&quot;Create ICOs, IGOs, IDOs, and other presale offerings&quot;,&quot;Help Facebook domimate the DeFi landscape&quot;,&quot;Give developers an alternative to C++ when writing smart contracts&quot;],&quot;prompt&quot;:&quot;What was the Move language designed to do?\n&quot;}}]}"  data-quiz-fullscreen=""  data-quiz-cache-answers="" ></div>
+<p>{{#quiz ../quizzes/ch01-02-move-was-designed-for.toml}}</p>
 <h2 id="from-diem-to-the-wider-world"><a class="header" href="#from-diem-to-the-wider-world">From Diem to the Wider World</a></h2>
 <p>Although Diem garnered significant attention and sparked discussions worldwide, it faced regulatory hurdles and skepticism from financial authorities. As the project's future became uncertain, the innovative work on Move did not go unnoticed by the broader blockchain community. The principles and capabilities of Move were too valuable to be confined to a single project.</p>
 <h2 id="the-dispersion-aptos-sui-and-beyond"><a class="header" href="#the-dispersion-aptos-sui-and-beyond">The Dispersion: Aptos, Sui and Beyond</a></h2>
@@ -210,7 +203,7 @@
 <p>Today, Move is more than just a programming language; it's a growing ecosystem that spans multiple blockchains. By addressing the complex needs of digital asset management, Move has set a new standard for blockchain development, emphasizing safety, flexibility, and scalability.</p>
 <h2 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h2>
 <p>The dispersion of Move from Facebook's Diem project to Sui, Aptos, and beyond is a testament to the language's robust design and the blockchain community's commitment to innovation. Move's story illustrates how good ideas can transcend their origins, finding new life and purpose in a wide range of applications. As Move continues to evolve and be adopted by more projects, its story remains an inspiring example of how collaboration and open-source principles drive progress in the blockchain space.</p>
-<script type="text/javascript" src="quiz/quiz-embed.iife.js"></script><link rel="stylesheet" type="text/css" href="quiz/style.css">
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
@@ -240,6 +233,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
@@ -257,10 +266,6 @@
         <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        <script src="ferris.js"></script>
-        <script src="js-extensions/packages/telemetry/dist/index.js"></script>
-        <script src="js-extensions/packages/consent-form/dist/index.js"></script>
-        <script src="js-extensions/packages/feedback/dist/index.js"></script>
 
 
     </div>

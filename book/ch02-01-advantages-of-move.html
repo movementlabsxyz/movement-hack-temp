@@ -29,10 +29,6 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="ferris.css">
-        <link rel="stylesheet" href="theme/2018-edition.css">
-        <link rel="stylesheet" href="js-extensions/packages/consent-form/dist/index.css">
-        <link rel="stylesheet" href="js-extensions/packages/feedback/dist/index.css">
 
     </head>
     <body class="sidebar-visible no-js">
@@ -151,9 +147,6 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/movementlabsxyz/movement-hack" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-github"></i>
-                        </a>
 
                     </div>
                 </div>
@@ -207,7 +200,7 @@ int main() {
     return 0;
 }
 </code></pre>
-<div class="quiz-placeholder" data-quiz-name="ch02-01-unsafe-access"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;This C program will compile despite the unsafe access of `value`. Accessing freed memory results in a \&quot;use-after-free\&quot; vulnerability, which can lead to undefined behavior, crashes, or security exploits.\n&quot;,&quot;id&quot;:&quot;02-01-unsafe-access&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;Accessing data after it has been freed can lead to undefined behavior, such as crashes or security vulnerabilities.&quot;},&quot;prompt&quot;:{&quot;distractors&quot;:[&quot;Accessing data after it has been freed can lead to network slowdowns and halt the blockchain due to infinite loops.&quot;,&quot;Because of the line `#include &lt;string.h&gt;`, the line containing `printf` will not execute.&quot;,&quot;The program will not compile, because accessing data after it has been freed is inherently unsafe&quot;],&quot;prompt&quot;:&quot;Explain why the access of `value` is unsafe?\n```c\n#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n#include &lt;string.h&gt;\n\nvoid printAndFree(char* data) {\n    printf(\&quot;Data: %s\n\&quot;, data);\n    free(data); // Function takes ownership and frees the memory\n}\n\nint main() {\n    char* value = (char*)malloc(strlen(\&quot;Hello\&quot;) + 1);\n    strcpy(value, \&quot;Hello\&quot;);\n    \n    printAndFree(value); // Pass ownership of 'value' to the function\n\n    // Attempt to access the value after it has been freed\n    printf(\&quot;Data after freeing: %s\n\&quot;, value); // Unsafe access!\n\n    return 0;\n}\n```\n&quot;}}]}"  data-quiz-fullscreen=""  data-quiz-cache-answers="" ></div>
+<p>{{#quiz ../quizzes/ch02-01-unsafe-access.toml}}</p>
 <p>In Move, this kind of unsafe access would not be possible because of strict ownership conditions.</p>
 <p>Each function owns any resources it creates and is responsible for its lifecycle. This ownership model ensures that resources are properly managed and prevents unauthorized access or modification, bolstering the security of blockchain-based applications.</p>
 <h3 id="access-restriction-all-the-way-down"><a class="header" href="#access-restriction-all-the-way-down">Access Restriction All the Way Down</a></h3>
@@ -225,7 +218,7 @@ int main() {
         + p(a)
 </code></pre>
 <p>Type linearity is a crucial aspect of resource-oriented programming that enforces the linear use of resources. In Move, resources generally have linear types, meaning they can only be consumed or moved, not duplicated. This feature prevents resource duplication, reduces memory consumption, and eliminates the risk of double-spending, ensuring the integrity and accuracy of transactions on the blockchain.</p>
-<div class="quiz-placeholder" data-quiz-name="ch02-01-type-linearity"  data-quiz-questions="{&quot;questions&quot;:[{&quot;context&quot;:&quot;Type linearity for resources means ownership of resources is in a line, with one owner of a resource after another.  \n&quot;,&quot;id&quot;:&quot;02-01-type-linearity&quot;,&quot;type&quot;:&quot;MultipleChoice&quot;,&quot;answer&quot;:{&quot;answer&quot;:&quot;By ensuring each resource has only one owner at a time, preventing accidental duplication or loss.&quot;},&quot;prompt&quot;:{&quot;distractors&quot;:[&quot;By making sure that all the fields of the struct contain linear functions.&quot;,&quot;If you can ensure that each type is aligned in terms of the number of fields they have, then you can prevent unsafe code.&quot;,&quot;You can ensure resource safety by adding the copy and drop abilities. Then it won't matter if they are duplicated or lost.&quot;],&quot;prompt&quot;:&quot;How does type linearity ensure resource safety?\n&quot;}}]}"  data-quiz-fullscreen=""  data-quiz-cache-answers="" ></div>
+<p>{{#quiz ../quizzes/ch02-01-type-linearity.toml}}</p>
 <h3 id="how-does-move-address-common-smart-contract-vulnerabilities"><a class="header" href="#how-does-move-address-common-smart-contract-vulnerabilities">How does Move address common smart contract vulnerabilities?</a></h3>
 <p>The resource-orientation and type-linearity of the Move programming language play a significant role in avoiding common smart contract vulnerabilities. Here's how these features address specific vulnerabilities:</p>
 <blockquote>
@@ -239,7 +232,7 @@ int main() {
 <p><strong>8. Unknown Function Calls:</strong> In Ethereum, sending Ether to unknown functions can lead to vulnerabilities. Move's explicit resource accounting can help avoid such scenarios by making it clear where and how resources are flowing.</p>
 </blockquote>
 <p>Move’s focus on safety, predictability, and explicit resource management addresses these vulnerabilities effectively, helping developers write safer smart contracts. This is particularly crucial in blockchain environments, where contract bugs and vulnerabilities can lead to significant financial losses and are often irreversible due to the immutable nature of blockchain technology.</p>
-<script type="text/javascript" src="quiz/quiz-embed.iife.js"></script><link rel="stylesheet" type="text/css" href="quiz/style.css">
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
@@ -269,6 +262,22 @@ int main() {
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
@@ -286,10 +295,6 @@ int main() {
         <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        <script src="ferris.js"></script>
-        <script src="js-extensions/packages/telemetry/dist/index.js"></script>
-        <script src="js-extensions/packages/consent-form/dist/index.js"></script>
-        <script src="js-extensions/packages/feedback/dist/index.js"></script>
 
 
     </div>

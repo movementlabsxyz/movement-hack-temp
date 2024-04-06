@@ -29,10 +29,6 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="ferris.css">
-        <link rel="stylesheet" href="theme/2018-edition.css">
-        <link rel="stylesheet" href="js-extensions/packages/consent-form/dist/index.css">
-        <link rel="stylesheet" href="js-extensions/packages/feedback/dist/index.css">
 
     </head>
     <body class="sidebar-visible no-js">
@@ -151,9 +147,6 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        <a href="https://github.com/movementlabsxyz/movement-hack" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-github"></i>
-                        </a>
 
                     </div>
                 </div>
@@ -213,7 +206,7 @@ cd movement-dapp-workshop
 </code></pre>
 <p>Make sure the address starts with <code>0x</code> else add it. That should be available in <code>.aptos/config.yaml</code> file as the <code>account</code> field.</p>
 <p>Now you can try running your transactions on the frontend and see the chat messages being posted.</p>
-<h2 id="check-your-knowledge-and-earn-rewards"><a class="header" href="#check-your-knowledge-and-earn-rewards">Check your knowledge and earn rewards</a></h2>
+<h2 id="chapter-quiz-check-your-knowledge-and-earn-rewards"><a class="header" href="#chapter-quiz-check-your-knowledge-and-earn-rewards">Chapter Quiz: Check your knowledge and earn rewards</a></h2>
 <iframe data-tally-src="https://tally.so/embed/3XDkBL?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="418" frameborder="0" marginheight="0" marginwidth="0" title="Movement Hack Chapter 2 Quiz"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
                     </main>
 
@@ -244,6 +237,22 @@ cd movement-dapp-workshop
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
@@ -261,10 +270,6 @@ cd movement-dapp-workshop
         <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        <script src="ferris.js"></script>
-        <script src="js-extensions/packages/telemetry/dist/index.js"></script>
-        <script src="js-extensions/packages/consent-form/dist/index.js"></script>
-        <script src="js-extensions/packages/feedback/dist/index.js"></script>
 
 
     </div>
