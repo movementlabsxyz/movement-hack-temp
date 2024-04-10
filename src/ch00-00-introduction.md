@@ -1,36 +1,45 @@
 # Movement Hack Introduction
 
-This course is designed to train you to build for Movement. See our [docs](https://docs.movementlabs.xyz/) for an introduction to the Move stack.
+This course is designed to support you as you build for build for Movement. See our [docs](https://docs.movementlabs.xyz/) for an introduction to the Move stack.
 
-Here are some unique mechanics of this course:
+## Table of Contents
 
-## 1. Quizzes
+- [History of Move](ch01-00-history-of-move.md)
+    - [The Language for Digital Assets](ch01-01-the-language.md)
+    - [The Dispersion of Move](ch01-02-dispersion-of-move.md)
+    - [Enter the Movement](ch01-03-enter-movement.md)
 
-The main mechanic is **quizzes**: each page has one ore more quizzes about the page's content. We have two rules about quizzes:
+- [Getting Started with Move](ch02-00-getting-started-with-move.md)
+    - [Advantages of Move](ch02-01-advantages-of-move.md)
+    - [Install Movement CLI](ch02-02-install-movement-cli.md)
+    - [Hello, Move!](ch02-03-hello-move.md)
 
-1. **Take a quiz as soon as you get to it.**
-2. **Do not skip a quiz.**
+- [Planning Your Capstone Project](ch03-00-domain-modeling.md)
+    - [Domain Modeling](ch03-01-domain-modeling.md)
+    - [User Journey](ch03-02-user-journey.md)
+    - [Architectural Diagram](ch03-03-architectural-diagram.md)
+    -->
+- [Basic Move Syntax](ch04-00-basic-move-syntax.md)
+    - [Primitive Types](ch04-01-primitive-types.md)
+    - [Comments](ch04-02-comments.md)
+    - [Expressions and Scope](ch04-03-expressions-and-scope.md)
+    - [Control Flow](ch04-04-control-flow.md)
+    - [Modules and Imports](ch04-05-modules-and-imports.md)
+    - [Testing](ch04-06-testing.md)
 
-(We don't enforce these rules, but please follow them! You can get points on Galxe for submitting quiz results!)
+- [Custom types and generics](ch05-00-custom-types-and-generics.md)
+    - [Custom Types](ch05-01-custom-types.md)
+    - [Getter and Setter Functions](ch05-02-getter-functions.md)
+    - [Generics Introduction](ch05-03-generics-intro.md)
+    - [Generics to Constrain Abilities](ch05-04-generics-abilities.md)
+    - [Generics with Multiple Type Parameters](ch05-05-generics-with-multiple-types.md)
 
-Every quiz looks like the one below. Try it out by clicking "Start".
+- [Move's Storage Model](ch06-00-storage-model.md)
+    - [Ownership and References](ch06-01-ownership-and-references.md)
+    - [Resources](ch06-02-resources.md)
+    - [Collections](ch06-03-collections.md)
 
-{{#quiz ../quizzes/example-quiz.toml}}
+## Feedback and Contributions
 
-If you get a question incorrect, you can choose to either retry the quiz, or see the correct answers. We encourage you to retry the quiz until you get 100% &mdash; feel free to review the content before retrying the quiz. Note that once you see the correct answers, you cannot retry the quiz.
-
-If you spot an issue in a question, you can submit a bug report by clicking the 🐞 icon. If you spot any other issue in this book, you can file an issue on our Github repository: <https://github.com/movementlabsxyz/movement-hack>
-
-## 2. Highlighting
-
-Another mechanic is **highlighting**: you can select any piece of text, and either highlight it or leave a comment about it. Once you select some text, click the ✏️ button, and leave an optional comment.
-
-👉 Try highlighting this text! 👈
-
-You can use highlights to save information for yourself. You can also use highlights to give us feedback &mdash; for example, if you think a section of content is confusing, you can let us know.
-
-> **Note:** your highlights will disappear if we change the content that you've highlighted. Also, your highlights are stored as a cookie. If you block cookies or change browsers, then you won't see your previous highlights.
-
-## 3. ...and more!
-
-The book's content may change as you work through it. Please send feedback to [contact email address].
+We hope you enjoy the course! Please send feedback and contributions via [Discord](https://discord.gg/movementlabsxyz) or [GitHub](https://github.com/movementlabsxyz/movement-hack). 
+ 
