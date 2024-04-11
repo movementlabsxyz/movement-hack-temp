@@ -39,7 +39,7 @@ module BoxManager {
 }
 ```
 
-Here, `clone_box` can duplicate any box with contents that have the copy ability, thanks to generics.
+Here, `clone_box` can duplicate any box with contents that have the `copy` ability. This is called using generics to constrain abilities.
 
 ## References and Borrow Checking
 

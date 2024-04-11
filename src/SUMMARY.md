@@ -19,7 +19,7 @@
     - [Hello, Move!](ch02-03-hello-move.md)
 
 - [Planning Your Capstone Project](ch03-00-domain-modeling.md)
-    - [Domain Modeling](ch03-01-domain-modeling.md)
+    - [Domain Modeling](ch03-01-domain-modeling-intro.md)
     - [User Journey](ch03-02-user-journey.md)
     - [Architectural Diagram](ch03-03-architectural-diagram.md)
     -->
@@ -35,9 +35,9 @@
     - [Custom Types](ch05-01-custom-types.md)
     - [Getter and Setter Functions](ch05-02-getter-functions.md)
     - [Generics Introduction](ch05-03-generics-intro.md)
-    - [Generics to Constrain Abilities](ch05-04-generics-abilities.md)
-    - [Generics with Multiple Type Parameters](ch05-05-generics-with-multiple-types.md)
-
+    - [Generics with Multiple Type Parameters](ch05-04
+    -generics-with-multiple-types.md)
+ 
 - [Move's Storage Model](ch06-00-storage-model.md)
     - [Ownership and References](ch06-01-ownership-and-references.md)
     - [Resources](ch06-02-resources.md)

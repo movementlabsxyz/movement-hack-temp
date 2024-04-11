@@ -34,7 +34,7 @@ This Sui Move example demonstrates managing account balances using Table, offeri
 
 ### Aptos Move Example: Todo List Application
 
-Aptos Move utilizes Table for similar key-value pair management but within its own standard library context.
+Aptos Move utilizes `Table` for similar key-value pair management but within its own standard library context.
 
 ```rust
 module ToDoList {
