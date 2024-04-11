@@ -1,5 +1,18 @@
 # Hello, Move!
+
+If you've installed Movement CLI, congratulations!
+
+If not, please [return to the previous lesson](ch02-02-install-movement-cli.md) and install Movement CLI.
+
+Now that you have Movement CLI installed, it's time to deploy something to Movement. Ideally and end-to-end (E2E) dApp.
+
+If you'd prefer to build up your confidence first, it's fine to deploy a simple module. Just [follow this guide](https://docs.movementlabs.xyz/developers/tutorials/deploy/aptos-module). It doesn't require any coding experience. 
+
+An E2E dApp is just an on-chain module or modules paired with a front end like a Next.js or Vite app. So it's not too much more complicated than deploying a module.
+
 In this lesson, you'll build a simple dApp that allows users to post messages to a chat room.
+
+Just like in the module deployment guide, you don't need any coding experience to deploy this dApp. You only have to be able to follow ste-by-step directions 👍🏼
 
 Try the app here: https://main.d2761w90g9sxb3.amplifyapp.com/ 
 
