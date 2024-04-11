@@ -14,7 +14,7 @@ In this lesson, you'll build a simple dApp that allows users to post messages to
 
 Just like in the module deployment guide, you don't need any coding experience to deploy this dApp. You only have to be able to follow ste-by-step directions 👍🏼
 
-Try the app here: https://main.d2761w90g9sxb3.amplifyapp.com/ 
+Try the app [here](https://main.d2761w90g9sxb3.amplifyapp.com/). 
 
 ## Requirements
 
