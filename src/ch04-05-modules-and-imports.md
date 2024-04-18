@@ -80,6 +80,7 @@ script {
     }
 }
 ```
+
 This approach keeps your script clean and focused, importing only what you need.
 
 ## Example: A Module for User Management
@@ -103,17 +104,17 @@ module user_manager_addr::UserManager {
 }
 ```
 
-Here we're using a named address. 
+Here we're using a named address.
 
-For Aptos, in your `Move.toml` file, under `[addresses]` you would add: 
+For Aptos, in your `Move.toml` file, under `[addresses]` you would add:
 
 ```rust
 user_manager_addr = "<your-account-address>"`
-``` 
+```
 
 to store the UserManager module in your account.
 
-For Sui, in `Move.toml` under `[addresses]` you could add user_manager_addr="0x0" to indicate that user_manager_addr is the root of the file. When you publish to Sui, the package will be assigned an arbitrary package ID. 
+For Sui, in `Move.toml` under `[addresses]` you could add user_manager_addr="0x0" to indicate that user_manager_addr is the root of the file. When you publish to Sui, the package will be assigned an arbitrary package ID.
 
 This UserManager module defines a Profile struct and provides functions to create and update a user's profile.
 
@@ -132,6 +133,7 @@ module profile_analytics_addr::ProfileAnalytics {
     }
 }
 ```
+
 In the ProfileAnalytics module, we're using the UserManager::Profile type and directly accessing the username field to compute its length, showcasing how to access types and fields across modules.
 
 ## Using `use` for Easier Access
@@ -168,6 +170,7 @@ module TransactionLogger {
     }
 }
 ```
+
 This approach imports only the Profile struct, keeping the module focused on its specific logging responsibilities.
 
 ## Aliasing with `as`
@@ -190,4 +193,4 @@ SecureUserManager uses UM as an alias for UserManager, streamlining access to th
 
 ## Conclusion
 
-By leveraging modules and imports, Move developers can build well-organized, modular, and reusable code. This structured approach facilitates collaboration across large-scale projects by clearly defining, isolating and reusing different components. 
+By leveraging modules and imports, Move developers can build well-organized, modular, and reusable code. This structured approach facilitates collaboration across large-scale projects by clearly defining, isolating and reusing different components.

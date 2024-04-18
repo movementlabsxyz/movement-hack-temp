@@ -58,4 +58,3 @@ module AccountManager {
 ```
 
 This function allows adding funds to any account type, leveraging Move's generics and references to ensure type safety and flexibility.
-

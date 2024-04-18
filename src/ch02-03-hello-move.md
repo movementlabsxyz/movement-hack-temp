@@ -1,4 +1,4 @@
-# Hello, Move!
+# Hello, Move
 
 If you've installed Movement CLI, congratulations!
 
@@ -6,7 +6,7 @@ If not, please [return to the previous lesson](ch02-02-install-movement-cli.md) 
 
 Now that you have Movement CLI installed, it's time to deploy something to Movement. Ideally and end-to-end (E2E) dApp.
 
-If you'd prefer to build up your confidence first, it's fine to deploy a simple module. Just [follow this guide](https://docs.movementlabs.xyz/developers/tutorials/deploy/aptos-module). It doesn't require any coding experience. 
+If you'd prefer to build up your confidence first, it's fine to deploy a simple module. Just [follow this guide](https://docs.movementlabs.xyz/developers/tutorials/deploy/aptos-module). It doesn't require any coding experience.
 
 An E2E dApp is just an on-chain module or modules paired with a front end like a Next.js or Vite app. So it's not too much more complicated than deploying a module.
 
@@ -14,7 +14,7 @@ In this lesson, you'll build a simple dApp that allows users to post messages to
 
 Just like in the module deployment guide, you don't need any coding experience to deploy this dApp. You only have to be able to follow ste-by-step directions 👍🏼
 
-Try the app [here](https://main.d2761w90g9sxb3.amplifyapp.com/). 
+Try the app [here](https://main.d2761w90g9sxb3.amplifyapp.com/).
 
 ## Requirements
 
@@ -23,6 +23,7 @@ Install Movement CLI:
 ```bash
 <(curl -fsSL https://raw.githubusercontent.com/movemntdev/M1/main/scripts/install.sh) --latest
 ```
+
 Clone the dApp repository:
 
 ```bash
@@ -42,7 +43,7 @@ cd aptos
 
 Aptos language requires you to initialize the Move environment:
 
-```bash 
+```bash
 movement aptos init
 ```
 
@@ -60,7 +61,7 @@ To test the front end, navigate to the frontend directory and run the following 
 npm i && npm run dev
 ```
 
-You will be able to see your frontend at http://localhost:3000.
+You will be able to see your frontend at <http://localhost:3000>.
 
 Take a look at `aptos/frontend/components/Chat.tsx`. This file contains the logic for the chat room. The Chat component is responsible for fetching the chat messages, displaying them and posting new messages to the chat room.
 

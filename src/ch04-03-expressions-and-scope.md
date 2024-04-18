@@ -74,6 +74,7 @@ script {
     }
 }
 ```
+
 Understanding scope is crucial for managing data effectively and ensuring that your program's structure is both secure and logical.
 
 ## Combining Expressions with Scope

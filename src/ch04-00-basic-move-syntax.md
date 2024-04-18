@@ -1,6 +1,6 @@
 # Basic Move Syntax
 
-By now, you have some experience publishing modules to the blockchain and interacting with them. And you've begun planning your dream dApp. Congratulations! You are well on your way to being a master Move developer. 
+By now, you have some experience publishing modules to the blockchain and interacting with them. And you've begun planning your dream dApp. Congratulations! You are well on your way to being a master Move developer.
 
 In this chapter, you'll learn or review the basics of the Move language:
 

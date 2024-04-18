@@ -60,6 +60,7 @@ script {
     }
 }
 ```
+
 In this example, the loop increments i but exits before it becomes an infinite loop thanks to the break statement.
 
 ## Debugging Infinite Loops
