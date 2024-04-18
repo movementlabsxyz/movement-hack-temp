@@ -8,3 +8,7 @@ tmp
 /src/quiz
 /src/aquascope
 .aquascope-cache
+
+process.txt
+processed.md
+review.sh

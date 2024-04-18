@@ -1,12 +1,12 @@
-## Advantages of Move
+# Advantages of Move
 
 In this lesson, you'll learn fundamental properties of Move, including resource-orientation and type linearity, and how Move addresses specific smart contract vulnerabilities.
 
-### Resource-orientation and the blockchain
+## Resource-orientation and the blockchain
 
 Resource-orientation is a fundamental concept in programming languages like Move that greatly benefits the blockchain ecosystem. By aligning with the principles of resource-oriented programming, the blockchain can enhance security, efficiency, and reliability of smart contracts.
 
-### Stack Model Programming and Function Ownership
+## Stack Model Programming and Function Ownership
 
 In resource-oriented programming, like Move, the stack model is employed to manage data ownership and control access. Take for example the following unsafe C program.
 
@@ -32,17 +32,18 @@ int main() {
     return 0;
 }
 ```
+
 {{#quiz ../quizzes/ch02-01-unsafe-access.toml}}
 
 In Move, this kind of unsafe access would not be possible because of strict ownership conditions.
 
 Each function owns any resources it creates and is responsible for its lifecycle. This ownership model ensures that resources are properly managed and prevents unauthorized access or modification, bolstering the security of blockchain-based applications.
 
-### Access Restriction All the Way Down
+## Access Restriction All the Way Down
 
 Resource-oriented programming languages like Move implement access restrictions at all levels of code execution. From the top-level contract to individual functions, access to resources is strictly controlled. This granular access control minimizes the risk of unauthorized operations and ensures that only authorized parties can interact with specific resources, promoting secure and auditable transactions on the blockchain.
 
-### Type Linearity and Ownership
+## Type Linearity and Ownership
 
 *Linear type:* a type with an enforced the restriction that variables or values of the type can be used exactly once. In other words, each linear value has a unique owner or consumer, and it must be used or consumed linearly without duplication or uncontrolled consumption.
 
@@ -65,7 +66,7 @@ Type linearity is a crucial aspect of resource-oriented programming that enforce
 
 {{#quiz ../quizzes/ch02-01-type-linearity.toml}}
 
-### How does Move address common smart contract vulnerabilities?
+## How does Move address common smart contract vulnerabilities?
 
 The resource-orientation and type-linearity of the Move programming language play a significant role in avoiding common smart contract vulnerabilities. Here's how these features address specific vulnerabilities:
 

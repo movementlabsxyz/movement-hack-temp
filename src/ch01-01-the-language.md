@@ -1,41 +1,29 @@
-# Move: The language for digital assets
+# Introduction to Move: A Language Designed for Digital Assets
 
-In this lesson, you'll learn why the Move language was created and what makes Move the ideal language for Digital assets.
+Get to know Move, a language specifically developed for handling digital assets effectively and safely.
 
-Move is a Rust-like language. It was developed in 2020 by the team behind Facebook's Diem project[1]. The goal of Move is to improve how digital assets are managed, making them more secure and efficient.
+## What is Move?
 
-> ## Why Was Move Created?
->
->Digital assets on the blockchain faced problems like security risks and management difficulties. Previous languages did not fully address these issues. Move was developed to solve these problems by treating digital assets more like physical assets, which helps prevent fraud and errors.
->
+Move is a language crafted by the Diem project team at Facebook in 2020. Its design mimics some principles from Rust, with a focus on enhancing the management of digital assets types on Blockchain technologies. With Move, the traditional security risks and inefficiencies associated with earlier languages are mitigated.
 
-## The Inventors of Move
+## Who Created Move?
 
-The engineering team at Diem, which included experts from Facebook, created Move. They used their deep knowledge of blockchain and finance to design a language that meets the needs of the digital economy.
+A crew of Blockchain and financial experts from Diem developed Move. The language caters to the specialized requirements of the cyber finance sector.
 
-> ## Key Features of Move
->
->- **Resources Concept:** Move uses a concept called "resources" to represent digital assets. This approach ensures that assets cannot be copied or accidentally lost, enhancing their security.
->
->- **Move Prover:** Move includes a verification tool called the Move Prover. This tool checks that Move programs follow the rules and are free from common mistakes, making the programs safer.
->
->- **Compilation into BCS Bytecode:** Move programs are compiled into a format known as BCS (Binary Canonical Serialization) bytecode. This process makes the programs efficient and secure, suitable for various blockchain applications.
->
->- **Flexibility and Scalability:** Move is designed to be flexible, supporting everything from simple transactions to complex financial contracts. It allows developers to create reusable components, promoting an ecosystem of secure and compatible applications.
->
->- **Open Source and Community-Driven:** Move is open source, meaning anyone can see how it works and contribute to its development. This approach ensures that Move can evolve to meet changing needs.
->
+## Characteristics of Move
 
-Here's an architectural diagram of Move, from the language's creators [1]:
+Here are some key features that make Move a standout language:
 
-![Move high-level architecture](./img/move_architecture.png "Move high-level architecture")
+- **Resources Concept**: Move emphasizes a resources paradigm where digital assets are seen as distinct items that can't be copied or misplaced.
+- **Move Prover**: This is an in-built validation tool in Move. Its responsibility is to ensure that programs align with the rules declared and are free from errors. This boosts its security.
+- **BCS Bytecode Compilation**: Programs written in Move are compiled into Binary Canonical Serialization (BCS) bytecode, a format that's both secure and efficient for different Blockchain applications.
+- **Flexibility and Scalability**: Move supports a range of applications from simple transactions to complex financial commitments. It also allows developers to build reusable modules.
+- **Open Source**: Move is open-source and governed by the community. This allows for adjustments and evolution to meet the changing trends in digital finance.
 
 ## Conclusion
 
-Move is a significant advancement in blockchain technology, offering a secure and efficient way to manage digital assets. Its introduction of resources, combined with the Move Prover and efficient bytecode compilation makes it a robust tool for developers. 
-
-Move's open-source nature and flexibility ensure it is well-equipped to support the future of digital finance with security and efficiency at its core.
+Move is a step forward in Blockchain technology. It provides a solid framework for managing digital assets efficiently and securely. Its innovative characteristics and community-driven growth guarantee it stays relevant in the swiftly changing digital finance arena.
 
 ## References
 
-1. The language of money, Part one: Why build Move? Diem blog: [https://www.diem.com/en-us/blog/why-build-move/](https://www.diem.com/en-us/blog/why-build-move/)
+1. The Language of Money, Part One: What Motivated the Creation of Move? Diem Blog: [https://www.diem.com/en-us/blog/why-build-move/](https://www.diem.com/en-us/blog/why-build-move/)
