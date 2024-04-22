@@ -6,10 +6,6 @@ Get to know Move, a language specifically developed for handling digital assets 
 
 Move is a language crafted by the Diem project team at Facebook in 2020. Its design mimics some principles from Rust, with a focus on enhancing the management of digital assets types on Blockchain technologies. With Move, the traditional security risks and inefficiencies associated with earlier languages are mitigated.
 
-## Who Created Move?
-
-A crew of Blockchain and financial experts from Diem developed Move. The language caters to the specialized requirements of the cyber finance sector.
-
 ## Characteristics of Move
 
 Here are some key features that make Move a standout language:
@@ -22,7 +18,7 @@ Here are some key features that make Move a standout language:
 
 ## Conclusion
 
-Move is a step forward in Blockchain technology. It provides a solid framework for managing digital assets efficiently and securely. Its innovative characteristics and community-driven growth guarantee it stays relevant in the swiftly changing digital finance arena.
+Move provides a solid framework for managing digital assets efficiently and securely. Its innovative characteristics and community-driven growth ensure that Move stays relevant in digital finance.
 
 ## References
 

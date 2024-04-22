@@ -1,1 +1,1 @@
-# Resource Applications
+# Resources and Applications
