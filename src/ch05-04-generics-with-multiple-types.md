@@ -83,3 +83,7 @@ In this `KeyValue` struct, constraints ensure that the `key` has the `key` abili
 ### Conclusion
 
 From asset management to e-commerce, the practical examples illustrated here demonstrate how generics underpin Move's versatility and safety. Generics with multiple types enhance the capability to write flexible and reusable code in Move. Generics underline Move's strength in supporting the development of complex smart contracts and decentralized applications.
+
+### Chapter Quiz: Get credit on Galxe for weekly rewards
+
+<iframe data-tally-src="https://tally.so/embed/w2ezrV?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="415" frameborder="0" marginheight="0" marginwidth="0" title="Movement Hack Chapter 5 Quiz"></iframe><script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
