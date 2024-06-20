@@ -1,4 +1,4 @@
-# Movement Hack Introduction
+# Movement Hack Introductions
 
 This course is designed to support you as you build for build for Movement. See our [docs](https://docs.movementlabs.xyz/) for an introduction to the Move stack. And please [join Movement Discord](https://discord.gg/movementlabsxyz) to get involved with the community!
 

@@ -1,6 +1,6 @@
 # Testing in Move
 
-In this lesson, you'll learn how to unit test Move code to make sure your program works as expected.
+Masons: Contribute the Testing lesson to this course at the [Movement Hack GitHub repository](https://github.com/movementlabsxyz/movement-hack) to earn more rewards! 
 
 ## Chapter Quiz: Check your knowledge and earn rewards
 
